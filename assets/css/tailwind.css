@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    /* SuisseIntl */
+    @font-face {
+        font-family: "suisse-intl";
+        src: url("./assets/fonts/Suisse/SuisseIntl/SuisseIntl-Regular.woff") format("woff");
+        font-weight: 400;
+    }
+
+    @font-face {
+        font-family: "suisse-intl";
+        src: url("./assets/fonts/Suisse/SuisseIntl/SuisseIntl-Bold.woff") format("woff");
+        font-weight: 700;
+    }
+
+    @font-face {
+        font-family: "suisse-intl";
+        src: url("./assets/fonts/Suisse/SuisseIntl/SuisseIntl-BoldItalic.woff") format("woff");
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: "suisse-intl";
+        src: url("./assets/fonts/Suisse/SuisseIntl/SuisseIntl-Black.woff") format("woff");
+        font-weight: 900;
+    }
+
+    @font-face {
+        font-family: "suisse-intl";
+        src: url("./assets/fonts/Suisse/SuisseIntl/SuisseIntl-BookItalic.woff") format("woff");
+        font-weight: 350;
+        font-style: italic;
+    }
+
+    /* Suisse Intl Cond*/
+    @font-face {
+        font-family: "suisse-intl-cond";
+        src: url("./assets/fonts/Suisse/SuisseIntlCond/SuisseIntlCond-Regular.otf") format("otf");
+        font-weight: 400;
+    }
+
+    @font-face {
+        font-family: "suisse-intl-cond";
+        src: url("./assets/fonts/Suisse/SuisseIntlCond/SuisseIntlCond-Bold-WebTrial.ttf") format("ttf");
+        font-weight: 700;
+    }
+
+    @font-face {
+        font-family: "suisse-intl-cond";
+        src: url("./assets/fonts/Suisse/SuisseIntlCond/SuisseIntlCond-SemiBold.otf") format("otf");
+        font-weight: 600;
+    }
+
+    @font-face {
+        font-family: "suisse-intl-cond";
+        src: url("./assets/fonts/Suisse/SuisseIntlCond/SuisseIntlCond-Medium.otf") format("otf");
+        font-weight: 500;
+    }
+
+    /* Suisse Intl Work*/
+
+    @font-face {
+        font-family: "suisse-intl-works";
+        src: url("./assets/fonts/Suisse/SuisseWorks/SuisseWorks-Regular.woff") format("woff");
+        font-weight: 400;
+    }
+
+    @font-face {
+        font-family: "suisse-intl-works";
+        src: url("./assets/fonts/Suisse/SuisseWorks/SuisseWorks-Bold.woff") format("woff");
+        font-weight: 700;
+    }
+
+    @font-face {
+        font-family: "suisse-intl-works";
+        src: url("./assets/fonts/Suisse/SuisseWorks/SuisseWorks-Book.woff") format("woff");
+        font-weight: 450;
+    }
+
+    @font-face {
+        font-family: "suisse-intl-works";
+        src: url("./assets/fonts/Suisse/SuisseWorks/SuisseWorks-Medium.woff") format("woff");
+        font-weight: 500;
+    }
+}

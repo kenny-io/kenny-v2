@@ -1,0 +1,16 @@
+:root {
+  /* colors */
+  --black: #020202;
+  --white: #D4D4D4;
+  --primary-color: #202a3c;
+  --neon-green: #A4EF28;
+  --secondary-color: #f7b2ad;
+  --tetiary-color: #f1e1e0;
+  --darkgrey: #9fa3a7;
+  --lightgrey: rgba(255, 255, 255, 0.7);
+}
+
+body {
+  color: var(--black);
+  overscroll-behavior: none;
+}

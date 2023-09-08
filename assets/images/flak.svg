@@ -1,0 +1,20 @@
+<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="11" height="11" fill="#DCDCDC"/>
+<g id="Uses" clip-path="url(#clip0_44_62)">
+<rect width="1440" height="3682" transform="translate(-158 -726)" fill="#020202"/>
+<g id="Frame 40" clip-path="url(#clip1_44_62)">
+<rect width="1482.85" height="106" transform="translate(-189 -40.6614) rotate(-2.06139)" fill="#7856FF"/>
+<g id="Group 31">
+<path id="Flak" fill-rule="evenodd" clip-rule="evenodd" d="M6.59768 0.329344L4.59897 0.401285L4.69197 2.985L2.79943 1.22396L1.437 2.68813L3.32995 4.44955L0.745444 4.54258L0.817385 6.54128L3.40128 6.44828L1.63972 8.34138L3.10389 9.70381L4.86566 7.81048L4.95868 10.3948L6.95738 10.3229L6.86436 7.73836L8.75784 9.50028L10.1203 8.03611L8.22719 6.27458L10.8109 6.18158L10.739 4.18287L8.15464 4.27589L9.91604 2.38297L8.45187 1.02054L6.69068 2.91324L6.59768 0.329344Z" fill="#D9D9D9"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_44_62">
+<rect width="1440" height="3682" fill="white" transform="translate(-158 -726)"/>
+</clipPath>
+<clipPath id="clip1_44_62">
+<rect width="1482.85" height="106" fill="white" transform="translate(-189 -40.6614) rotate(-2.06139)"/>
+</clipPath>
+</defs>
+</svg>
