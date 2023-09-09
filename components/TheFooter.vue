@@ -8,14 +8,14 @@
                     conference or delivering workshops.. If you're interested in web development and Jamstack technologies,
                     I'll be happy to send you the contents I make if you give me your email address below
                 </p>
-                <form class="flex mt-14 gap-2.5">
-                    <div class="w-64 h-fit bg-[#252525] rounded-md relative">
+                <form class="flex mt-14">
+                    <div class="w-64 h-fit bg-[#252525] rounded-md relative mr-1">
                         <input class="bg-transparent rounded-xl w-full h-[45px] pl-4 py-3  focus:border-none active:border-none focus-visible:border-none placeholder:text-[#878787]" placeholder="Joshua" type="text" id="name" name="name" required>
                     </div>
-                    <div class="w-64 h-fit bg-[#252525] rounded-md relative">
+                    <div class="w-64 h-fit bg-[#252525] rounded-md relative mr-2">
                         <input class="bg-transparent rounded-xl w-full h-[45px] pl-4 py-3  focus:border-none active:border-none focus-visible:border-none placeholder:text-[#878787]" placeholder="joshua@gmail.com" type="text" id="name" name="name" required>
                     </div>
-                    <button type="submit" class="w-[233px] h-[45px] px-5 py-6 bg-[#B7CD14] text-[#090909] text-xl tracking-tight font-semibold flex items-center justify-center">Subscribe</button>
+                    <button type="submit" class="w-[233px] h-[45px] px-5 py-6 bg-[#B7CD14] rounded-md text-[#090909] text-xl tracking-tight font-semibold flex items-center justify-center">Subscribe</button>
                 </form>
             </div>
             <div class="py-6 flex justify-between items-center">

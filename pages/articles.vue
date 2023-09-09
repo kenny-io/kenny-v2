@@ -22,7 +22,7 @@ const articleCategories = ref<string[]>(["web3", "External Articles", "Javascrip
                 </div>
             </TheWrapper>
         </section>
-        <section class="mb-24 sticky top-0 mt-6 bg-black/80 backdrop-blur-lg">
+        <section class="mb-24 sticky top-0 pt-6 bg-black/80 backdrop-blur-lg">
             <TheWrapper>
                 <div>
                     <div class="w-full px-4 py-4 border border-[#383838] rounded-md relative flex items-center">
