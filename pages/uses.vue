@@ -31,7 +31,7 @@
         <section>
             <div class="w-full overflow-hidden transform -rotate-6">
                 <div
-                    class="flex text-[140px] text-[#d4d4d4] whitespace-nowrap font-suisseIntl tracking-[-7.7px] leading-tight">
+                    class="flex text-[140px] text-[#d4d4d4] select-none whitespace-nowrap font-suisseIntl tracking-[-7.7px] leading-tight">
                     <span>Director of Developer Relations - Content Creator - Youtuber - Drone Pilot</span>
                     <span>Director of Developer Relations - Content Creator - Youtuber - Drone Pilot</span>
                     <span>Director of Developer Relations - Content Creator - Youtuber - Drone Pilot</span>

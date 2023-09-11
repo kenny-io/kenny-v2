@@ -49,3 +49,10 @@ const navLinks = ref([{
     </TheWrapper>
   </header>
 </template>
+
+<style>
+.router-link-active, 
+.router-link-exact-active{
+  font-weight: 500;
+}
+</style>

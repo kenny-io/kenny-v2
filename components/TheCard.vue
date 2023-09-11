@@ -1,11 +1,11 @@
 <template>
-    <div class="border border-gray-200/20 rounded-r-2xl rounded-l-2xl overflow-hidden">
-        <div class="w-full h-80">
-            <img class="object-cover w-full" src="../assets/images/card-header-image.jpg" alt="card-header-image">
+    <div class="border border-gray-200/20 rounded-r-2xl rounded-l-2xl overflow-hidden relative">
+        <div class="w-full h-[490px]">
+            <img class="object-cover w-full" src="../assets/images/question-everything.gif" alt="card-header-image">
         </div>
-        <div class="px-8 py py-6">
+        <div class="px-8 py-6 bg-gradient-to-t from-black/80 to-transparent backdrop-blur absolute bottom-0">
             <h4 class="text-4xl font-bold tracking-tighter text-white">Building Fullstack on the web</h4>
-            <p class="text-xl text-[#AFADAD] mt-4">
+            <p class="text-xl text-white/70 mt-4">
                 Learn the principles and best practices for writing maintainable test applications to catch
                 errors before your product reaches the end user!
             </p>

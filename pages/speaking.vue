@@ -45,36 +45,36 @@
         <section v-if="showStripe" class="mt-12 mb-40">
             <TheWrapper>
                 <div>
-                    <div class="border-b py-10 border-[#434343]">
+                    <div class="border-b cursor-pointer group py-10 border-[#434343]">
                         <div class="flex items-center gap-7">
-                            <h2 class="hover:text-white text-[#898989] text-6xl tracking-[-4.16px]">Token Gating on the web</h2>
-                            <TheChip class="text-green-400 border-green-200">Upcoming</TheChip>
+                            <h2 class="group-hover:text-white transition duration-300 ease-in-out text-[#898989] text-6xl tracking-[-4.16px]">Token Gating on the web</h2>
+                            <TheChip class="text-green-400 border-green-300">Upcoming</TheChip>
                         </div>
                     </div>
-                    <div class="border-b py-10 border-[#434343]">
+                    <div class="border-b cursor-pointer group py-10 border-[#434343]">
                         <div class="flex items-center gap-7">
-                            <h2 class="hover:text-white text-[#898989] text-6xl tracking-[-4.16px]">Writing Documentations That Don’t Suck!</h2>
+                            <h2 class="group-hover:text-white transition duration-300 ease-in-out text-[#898989] text-6xl tracking-[-4.16px]">Writing Documentations That Don’t Suck!</h2>
                         </div>
                     </div>
-                    <div class="border-b py-10 border-[#434343]">
+                    <div class="border-b cursor-pointer group py-10 border-[#434343]">
                         <div class="flex items-center gap-7">
-                            <h2 class="hover:text-white text-[#898989] text-6xl tracking-[-4.16px]">Leveraging community for product growth</h2>
-                            <TheChip class="text-green-400 border-green-200">Upcoming</TheChip>
+                            <h2 class="group-hover:text-white transition duration-300 ease-in-out text-[#898989] text-6xl tracking-[-4.16px]">Leveraging community for product growth</h2>
+                            <TheChip class="text-green-400 border-green-300">Upcoming</TheChip>
                         </div>
                     </div>
-                    <div class="border-b py-10 border-[#434343]">
+                    <div class="border-b cursor-pointer group py-10 border-[#434343]">
                         <div class="flex items-center gap-7">
-                            <h2 class="hover:text-white text-[#898989] text-6xl tracking-[-4.16px]">Token Gating on the web</h2>
+                            <h2 class="group-hover:text-white transition duration-300 ease-in-out text-[#898989] text-6xl tracking-[-4.16px]">Token Gating on the web</h2>
                         </div>
                     </div>
-                    <div class="border-b py-10 border-[#434343]">
+                    <div class="border-b cursor-pointer group py-10 border-[#434343]">
                         <div class="flex items-center gap-7">
-                            <h2 class="hover:text-white text-[#898989] text-6xl tracking-[-4.16px]">Writing Documentations That Don’t Suck!</h2>
+                            <h2 class="group-hover:text-white transition duration-300 ease-in-out text-[#898989] text-6xl tracking-[-4.16px]">Writing Documentations That Don’t Suck!</h2>
                         </div>
                     </div>
-                    <div class="border-b py-10 border-[#434343]">
+                    <div class="border-b cursor-pointer group py-10 border-[#434343]">
                         <div class="flex items-center gap-7">
-                            <h2 class="hover:text-white text-[#898989] text-6xl tracking-[-4.16px]">Leveraging community for product growth</h2>
+                            <h2 class="group-hover:text-white transition duration-300 ease-in-out text-[#898989] text-6xl tracking-[-4.16px]">Leveraging community for product growth</h2>
                         </div>
                     </div>
                 </div>
