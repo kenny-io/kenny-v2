@@ -19,8 +19,8 @@
             </TheWrapper>
         </section>
         <section class="-mt-7">
-            <div class="space-x-4 whitespace-nowrap py-8 bg-[#7856FF] transform -rotate-3">
-                <div v-for="x in 20" key="x" class="space-x-4 inline-block">
+            <div class="space-x-4 whitespace-nowrap py-8 bg-[#7856FF] transform">
+                <div v-for="x in 10" key="x" class="space-x-4 inline-block">
                     <span class="inline-block text-base tracking-[-0.25px] text-[#fff]">Javascript</span>
                     <span class="inline-block"><img src="../assets/images/flak.svg" alt=""></span>
                 </div>
@@ -38,6 +38,7 @@
             <TheWrapper>
                 <div class="grid grid-cols-2 gap-4 gap-y-24">
                     <TheCard v-for="x in 4" :key="x"/>
+                    <TheCard tag="Ethereum"/>
                 </div>
             </TheWrapper>
         </section>

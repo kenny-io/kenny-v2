@@ -1,3 +1,6 @@
+<script setup lang="ts">
+</script>
+
 <template>
     <main>
         <section class="py-[100px]">
@@ -51,22 +54,12 @@
             </TheWrapper>
         </section>
         <section>
-            <div class="w-full overflow-hidden">
-                <div
-                    class="flex text-[140px] text-[#d4d4d4] select-none whitespace-nowrap font-suisseIntl tracking-[-7.7px] leading-tight">
-                    <span>Director of Developer Relations - Content Creator - Youtuber - Drone Pilot</span>
-                    <span>Director of Developer Relations - Content Creator - Youtuber - Drone Pilot</span>
-                    <span>Director of Developer Relations - Content Creator - Youtuber - Drone Pilot</span>
-                </div>
-            </div>
-            <div class="w-full overflow-hidden">
-                <div
-                    class="flex text-[140px] text-[#d4d4d4] select-none whitespace-nowrap font-suisseIntl tracking-[-7.7px] leading-tight">
-                    <span>Director of Developer Relations - Content Creator - Youtuber - Drone Pilot</span>
-                    <span>Director of Developer Relations - Content Creator - Youtuber - Drone Pilot</span>
-                    <span>Director of Developer Relations - Content Creator - Youtuber - Drone Pilot</span>
-                </div>
-            </div>
+            <TheSlider styles="text-[140px]">
+                Director of Developer Relations - Content Creator - Youtuber - Drone Pilot -   
+            </TheSlider>
+            <TheSlider styles="text-[140px]" slide-to="right">
+                Director of Developer Relations - Content Creator - Youtuber - Drone Pilot - 
+            </TheSlider>
         </section>
         <section>
             <TheWrapper class="text-white py-[180px] text-center flex flex-col items-center">

@@ -1,22 +1,16 @@
 <script setup lang="ts">
 import { useRouter } from 'nuxt/app';
 
-const navLinks = ref([{
-  slug: 'Home',
-  path: '/'
-},
+const navLinks = ref([
 {
   slug: 'Courses',
   path: '/courses'
 },
 {
-  slug: 'Blog',
+  slug: 'Articles',
   path: '/articles'
 },
-{
-  slug: 'Uses',
-  path: '/uses'
-},
+
 {
   slug: 'Speaking',
   path: '/speaking'
@@ -24,6 +18,10 @@ const navLinks = ref([{
 {
   slug: 'Demo',
   path: '/demos'
+},
+{
+  slug: 'Uses',
+  path: '/uses'
 }])
 
 </script>

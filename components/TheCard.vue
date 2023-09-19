@@ -1,5 +1,13 @@
+<script setup lang="ts">
+interface Props {
+    tag?: string
+}
+
+const props = withDefaults(defineProps<Props>(), {})
+</script>
+
 <template>
-    <div class="border border-gray-200/20 rounded-r-2xl rounded-l-2xl overflow-hidden relative">
+    <div class="hover:border-gray-200/50 cursor-pointer hover:transition-colors hover:duration-1000 ease-in-out border border-gray-200/20 rounded-r-2xl rounded-l-2xl overflow-hidden relative">
         <div class="w-full h-[490px]">
             <img class="object-cover w-full" src="../assets/images/question-everything.gif" alt="card-header-image">
         </div>
@@ -18,6 +26,9 @@
                     </svg>
                 </span>
             </div>
+        </div>
+        <div v-if="tag" class="px-4 py-1 bg-[#39FF41] text-sm text-black uppercase rounded-2xl absolute top-7 left-8">
+            <p>{{ tag }}</p>
         </div>
     </div>
 </template>
