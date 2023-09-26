@@ -11,10 +11,13 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.8.0",
-    "nuxt": "^3.7.0"
+    "nuxt": "^3.7.0",
+    "nuxt-icon": "^0.5.0"
   },
   "dependencies": {
     "@hypernym/nuxt-gsap": "^2.2.2",
-    "nuxt-lenis": "^1.0.2"
+    "@pinia/nuxt": "^0.4.11",
+    "nuxt-lenis": "^1.0.2",
+    "pinia": "^2.1.6"
   }
 }

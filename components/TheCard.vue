@@ -12,8 +12,8 @@ const props = withDefaults(defineProps<Props>(), {})
             <img class="object-cover w-full" src="../assets/images/question-everything.gif" alt="card-header-image">
         </div>
         <div class="px-8 py-6 bg-gradient-to-t from-black/80 to-transparent backdrop-blur absolute bottom-0">
-            <h4 class="text-4xl font-bold tracking-tighter text-white">Building Fullstack on the web</h4>
-            <p class="text-xl text-white/70 mt-4">
+            <h4 class="text-2xl md:text-4xl font-bold tracking-tighter text-white">Building Fullstack on the web</h4>
+            <p class="text-lg md:text-xl text-white/70 mt-4">
                 Learn the principles and best practices for writing maintainable test applications to catch
                 errors before your product reaches the end user!
             </p>
