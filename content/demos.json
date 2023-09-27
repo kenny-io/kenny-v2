@@ -1,0 +1,100 @@
+{
+  "demos": [
+    {
+      "title": "PetsCanDate - A dating site for pets",
+      "description": "A dating site for pets built with Nuxt.js and Netlify as part of Netlifys 'Dusty Domains' campaign.",
+      "date": "2021-01-12",
+      "hasSite": true,
+      "hasPost": false,
+      "site": "https://petscan.date/",
+      "github": "https://github.com/kenny-io/petcandate",
+      "post": "#"
+    },
+    {
+      "title": "Ecommerce site with Shopify Storefront APIs and SvelteKit",
+      "description": "The Shopify team recently announced enhancements to their Storefront APIs that make it possible for store owners to access and manage their entire store and inventory via APIs. This demo uses those APIs to build an e-commerce template with SvelteKit.",
+      "date": "2021-07-19",
+      "hasSite": true,
+      "hasPost": true,
+      "post": "https://www.netlify.com/blog/2021/07/19/shopify-announces-enhanced-storefront-apis-a-first-look-with-gridsome-and-netlify/",
+      "site": "https://sveltekit-shopify-ecommerce.netlify.app",
+      "github": "https://github.com/kenny-io/sveltekit-shopify-ecommerce"
+    },
+    {
+      "title": "Jamstack site with Docs, Blog and Shop sections built wt Nuxt.js and Netlify",
+      "description": "This demo uses Nuxt.js and Netlify to show a typical Jamstack site. I built it in an attempt to explain how developers can split large sites into independent microsites.",
+      "date": "2021-04-27",
+      "hasSite": true,
+      "site": "https://hedges.netlify.app",
+      "github": "https://github.com/kenny-io/Hedges-Home"
+    },
+    {
+      "title": "Random user generator with Next.js useSWR",
+      "description": "Learn the basics of the useSWR hook with this random user generator demo built with Next.js.",
+      "date": "2021-10-13",
+      "hasSite": true,
+      "hasPost": true,
+      "post": "https://blog.logrocket.com/handling-data-fetching-next-js-useswr/",
+      "github": "https://github.com/kenny-io/useswr-hook-nextjs",
+      "site": "https://random-userswith-swr.netlify.app"
+    },
+    {
+      "title": "Local news site with Next.js and On-demand builders",
+      "description": "Looking for a way to explain the benefits of On-demand builders to folks? here's one. This demo is built with Next.js and uses ODB to generate the headline news at build time, and the rest on-demand.",
+      "date": "2021-07-20",
+      "hasSite": true,
+      "site": "https://next-odb-demo.netlify.app",
+      "github": "https://github.com/kenny-io/nextjs-odb-demo",
+      "post": "https://dev.to/netlify/how-to-use-distributed-persistent-rendering-in-next-js-with-netlify-4fhf",
+      "hasPost": true
+    },
+    {
+      "title": "Local news site with Gatsby 4 SSG rendering on Netlify",
+      "description": "Looking for a way to explain the benefits of On-demand builders to folks? here's one. This demo is built with Gatsby and uses ODB to generate the headline news at build time, and the rest on-demand.",
+      "date": "2021-10-18",
+      "hasPost": true,
+      "hasSite": true,
+      "site": "https://gatsby4-dsg-demo.netlify.app",
+      "github": "https://github.com/kenny-io/Gatsby-v4-news",
+      "post": "https://kenny-io.netlify.app/blogging/gatsby-v4-ssg-on-netlify"
+    },
+    {
+      "title": "Mealzers - food ordering site bulit with Gridsome, Strapi, and Snipcart",
+      "description": "This is an Ecommerce site built as a 6 part series on Strapi. It uses Strapi as a headless CMS, Gridsome at the static site generator and Snipcart to manage cart functionalities.",
+      "date": "2021-09-20",
+      "hasSite": true,
+      "hasPost": true,
+      "site": "https://shopify-gridsom.netlify.app",
+      "github": "https://github.com/kenny-io/shopify-gridsome",
+      "post": "https://strapi.io/blog/building-a-jamstack-food-ordering-app-with-strapi-gridsome-and-snipcart-1-6"
+    },
+    {
+      "title": "On-Demand Meals restuarant site with Gridsome, GraphQL and ODB",
+      "description": "This demo examplifies how to use On-demand builders to fetch deferred content at request time using Gridsome.",
+      "date": "2021-04-15",
+      "hasSite": true,
+      "hasPost": false,
+      "site": "https://on-demand-meals.netlify.app",
+      "github": "https://github.com/kenny-io/on-demand-meals"
+    },
+    {
+      "title": "Ecommerce site with Sanity and Nuxt",
+      "description": "This demo was built while making the Jamstack Explorers mission titled 'Building with Sanity and Nuxt.' ",
+      "date": "2021-03-25",
+      "hasSite": true,
+      "hasPost": false,
+      "site": "https://sanity-nuxt-mission.netlify.app",
+      "github": "https://github.com/kenny-io/Sanity-Nuxt-Mission"
+    },
+    {
+      "title": "Event registration site with the Vue Composition API and Serverless functions",
+      "description": "A simple HTML form built to demonstrate how the Vue composition API pairs up nicely with serverless functions.",
+      "date": "2021-01-12",
+      "hasSite": true,
+      "hasPost": true,
+      "site": "https://sanity-nuxt-mission.netlify.app",
+      "github": "https://github.com/kenny-io/Sanity-Nuxt-Mission",
+      "post": "https://www.netlify.com/blog/2021/01/12/building-an-event-registration-page-with-composition-api-and-serverless-functions/"
+    }
+  ]
+}

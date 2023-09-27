@@ -1,0 +1,27 @@
+{
+  "conference": "InfoBip Shift Conference 2021",
+  "title": "Speeding up build times in the Jamstack with DPR in Next.js",
+  "description": "The Jamstack way of building the web is highly optimized for speed and performance. This is owing to the fact that all the assets required in your site will be pre-generated at build time and made available to your users. But what happens when your site grows and you have to pre-generate thousands of pages and assets, your build times will increase. Long build times will consequently impact productivity and increase hosting costs. In this session, we looked at a few ways to conveniently scale Jamstack applications without losing the core benefits of the Jamstack like speed, efficiency, rollbacks and more.",
+  "date": "2020-09-08",
+  "country": "Croatia",
+  "site": "https://shift.infobip.com",
+  "category": [
+    {
+      "id": "1",
+      "name": "jamstack"
+    },
+    {
+      "id": "2",
+      "name": "web"
+    },
+    {
+      "id": "3",
+      "name": "infobip-shift"
+    }
+  ],
+  "video": "https://youtu.be/TAMtz0h4atM",
+  "slides": "https://slides.com/kenny_io/faster-jamstack-builds",
+  "status": "done",
+  "image": "https://res.cloudinary.com/kennyy/image/upload/v1633878358/kenny-3_iomjbk.jpg",
+  "ready": true
+}

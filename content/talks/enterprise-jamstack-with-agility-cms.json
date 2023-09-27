@@ -1,0 +1,27 @@
+{
+  "conference": "Agility CMS Webinar",
+  "title": "Enterprise Jamstack: Faster Builds For Larger Sites With Netlify DPR",
+  "description": "Joel Varty of Agility CMS discusses speeding up build times in the Jamstack with Ekene Eze from Netlify. In this webinar, you'll learn how to use static rendering on larger sites while still keep build times low, amongst other things. ",
+  "date": "2021-06-24",
+  "country": "Online",
+  "site": "https://agilitycms.com/download/webinar-dpr-netlify",
+  "category": [
+    {
+      "id": "1",
+      "name": "jamstack"
+    },
+    {
+      "id": "2",
+      "name": "web"
+    },
+    {
+      "id": "3",
+      "name": "agility-cms"
+    }
+  ],
+  "video": "https://youtu.be/6UuSRlWtpTI",
+  "slides": "",
+  "status": "done",
+  "image": "https://res.cloudinary.com/kennyy/image/upload/v1633878358/kenny-3_iomjbk.jpg",
+  "ready": true
+}

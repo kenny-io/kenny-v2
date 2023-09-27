@@ -1,31 +1,32 @@
 <script setup lang="ts">
 import { useRouter } from 'nuxt/app';
 
-const navLinks = ref([{
-  slug: 'Home',
-  path: '/'
-},
-{
-  slug: 'Courses',
-  path: '/courses'
-},
-{
-  slug: 'Blog',
-  path: '/articles'
-},
-{
-  slug: 'Uses',
-  path: '/uses'
-},
-{
-  slug: 'Speaking',
-  path: '/speaking'
-},
-{
-  slug: 'Demo',
-  path: '/demos'
-}])
-
+const navLinks = ref([
+  {
+    slug: 'Home',
+    path: '/',
+  },
+  {
+    slug: 'Courses',
+    path: '/courses',
+  },
+  {
+    slug: 'Articles',
+    path: '/articles',
+  },
+  {
+    slug: 'Uses',
+    path: '/uses',
+  },
+  {
+    slug: 'Speaking',
+    path: '/speaking',
+  },
+  {
+    slug: 'Demo',
+    path: '/demos',
+  },
+]);
 </script>
 
 <template>
@@ -41,7 +42,11 @@ const navLinks = ref([{
 
       <nav>
         <ul class="flex items-center justify-center space-x-4">
-          <li v-for="link in navLinks" :key="link.slug" class="text-[#b5b5b5] text-base">
+          <li
+            v-for="link in navLinks"
+            :key="link.slug"
+            class="text-[#b5b5b5] text-base"
+          >
             <NuxtLink :to="link.path">{{ link.slug }}</NuxtLink>
           </li>
         </ul>
@@ -51,8 +56,8 @@ const navLinks = ref([{
 </template>
 
 <style>
-.router-link-active, 
-.router-link-exact-active{
+.router-link-active,
+.router-link-exact-active {
   font-weight: 500;
 }
 </style>

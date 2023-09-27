@@ -1,0 +1,23 @@
+{
+  "conference": "InfoBip Comms API Meetup 2022",
+  "title": "Intro to DevRel for Beginners",
+  "description": "A quick look at developer relations for new entrants to better understand the role, relevant skills, possible careers, and the benefits of being a developer advocate.",
+  "date": "2022-07-14",
+  "country": "Africa",
+  "site": "https://www.eventbrite.com/e/comms-api-lagos-tech-meetup-tickets-379621587387",
+  "category": [
+    {
+      "id": "1",
+      "name": "api"
+    },
+    {
+      "id": "2",
+      "name": "devrel"
+    }
+  ],
+  "video": "",
+  "slides": "https://docs.google.com/presentation/d/1_VmzL2d0u8C_ptVURdZkJRxL5q5XoPY5FkaUQ9uOwU4/edit#slide=id.p1",
+  "status": "done",
+  "ready": false,
+  "image": "https://res.cloudinary.com/kennyy/image/upload/v1633878358/kenny-3_iomjbk.jpg"
+}

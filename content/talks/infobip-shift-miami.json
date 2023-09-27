@@ -1,0 +1,23 @@
+{
+  "conference": "Infobip Shift Miami",
+  "title": "Writing Documentations That Don’t Suck!",
+  "description": "Documentation is a critical part of software development, yet it is often overlooked or undervalued.",
+  "date": "2023-05-23",
+  "country": "Miami",
+  "site": "https://shift.infobip.com/us/",
+  "category": [
+    {
+      "id": "1",
+      "name": "api"
+    },
+    {
+      "id": "2",
+      "name": "devrel"
+    }
+  ],
+  "video": "",
+  "slides": "",
+  "status": "done",
+  "ready": false,
+  "image": "https://res.cloudinary.com/kennyy/image/upload/v1633878358/kenny-3_iomjbk.jpg"
+}
