@@ -1,5 +1,17 @@
 <script setup lang="ts">
-const articleCategories = ref<string[]>([
+import { ref } from 'vue';
+import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types';
+const searchQuery = ref('');
+
+const query: QueryBuilderParams = {
+  path: '/blog',
+  sort: [{ date: -1 }],
+  //   where: [{ title: { $regex: searchQuery, $options: 'i' } }],
+};
+
+console.log(JSON.stringify(searchQuery.value));
+
+const articleCategories = ref([
   'web3',
   'External Articles',
   'Javascript',
@@ -38,7 +50,7 @@ const articleCategories = ref<string[]>([
         </div>
       </TheWrapper>
     </section>
-    <section class="mb-24 sticky top-0 pt-6 bg-black/80 backdrop-blur-lg">
+    <section class="mb-24 top-0 pt-6 bg-black/80 backdrop-blur-lg">
       <TheWrapper>
         <div>
           <div
@@ -74,6 +86,7 @@ const articleCategories = ref<string[]>([
               type="text"
               id="name"
               name="name"
+              v-model="searchQuery"
               required
             />
           </div>
@@ -92,7 +105,7 @@ const articleCategories = ref<string[]>([
     <section class="mb-64">
       <TheWrapper>
         <div class="grid grid-cols-2 gap-4 gap-y-24">
-          <ContentList path="/blog" v-slot="{ list }">
+          <ContentList :query="query" v-slot="{ list }">
             <TheCard
               v-for="article in list"
               :key="article._path"

@@ -2,4 +2,5 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss', 'nuxt-lenis', '@nuxt/content'],
+  css: ['@/assets/css/globals.css'],
 });

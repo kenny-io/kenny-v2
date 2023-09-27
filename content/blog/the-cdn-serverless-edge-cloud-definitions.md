@@ -4,8 +4,8 @@ description: Different people use these terms in a lot of different ways. This m
 authors:
   - Ekene-Eze
 
-image: "../content/blog/images/cdn.png"
-thumbnail: "v1644517485/cdn_edge_serverless_v45ths.png"
+image: 'https://res.cloudinary.com/kennyy/image/upload/v1695816371/AI_Generated_Image_1_ztbm5c.jpg'
+thumbnail: 'v1644517485/cdn_edge_serverless_v45ths.png'
 date: 2022-01-27
 lastmod: 2022-01-27
 topics:
@@ -15,7 +15,7 @@ tags:
   - cloud
   - edge
   - serverless
-tweet: ""
+tweet: ''
 format: blog
 # featured: true
 ---

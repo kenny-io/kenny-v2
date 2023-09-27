@@ -4,8 +4,8 @@ description: Learn how to speed up development time with these 10 Netlify CLI co
 authors:
   - Ekene-Eze
 
-image: "https://res.cloudinary.com/kennyy/image/upload/v1644517485/netlify_cli_commands_ahaew0.png"
-thumbnail: "v1644517485/netlify_cli_commands_ahaew0.png"
+image: 'https://res.cloudinary.com/kennyy/image/upload/v1644517485/netlify_cli_commands_ahaew0.png'
+thumbnail: 'v1644517485/netlify_cli_commands_ahaew0.png'
 date: 2022-01-21
 lastmod: 2022-01-21
 topics:
@@ -14,9 +14,9 @@ tags:
   - netlify
   - netlify-cli
 
-tweet: ""
+tweet: ''
 format: blog
-# featured: true
+featured: true
 ---
 
 The Netlify Command Line Interface makes it easier and faster to write, test, review code locally. Here's a list of the Netlify CLI commands I used in my everyday activities to speed up development time.

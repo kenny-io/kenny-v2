@@ -13,15 +13,15 @@
           class="text-base tracking-tight w-2/3 text-center text-[#B0B0B0] mt-12"
         >
           I spend most of my time making contents like blog posts, video
-          tutorials and courses, speaking at conference or delivering
-          workshops.. If you're interested in web development and Jamstack
+          tutorials, and courses, speaking at conferences or delivering
+          workshops. If you're interested in web development and Jamstack
           technologies, I'll be happy to send you the contents I make if you
-          give me your email address below
+          give me your email address below.
         </p>
         <form class="flex mt-14">
           <div class="w-64 h-fit bg-[#252525] rounded-md relative mr-1">
             <input
-              class="bg-transparent rounded-xl w-full h-[45px] pl-4 py-3 focus:border-none active:border-none focus-visible:border-none placeholder:text-[#878787]"
+              class="bg-transparent rounded-xl w-full h-[45px] pl-4 py-3 placeholder:text-[#878787] focus:outline-none"
               placeholder="Joshua"
               type="text"
               id="name"
@@ -31,7 +31,7 @@
           </div>
           <div class="w-64 h-fit bg-[#252525] rounded-md relative mr-2">
             <input
-              class="bg-transparent rounded-xl w-full h-[45px] pl-4 py-3 focus:border-none active:border-none focus-visible:border-none placeholder:text-[#878787]"
+              class="bg-transparent rounded-xl w-full h-[45px] pl-4 py-3 placeholder:text-[#878787] focus:outline-none"
               placeholder="joshua@gmail.com"
               type="text"
               id="name"
@@ -41,7 +41,7 @@
           </div>
           <button
             type="submit"
-            class="w-[233px] h-[45px] px-5 py-6 bg-[#B7CD14] rounded-md text-[#090909] text-xl tracking-tight font-semibold flex items-center justify-center"
+            class="w-[233px] h-[45px] px-5 py-6 bg-[#7cfb55] rounded-md text-[#090909] text-xl tracking-tight font-semibold flex items-center justify-center"
           >
             Subscribe
           </button>
@@ -58,11 +58,12 @@
         </div>
         <div class="flex flex-row items-center gap-4">
           <div>
-            <ul class="flex flex-row text-[#6F6F6F] gap-2">
-              <li>GITHUB</li>
-              <li>LINKEDIN</li>
-              <li>TWITTER</li>
-              <li>THREADS</li>
+            <ul class="flex flex-row text-[#6F6F6F] gap-2 uppercase">
+              <li v-for="link in socialLinks" :key="link.name">
+                <a :href="link.url" target="_blank" rel="noopener noreferrer">
+                  {{ link.name }}
+                </a>
+              </li>
             </ul>
           </div>
           <div class="border text-[#6F6F6F] rounded-full">
@@ -78,15 +79,36 @@
   </footer>
 </template>
 
-<script>
+<script setup>
+const socialLinks = [
+  {
+    name: 'Github',
+    url: 'https://github.com/kenny-io',
+  },
+  {
+    name: 'Linkedin',
+    url: 'https://www.linkedin.com/in/ekeneeze/',
+  },
+  {
+    name: 'Twitter',
+    url: 'https://twitter.com/kenny_io',
+  },
+  {
+    name: 'Polywork',
+    url: 'https://polywork.com/kenny_io',
+  },
+];
+
+const dubaiTime = displayDubaiTime();
+
 function displayDubaiTime() {
   // Create a new Date object with the current time in Dubai
-  var dubaiTime = new Date().toLocaleString('en-US', {
+  const dubaiTime = new Date().toLocaleString('en-US', {
     timeZone: 'Asia/Dubai',
   });
 
   // Format the Dubai time in a 12-hour format
-  var formattedDubaiTime = new Date(dubaiTime).toLocaleTimeString('en-US', {
+  const formattedDubaiTime = new Date(dubaiTime).toLocaleTimeString('en-US', {
     hour: 'numeric',
     minute: 'numeric',
     hour12: true,
@@ -95,15 +117,4 @@ function displayDubaiTime() {
   // Return the formatted Dubai time
   return formattedDubaiTime;
 }
-
-export default {
-  data() {
-    return {
-      dubaiTime: '',
-    };
-  },
-  created() {
-    this.dubaiTime = displayDubaiTime();
-  },
-};
 </script>
