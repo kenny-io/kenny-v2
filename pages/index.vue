@@ -20,15 +20,19 @@ const videoquery: QueryBuilderParams = {
         <div>
           <div>
             <h1 class="text-8xl text-[#D4D4D4] tracking-[-3.84px]">
-              <span class="block text-inherit">Hello👋</span>
-              <span class="block text-inherit">I am Ekene Eze</span>
+              <span class="block text-inherit">Hey there!👋</span>
+              <span class="block text-inherit">I'm Ekene Eze</span>
             </h1>
           </div>
           <div class="w-[600px] py-4">
             <p class="text-2xl text-[#999] leading-[150%] tracking-[-1.2px]">
-              I love creating content and sharing my knowledge with the
-              community in forms of blog posts, video tutorials, livestreams,
-              podcasts and speaking at conferences.
+              kenny for short. I'm a software engineer and developer advocate
+              currently based in Dubai. I love bringing insights, tips, and
+              aha-moments! to developers the the resources I create as I work
+              with different companies to improve the experiences of thier
+              developers.
+              <br />
+              BTS, I angel invest, play video games, and fly drones.
             </p>
           </div>
           <div class="flex items-center mt-2">
@@ -126,7 +130,11 @@ const videoquery: QueryBuilderParams = {
           developer advocates get started with DevRel. Think that’s you, check
           when the next cohort would open for application.
         </p>
-        <TheButton>APPLY TO DXMENTORSHIP</TheButton>
+        <TheButton
+          ><a href="https://dxmentorship.com" target="_blank"
+            >APPLY TO DXMENTORSHIP</a
+          ></TheButton
+        >
       </TheWrapper>
     </section>
     <section>
@@ -138,8 +146,9 @@ const videoquery: QueryBuilderParams = {
             Featured Videos
           </h2>
           <p class="text-2xl leading-7 tracking-tight text-[#999] mt-2">
-            Explore a couple of the Videos I have made on devrel, jamstack and
-            my workspace
+            Explore video tutorials, courses and workshops I have created mostly
+            on frontend technologies like Next.js, React, Vue, and Svelte. You
+            will also find videos on developer relations and productivity tools.
           </p>
 
           <div class="grid grid-flow-row grid-cols-2 mt-14 gap-4">
@@ -169,8 +178,9 @@ const videoquery: QueryBuilderParams = {
             Featured Articles
           </h2>
           <p class="text-2xl leading-7 tracking-tight text-[#999] mt-2">
-            Explore a couple of the Videos I have made on devrel, jamstack and
-            my workspace
+            Take a moment to explore a selection of articles I have written,
+            focusing on various topics such as DevRel, Jamstack, Frontend
+            technologies and productivity.
           </p>
 
           <div class="grid grid-flow-row grid-cols-2 mt-14 gap-4">
@@ -193,9 +203,10 @@ const videoquery: QueryBuilderParams = {
       >
         <h3 class="text-2xl tracking-tight">PODCAAAAAST</h3>
         <p class="w-2/5 mt-2 tracking-tighter text-[#999]">
-          I run a DevRel mentorship program where I help other intending
-          developer advocates get started with DevRel. Think that’s you, check
-          when the next cohort would open for application.
+          This is a work in progress, but I am working on a podcast where I talk
+          to people in the all spheres of life about their journey and how they
+          got to where they are today. If you want to be notified when it
+          launches, subscribe to my newsletter below.
         </p>
         <TheButton :rightIcon="true">
           Listen On

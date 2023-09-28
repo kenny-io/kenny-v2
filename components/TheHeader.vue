@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useRouter } from 'nuxt/app';
-
 const navLinks = ref([
   {
     slug: 'Home',
@@ -34,7 +32,7 @@ const navLinks = ref([
     <TheWrapper class="flex items-center justify-between">
       <div>
         <NuxtLink to="/">
-          <span class="font-suisseIntl font-bold text-2xl text-gray-300">
+          <span class="font-suisseIntl font-bold text-3xl text-[#D4D4D4]">
             Ekene Eze
           </span>
         </NuxtLink>

@@ -51,17 +51,16 @@ function displayDubaiTime() {
         <p
           class="text-base tracking-tight w-2/3 text-center text-[#B0B0B0] mt-12"
         >
-          I spend most of my time making contents like blog posts, video
-          tutorials, and courses, speaking at conferences or delivering
-          workshops. If you're interested in web development and Jamstack
-          technologies, I'll be happy to send you the contents I make if you
-          give me your email address below.
+          I spend most of my time making content like blog posts, video
+          tutorials, courses, speaking at conferences or delivering workshops.
+          If you're interested in web development and Jamstack technologies, or
+          you just want to be up to date with my activities, subscribe here.
         </p>
         <form class="flex mt-14">
           <div class="w-64 h-fit bg-[#252525] rounded-md relative mr-1">
             <input
               class="bg-transparent rounded-xl w-full h-[45px] pl-4 py-3 placeholder:text-[#878787] focus:outline-none"
-              placeholder="Joshua"
+              placeholder="your name"
               type="text"
               id="name"
               name="name"
@@ -71,7 +70,7 @@ function displayDubaiTime() {
           <div class="w-64 h-fit bg-[#252525] rounded-md relative mr-2">
             <input
               class="bg-transparent rounded-xl w-full h-[45px] pl-4 py-3 placeholder:text-[#878787] focus:outline-none"
-              placeholder="joshua@gmail.com"
+              placeholder="your email address"
               type="text"
               id="name"
               name="name"
