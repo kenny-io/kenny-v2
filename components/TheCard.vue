@@ -25,7 +25,6 @@ const truncateText = (text: String) => {
     >
       <div class="w-full h-[490px]">
         <img
-          v-if="type != 'video'"
           class="object-cover w-full"
           :src="article?.image"
           alt="card-header-image"

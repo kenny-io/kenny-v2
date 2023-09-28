@@ -7,8 +7,8 @@ const query: QueryBuilderParams = {
   sort: [{ date: -1 }],
 };
 const videoquery: QueryBuilderParams = {
-  path: '/externals',
-  where: [{ category: 'forms' }],
+  path: '/featured',
+  where: [{ featured: true }],
   limit: 2,
   sort: [{ date: -1 }],
 };
@@ -130,7 +130,7 @@ const videoquery: QueryBuilderParams = {
       </TheWrapper>
     </section>
     <section>
-      <TheWrapper class="mt-32 flex flex-col items-center">
+      <TheWrapper class="mt-20 flex flex-col items-center">
         <div class="">
           <h2
             class="text-6xl tracking-[-3.2px] leading-[-3.2px] text-[#999] font-bold"
@@ -148,11 +148,16 @@ const videoquery: QueryBuilderParams = {
                 v-for="article in list"
                 :key="article._path"
                 :article="article"
+                :button-text="'Watch Now'"
               />
             </ContentList>
           </div>
         </div>
-        <TheButton>Subscribe</TheButton>
+        <TheButton
+          ><a href="https://www.youtube.com/c/EkeneEze" target="_blank"
+            >Watch More</a
+          ></TheButton
+        >
       </TheWrapper>
     </section>
     <section>
@@ -174,14 +179,15 @@ const videoquery: QueryBuilderParams = {
                 v-for="article in list"
                 :key="article._path"
                 :article="article"
+                :button-text="'Read More'"
               />
             </ContentList>
           </div>
         </div>
-        <TheButton>See More</TheButton>
+        <TheButton><a href="/articles">See More</a></TheButton>
       </TheWrapper>
     </section>
-    <section class="mb-[220px] mt-10">
+    <section class="mb-20 mt-10">
       <TheWrapper
         class="text-white pt-[200px] pb-[150px] text-center flex flex-col items-center"
       >

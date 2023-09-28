@@ -6,7 +6,8 @@
       "url": "https://www.youtube.com/watch?v=XtBPLKiItgc",
       "etag": "8N0GnVI5Yr-bQ9EznVpo35t6tN8",
       "date": "2022-12-12T10:00:14Z",
-      "image": "https://i.ytimg.com/vi/XtBPLKiItgc/hqdefault.jpg"
+      "image": "https://res.cloudinary.com/kennyy/image/upload/v1695816371/AI_Generated_Image_1_ztbm5c.jpg",
+      "featured": true
     },
     {
       "title": "Export your Figma design to code in minutes with plasmic ",
@@ -14,7 +15,8 @@
       "url": "https://www.youtube.com/watch?v=05Qq1LD5SgY",
       "etag": "kvI8vVVydZJRpTWDbvHPBYQNU3k",
       "date": "2022-07-27T07:45:00Z",
-      "image": "https://i.ytimg.com/vi/05Qq1LD5SgY/default.jpg"
+      "image": "https://res.cloudinary.com/kennyy/image/upload/v1695921469/AI_Generated_Image_13_d1aaw0.jpg",
+      "featured": true
     },
     {
       "title": "Signed Uploads with Cloudinary and Next.js ",
@@ -22,7 +24,7 @@
       "url": "https://www.youtube.com/watch?v=Z7LwjMIeDt0",
       "etag": "e-VXsr5PZLTuJu9TsDPhhZ65CXI",
       "date": "2022-05-16T09:15:30Z",
-      "image": "https://i.ytimg.com/vi/Z7LwjMIeDt0/default.jpg"
+      "image": "https://res.cloudinary.com/kennyy/image/upload/v1695921468/AI_Generated_Image_7_qblbi4.jpg"
     },
     {
       "title": "Creating a fullstack Todo application with Nhost and Next.js",
@@ -30,7 +32,7 @@
       "url": "https://www.youtube.com/watch?v=s8DDLDrAkZk",
       "etag": "zoT0a_W0YM21EMrKZexwWkVOoBc",
       "date": "2022-04-11T08:00:23Z",
-      "image": "https://i.ytimg.com/vi/s8DDLDrAkZk/default.jpg"
+      "image": "https://res.cloudinary.com/kennyy/image/upload/v1695921469/AI_Generated_Image_14_vbubns.jpg"
     },
     {
       "title": "Add Scheduled functions to an existing site with Supabase",
@@ -38,7 +40,7 @@
       "url": "https://www.youtube.com/watch?v=QhpGQAuQuWs",
       "etag": "ZEJNhzg7WCj7L2GZtA2uKIVypHg",
       "date": "2022-02-21T11:00:13Z",
-      "image": "https://i.ytimg.com/vi/QhpGQAuQuWs/default.jpg"
+      "image": "https://res.cloudinary.com/kennyy/image/upload/v1695921468/AI_Generated_Image_5_x3fq4v.jpg"
     },
     {
       "title": "Code faster with these VSCode extensions, tips, tricks and shortcuts",
@@ -46,7 +48,7 @@
       "url": "https://www.youtube.com/watch?v=2nkD4bJg008",
       "etag": "bEQ7_z3tn_diA1pZStfoAYg0N3g",
       "date": "2022-02-14T08:00:00Z",
-      "image": "https://i.ytimg.com/vi/2nkD4bJg008/default.jpg"
+      "image": "https://res.cloudinary.com/kennyy/image/upload/v1695921468/AI_Generated_Image_6_jhxbji.jpg"
     },
     {
       "title": "First look at Scheduled Serverless Functions (Cron Jobs) on Netlify",
@@ -54,7 +56,7 @@
       "url": "https://www.youtube.com/watch?v=jT_13fYJQlc",
       "etag": "D66KfSgg0aJmrNBnLfvj5VgQ8v4",
       "date": "2022-02-07T08:00:14Z",
-      "image": "https://i.ytimg.com/vi/jT_13fYJQlc/default.jpg"
+      "image": "https://res.cloudinary.com/kennyy/image/upload/v1695921468/AI_Generated_Image_8_cqeag6.jpg"
     },
     {
       "title": "How to get a job in DevRel as a beginner with no experience",
@@ -62,7 +64,7 @@
       "url": "https://www.youtube.com/watch?v=otbgouhppXA",
       "etag": "KOIKFL5rahf_1sac8mu2NzpJ34I",
       "date": "2022-01-31T12:30:51Z",
-      "image": "https://i.ytimg.com/vi/otbgouhppXA/default.jpg"
+      "image": "https://res.cloudinary.com/kennyy/image/upload/v1695921468/AI_Generated_Image_9_sx67m8.jpg"
     },
     {
       "title": "How to add custom (web and locally downloaded) fonts in Tailwind",
