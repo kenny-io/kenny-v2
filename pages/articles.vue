@@ -72,28 +72,7 @@ const clearSelectedCategory = () => {
             class="w-full px-4 py-4 border border-[#383838] rounded-md relative flex items-center"
           >
             <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 28 28"
-                fill="none"
-              >
-                <path
-                  d="M12.6653 23.3306C18.5555 23.3306 23.3306 18.5555 23.3306 12.6653C23.3306 6.77501 18.5555 2 12.6653 2C6.77501 2 2 6.77501 2 12.6653C2 18.5555 6.77501 23.3306 12.6653 23.3306Z"
-                  stroke="#626262"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M25.9985 25.9971L20.1992 20.1979"
-                  stroke="#626262"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+              <TheSearchIcon />
             </div>
             <input
               class="bg-transparent rounded-xl w-full h-[45px] pl-4 py-3 text-[#999] text-2xl font-semibold tracking-[-0.84px] focus:border-none active:border-none focus-visible:border-none focus:outline-none placeholder:text-[#878787]"
@@ -130,6 +109,7 @@ const clearSelectedCategory = () => {
             v-for="article in filteredArticles"
             :key="article._path"
             :article="article"
+            :button-text="'Read More'"
           />
         </div>
         <TheButton class="mx-auto mt-24">Show More</TheButton>

@@ -10,13 +10,23 @@ const props = defineProps({
 const { content, categories } = toRefs(props);
 
 const localSearchQuery = ref('');
+// infer the type of the categories prop
+
 const selectedCategory = ref('') as any;
-// Use provided categories or default to empty array
-const articleCategories = categories || (ref([]) as any);
+
+const talkCategories = categories || (ref([]) as any); // Use provided categories or default to empty array
 
 const filteredContent = computed(() => {
   // Use provided content or default to empty array
+
+  // sort by date
   let results = content?.value || [];
+  results.sort((a: any, b: any) => {
+    // assuming date is in YYYY-MM-DD format, you can use new Date(dateString) to convert it into a Date object
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateB.getTime() - dateA.getTime();
+  });
 
   if (localSearchQuery.value.trim()) {
     results = results.filter(
@@ -51,28 +61,7 @@ const clearSelectedCategory = () => {
       class="w-full px-4 py-4 border border-[#383838] rounded-md relative flex items-center"
     >
       <div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 28 28"
-          fill="none"
-        >
-          <path
-            d="M12.6653 23.3306C18.5555 23.3306 23.3306 18.5555 23.3306 12.6653C23.3306 6.77501 18.5555 2 12.6653 2C6.77501 2 2 6.77501 2 12.6653C2 18.5555 6.77501 23.3306 12.6653 23.3306Z"
-            stroke="#626262"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M25.9985 25.9971L20.1992 20.1979"
-            stroke="#626262"
-            stroke-width="4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+        <TheSearchIcon />
       </div>
       <input
         v-model="localSearchQuery"
@@ -86,11 +75,11 @@ const clearSelectedCategory = () => {
     <div class="text-[#999] flex items-center py-4">
       <p class="text-base tracking-[-0.56px] mr-6">Filter by:</p>
       <TheChip
-        v-for="articleCategory in articleCategories"
-        :key="articleCategory"
-        @click="selectedCategory = articleCategory"
+        v-for="talk in talkCategories"
+        :key="talk"
+        @click="selectedCategory = talk"
       >
-        {{ articleCategory }}
+        {{ talk }}
       </TheChip>
       <button
         v-if="selectedCategory"
@@ -101,14 +90,26 @@ const clearSelectedCategory = () => {
       </button>
     </div>
 
-    <div class="grid grid-cols-2 gap-4 gap-y-24">
-      <TheCard
-        :buttonText="buttonText"
-        v-for="article in filteredContent"
-        :key="article._path"
-        :article="article"
-      />
+    <div>
+      <div
+        v-for="talk in filteredContent"
+        class="border-b cursor-pointer group py-10 border-[#434343]"
+      >
+        <div class="flex items-center gap-7">
+          <h2
+            class="group-hover:text-white transition duration-300 ease-in-out text-[#898989] text-6xl tracking-[-4.16px]"
+          >
+            {{ talk.title }}
+          </h2>
+          <TheChip
+            v-if="talk.status === 'upcoming'"
+            class="text-green-400 border-green-300"
+            >Upcoming</TheChip
+          >
+        </div>
+      </div>
     </div>
+    <TheButton class="mx-auto">Show All</TheButton>
 
     <TheButton class="mx-auto mt-24">Show More</TheButton>
   </div>

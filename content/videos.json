@@ -1,0 +1,188 @@
+{
+  "items": [
+    {
+      "title": "How to add search to your site in minutes",
+      "description": "Meilisearch is a RESTful search API. It aims to be a ready-to-go solution for everyone who wants a fast and relevant search ...",
+      "url": "https://www.youtube.com/watch?v=XtBPLKiItgc",
+      "etag": "8N0GnVI5Yr-bQ9EznVpo35t6tN8",
+      "date": "2022-12-12T10:00:14Z",
+      "image": "https://i.ytimg.com/vi/XtBPLKiItgc/hqdefault.jpg"
+    },
+    {
+      "title": "Export your Figma design to code in minutes with plasmic ",
+      "description": "Learn how to export your Figma design files into code in minutes with @plasmicapp In this tutorial, we walk through the process of ...",
+      "url": "https://www.youtube.com/watch?v=05Qq1LD5SgY",
+      "etag": "kvI8vVVydZJRpTWDbvHPBYQNU3k",
+      "date": "2022-07-27T07:45:00Z",
+      "image": "https://i.ytimg.com/vi/05Qq1LD5SgY/default.jpg"
+    },
+    {
+      "title": "Signed Uploads with Cloudinary and Next.js ",
+      "description": "Signed Uploads with Cloudinary and Next.js To upload images to Cloudinary, ordinarily, you would need to specify an upload ...",
+      "url": "https://www.youtube.com/watch?v=Z7LwjMIeDt0",
+      "etag": "e-VXsr5PZLTuJu9TsDPhhZ65CXI",
+      "date": "2022-05-16T09:15:30Z",
+      "image": "https://i.ytimg.com/vi/Z7LwjMIeDt0/default.jpg"
+    },
+    {
+      "title": "Creating a fullstack Todo application with Nhost and Next.js",
+      "description": "In this video, I walked us through the processes of creating a fullstack Todo application with Nhost and Next.js. As the tutorial ...",
+      "url": "https://www.youtube.com/watch?v=s8DDLDrAkZk",
+      "etag": "zoT0a_W0YM21EMrKZexwWkVOoBc",
+      "date": "2022-04-11T08:00:23Z",
+      "image": "https://i.ytimg.com/vi/s8DDLDrAkZk/default.jpg"
+    },
+    {
+      "title": "Add Scheduled functions to an existing site with Supabase",
+      "description": "Scheduled functions allow us to run cron jobs with regular serverless functions. It provides an opportunity to create functions that ...",
+      "url": "https://www.youtube.com/watch?v=QhpGQAuQuWs",
+      "etag": "ZEJNhzg7WCj7L2GZtA2uKIVypHg",
+      "date": "2022-02-21T11:00:13Z",
+      "image": "https://i.ytimg.com/vi/QhpGQAuQuWs/default.jpg"
+    },
+    {
+      "title": "Code faster with these VSCode extensions, tips, tricks and shortcuts",
+      "description": "In this video, we'll take a look at a couple Visual Studio Code extensions that I use on a daily basis to speed up local development ...",
+      "url": "https://www.youtube.com/watch?v=2nkD4bJg008",
+      "etag": "bEQ7_z3tn_diA1pZStfoAYg0N3g",
+      "date": "2022-02-14T08:00:00Z",
+      "image": "https://i.ytimg.com/vi/2nkD4bJg008/default.jpg"
+    },
+    {
+      "title": "First look at Scheduled Serverless Functions (Cron Jobs) on Netlify",
+      "description": "In this video, we will take a look at the new scheduled serverless functions feature on Netlify. We'll try and get it to work and ...",
+      "url": "https://www.youtube.com/watch?v=jT_13fYJQlc",
+      "etag": "D66KfSgg0aJmrNBnLfvj5VgQ8v4",
+      "date": "2022-02-07T08:00:14Z",
+      "image": "https://i.ytimg.com/vi/jT_13fYJQlc/default.jpg"
+    },
+    {
+      "title": "How to get a job in DevRel as a beginner with no experience",
+      "description": "Getting a job as a Developer Advocate can be particularly tasking given that it relies heavily on your ability to create, communicate ...",
+      "url": "https://www.youtube.com/watch?v=otbgouhppXA",
+      "etag": "KOIKFL5rahf_1sac8mu2NzpJ34I",
+      "date": "2022-01-31T12:30:51Z",
+      "image": "https://i.ytimg.com/vi/otbgouhppXA/default.jpg"
+    },
+    {
+      "title": "How to add custom (web and locally downloaded) fonts in Tailwind",
+      "description": "This tutorial will walk you through the processes of adding custom fonts to your Tailwind applications. We will first add Poppins ...",
+      "url": "https://www.youtube.com/watch?v=5U1okKk-GGE",
+      "etag": "kndiE8ZYc87fOssxwgxzMaM0-cU",
+      "date": "2022-01-18T07:00:01Z",
+      "image": "https://i.ytimg.com/vi/5U1okKk-GGE/default.jpg"
+    },
+    {
+      "title": "2022 Content Plans and Ideas",
+      "description": "We've kicked off the new year and I wanted to share the content plans I have for the year. This will guide my decisions on what I ...",
+      "url": "https://www.youtube.com/watch?v=AUDaQvVa7mE",
+      "etag": "z7idrnESy2NdGBbZ6GhHd-8QWOw",
+      "date": "2022-01-10T11:42:26Z",
+      "image": "https://i.ytimg.com/vi/AUDaQvVa7mE/default.jpg"
+    },
+    {
+      "title": "Add custom domains from Godaddy, Namecheap, Name.com etc to Netlify sites",
+      "description": "In this tutorial, I'll show you how to use custom Domains on Netlify. Imagine that you already bought a domain from Godaddy, ...",
+      "url": "https://www.youtube.com/watch?v=kIdJi8NBvgY",
+      "etag": "UhCAdJcK_-ET6yr6ZIvgJNL83Hw",
+      "date": "2021-12-16T08:00:14Z",
+      "image": "https://i.ytimg.com/vi/kIdJi8NBvgY/default.jpg"
+    },
+    {
+      "title": "How to deploy Nuxt 3",
+      "description": "This is a very straightforward one. Just wanted to quickly show you how to deploy Nuxt 3 projects to Netlify in a minute. The fun ...",
+      "url": "https://www.youtube.com/watch?v=SGT44oiJWXc",
+      "etag": "mkKWczxWrGqETEfkOJpp4geVF7U",
+      "date": "2021-11-15T18:32:54Z",
+      "image": "https://i.ytimg.com/vi/SGT44oiJWXc/default.jpg"
+    },
+    {
+      "title": "How to use Netlify Functions in SvelteKit Applications",
+      "description": "SvelteKit is one of my favourite frontend technologies. In this tutorial, I'll show you how to use Netlify functions in a Sveltekit ...",
+      "url": "https://www.youtube.com/watch?v=qHUMu7ZGQwo",
+      "etag": "owZWcZjZNir3SifhMY-IpmSz7J8",
+      "date": "2021-11-08T12:04:12Z",
+      "image": "https://i.ytimg.com/vi/qHUMu7ZGQwo/default.jpg"
+    },
+    {
+      "title": "Pairing Nuxt 3 with TailwindCSS and Supabase",
+      "description": "Learn how to add TailwindCSS to Nuxt 3 applications and save data to Supabase using Nuxt 3 built-in api routes. I'll cover the ...",
+      "url": "https://www.youtube.com/watch?v=xbE11CfZpNQ",
+      "etag": "A-RoKmZRPZpaojUzLbRxoVMMZZA",
+      "date": "2021-11-01T09:00:23Z",
+      "image": "https://i.ytimg.com/vi/xbE11CfZpNQ/default.jpg"
+    },
+    {
+      "title": "Jamstack Content Hackathon",
+      "description": "Attend technical writing workshops by experts, participate in a Jamstack content hackathon, get paid to write and publish content ...",
+      "url": "https://www.youtube.com/watch?v=Ekzu7z9Rb3g",
+      "etag": "RhkrftF04jZjLMAXLFgtUGDGqV4",
+      "date": "2021-09-17T07:06:51Z",
+      "image": "https://i.ytimg.com/vi/Ekzu7z9Rb3g/default.jpg"
+    },
+    {
+      "title": "Understanding the Jamstack - A live workshop for beginners",
+      "description": "The most frequent questions I've gotten in recent times is \"What is Jamstack and How do I get started\"? and that is the ...",
+      "url": "https://www.youtube.com/watch?v=UWCkkefuA5c",
+      "etag": "HTrNgiSmx5p4FQLCUPtvf3XsbF8",
+      "date": "2021-08-26T22:33:06Z",
+      "image": "https://i.ytimg.com/vi/UWCkkefuA5c/default.jpg"
+    },
+    {
+      "title": "Getting started with Netlify Dev - Serverless functions, environment variables and databases",
+      "description": "Netlify Dev allows you to access all of Netlify's platform directly from your terminal. You can run commands to create and use ...",
+      "url": "https://www.youtube.com/watch?v=i_XtNZHC_-o",
+      "etag": "bvEILPvTYBQ_-kXT6O-VXxZqX6s",
+      "date": "2021-08-16T08:30:04Z",
+      "image": "https://i.ytimg.com/vi/i_XtNZHC_-o/default.jpg"
+    },
+    {
+      "title": "How to build large Jamstack sites with Next.js and On-demand Builders",
+      "description": "In this video, I explained how to build large Jamstack sites with Next.js and On-demand builders. The Jamstack way of building the ...",
+      "url": "https://www.youtube.com/watch?v=T916umjd5Eo",
+      "etag": "fH5iKUkldTQnCrdwGP7xGQmoJbk",
+      "date": "2021-07-26T08:00:04Z",
+      "image": "https://i.ytimg.com/vi/T916umjd5Eo/default.jpg"
+    },
+    {
+      "title": "Building large sites on the Jamstack  Part 1 (Microsites)",
+      "description": "To build large sites on the Jamstack, we need a way to optimize the site build time. There a few ways to achieve this, like: ...",
+      "url": "https://www.youtube.com/watch?v=BhQ76OyZTPE",
+      "etag": "i7EZpXP-_kcvoAkA4dgaduDuXkg",
+      "date": "2021-04-30T14:51:53Z",
+      "image": "https://i.ytimg.com/vi/BhQ76OyZTPE/default.jpg"
+    },
+    {
+      "title": "Introducing my channel",
+      "description": "Hello! I'm starting this channel to create helpful content on web development. I will be focusing mostly on modern web ...",
+      "url": "https://www.youtube.com/watch?v=0MLZIckBgvw",
+      "etag": "aKOBW3PV6vPYiikWwAJFELyrZsY",
+      "date": "2021-04-26T14:32:49Z",
+      "image": "https://i.ytimg.com/vi/0MLZIckBgvw/default.jpg"
+    },
+    {
+      "title": "How to use Vue 3's watch API to track data changes",
+      "description": "The watch API is part of the larger Vue Composition APIs. It takes a data source and a callback function that executes when the ...",
+      "url": "https://www.youtube.com/watch?v=n6Rciryl2PU",
+      "etag": "a9V9OvQR-GUAAQ2agUtxABd9N2c",
+      "date": "2021-01-19T06:00:09Z",
+      "image": "https://i.ytimg.com/vi/n6Rciryl2PU/default.jpg"
+    },
+    {
+      "title": "The fastest way to host Node.js servers | Glitch",
+      "description": "Hello Everyone So I discovered this tool called Glitch last night, I thought it was cool and I decided to share. Glitch is a tool you can ...",
+      "url": "https://www.youtube.com/watch?v=4stgU3A-4Rc",
+      "etag": "eFvaH9deYop_PKcpN2xUHW5Ejio",
+      "date": "2020-07-13T16:53:54Z",
+      "image": "https://i.ytimg.com/vi/4stgU3A-4Rc/default.jpg"
+    },
+    {
+      "title": "Build Customizable Checkout Systems with Flutterwave",
+      "description": "Checkout systems basically make it possible for customers to complete payments for transactions with little or no human ...",
+      "url": "https://www.youtube.com/watch?v=aFI5RY_4meY",
+      "etag": "rTcHXTNSipwURQA7-kAttiYef2c",
+      "date": "2019-11-15T20:31:48Z",
+      "image": "https://i.ytimg.com/vi/aFI5RY_4meY/default.jpg"
+    }
+  ]
+}

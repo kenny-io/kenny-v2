@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import TheSearch from '~/components/TheSearch.vue';
 const talks = await queryContent('talks').sort({ title: 1 }).find();
 
-const talkCategoriesFromPosts = Array.from(
-  new Set(
-    talks.flatMap((talk) =>
-      talk.category.map((cat: { name: string }) => cat.name)
-    )
-  )
-);
+// const talkCategoriesFromPosts = Array.from(
+//   new Set(
+//     talks.flatMap((talk) =>
+//       talk.category.map((cat: { name: string }) => cat.name)
+//     )
+//   )
+// );
 const talkCategories = ref<string[]>([
   'web3',
   'fintech',
@@ -47,7 +46,7 @@ const talkCategories = ref<string[]>([
     </section>
     <section class="mb-24 sticky top-0 pt-6 bg-black/80 backdrop-blur-lg">
       <TheWrapper>
-        <TheSearch
+        <TheTalksSearch
           :content="talks"
           :categories="talkCategories"
           :button-text="'View Talk'"

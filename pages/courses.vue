@@ -1,6 +1,30 @@
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
+import videosData from '../content/videos.json';
+
+interface Video {
+  title: string;
+  description: string;
+  date: string;
+  url: string;
+  etag: string;
+  image: string;
+}
+
+const videos = ref<Video[]>([]);
+
+// Fetch videos data from the imported JSON file
+function fetchvideos() {
+  videos.value = videosData.items;
+}
+onMounted(() => {
+  fetchvideos();
+});
+</script>
+
 <template>
   <main>
-    <section class="pt-20">
+    <section class="pt-10">
       <TheWrapper>
         <div class="flex text-[#ABABAB] px-16">
           <div class="w-3/4 mt-20">
@@ -39,7 +63,7 @@
     </section>
     <section>
       <TheWrapper>
-        <div class="text-center w-4/6 py-56 px-28 mx-auto">
+        <div class="text-center w-4/6 py-20 px-28 mx-auto">
           <h2 class="text-4xl text-[#F5F5F5] tracking-[-1.26px]">
             Over 1,300 course lessons and 200+ hours included:
           </h2>
@@ -49,13 +73,13 @@
     <section class="mb-64">
       <TheWrapper>
         <div class="grid grid-cols-2 gap-4 gap-y-24">
-          <ContentList path="/externals" v-slot="{ list }">
-            <TheCard
-              v-for="article in list"
-              :key="article._path"
-              :article="article"
-            />
-          </ContentList>
+          <TheCard
+            v-for="video in videos"
+            :key="video.etag"
+            :article="video"
+            :button-text="'Watch Now'"
+            :type="'video'"
+          />
         </div>
       </TheWrapper>
     </section>
