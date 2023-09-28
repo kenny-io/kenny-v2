@@ -1,3 +1,26 @@
+<script setup lang="ts">
+import { onMounted, ref } from 'vue';
+import demosData from '../content/demos.json'; // Import the JSON file
+interface Demo {
+  title: string;
+  description: string;
+  date: string;
+  hasSite: boolean;
+  hasPost?: boolean;
+  site: string;
+  github: string;
+  post?: string;
+}
+
+const demos = ref<Demo[]>([]);
+// Fetch demos data from the imported JSON file
+function fetchDemos() {
+  demos.value = demosData.demos;
+}
+onMounted(() => {
+  fetchDemos();
+});
+</script>
 <template>
   <main>
     <section class="pt-20">
@@ -45,27 +68,3 @@
     </section>
   </main>
 </template>
-
-<script setup lang="ts">
-import { onMounted, ref } from 'vue';
-import demosData from '../content/demos.json'; // Import the JSON file
-interface Demo {
-  title: string;
-  description: string;
-  date: string;
-  hasSite: boolean;
-  hasPost?: boolean;
-  site: string;
-  github: string;
-  post?: string;
-}
-
-const demos = ref<Demo[]>([]);
-// Fetch demos data from the imported JSON file
-function fetchDemos() {
-  demos.value = demosData.demos;
-}
-onMounted(() => {
-  fetchDemos();
-});
-</script>

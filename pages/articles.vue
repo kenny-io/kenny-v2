@@ -1,24 +1,39 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types';
-const searchQuery = ref('');
-
-const query: QueryBuilderParams = {
-  path: '/blog',
-  sort: [{ date: -1 }],
-  //   where: [{ title: { $regex: searchQuery, $options: 'i' } }],
-};
-
-console.log(JSON.stringify(searchQuery.value));
-
 const articleCategories = ref([
-  'web3',
-  'External Articles',
-  'Javascript',
-  'DevRel',
-  'Jokes',
-  'AI',
+  'nuxt',
+  'netlify',
+  'web',
+  'devrel',
+  'cdn',
+  'rendering',
 ]);
+
+const searchQuery = ref('');
+const selectedCategory = ref('');
+// Load initial articles
+const articles = await queryContent('blog').sort({ title: 1 }).find();
+
+const filteredArticles = computed(() => {
+  // If search query and selected category are both empty, return all articles
+  if (!searchQuery.value.trim() && !selectedCategory.value.trim())
+    return articles;
+
+  // Filter articles based on search query and selected category
+  return articles.filter((article) => {
+    const matchesSearchQuery =
+      !searchQuery.value.trim() ||
+      article.title?.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
+      article.content?.toLowerCase().includes(searchQuery.value.toLowerCase());
+    const matchesSelectedCategory =
+      !selectedCategory.value.trim() ||
+      article.tags?.includes(selectedCategory.value);
+    return matchesSearchQuery && matchesSelectedCategory;
+  });
+});
+
+const clearSelectedCategory = () => {
+  selectedCategory.value = '';
+};
 </script>
 
 <template>
@@ -85,7 +100,6 @@ const articleCategories = ref([
               placeholder="Search articles"
               type="text"
               id="name"
-              name="name"
               v-model="searchQuery"
               required
             />
@@ -96,22 +110,27 @@ const articleCategories = ref([
           <TheChip
             v-for="articleCategory in articleCategories"
             :key="articleCategory"
+            @click="selectedCategory = articleCategory"
           >
-            {{ articleCategory }}
-          </TheChip>
+            {{ articleCategory }} </TheChip
+          ><button
+            v-if="selectedCategory"
+            @click="clearSelectedCategory"
+            class="ml-4 px-3 py-1 rounded-md bg-gray-200 text-gray-800"
+          >
+            Clear
+          </button>
         </div>
       </TheWrapper>
     </section>
     <section class="mb-64">
       <TheWrapper>
         <div class="grid grid-cols-2 gap-4 gap-y-24">
-          <ContentList :query="query" v-slot="{ list }">
-            <TheCard
-              v-for="article in list"
-              :key="article._path"
-              :article="article"
-            />
-          </ContentList>
+          <TheCard
+            v-for="article in filteredArticles"
+            :key="article._path"
+            :article="article"
+          />
         </div>
         <TheButton class="mx-auto mt-24">Show More</TheButton>
       </TheWrapper>

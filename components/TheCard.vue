@@ -1,3 +1,20 @@
+<script setup lang="ts">
+import { defineProps } from 'vue';
+
+// Define props
+const { article, buttonText } = defineProps({
+  article: Object,
+  buttonText: String,
+});
+
+const truncateText = (text: String) => {
+  const words = text.split(' ');
+  if (words.length <= 50) return text;
+
+  const truncated = words.slice(0, 30).join(' ');
+  return `${truncated}...`;
+};
+</script>
 <template>
   <div
     class="border border-gray-200/20 rounded-r-2xl rounded-l-2xl overflow-hidden relative"
@@ -5,7 +22,7 @@
     <div class="w-full h-[490px]">
       <img
         class="object-cover w-full"
-        :src="article.image"
+        :src="article?.image"
         alt="card-header-image"
       />
     </div>
@@ -13,15 +30,15 @@
       class="px-8 py-6 bg-gradient-to-t from-black/80 to-transparent backdrop-blur absolute bottom-0"
     >
       <h4 class="text-4xl font-bold tracking-tighter text-white">
-        {{ article.title }}
+        {{ article?.title }}
       </h4>
       <p class="text-xl text-white/70 mt-4">
-        {{ article.description }}
+        {{ truncateText(article?.description) }}
       </p>
       <div
         class="mt-8 w-fit text-[#AFADAD] flex items-center gap-1 hover:gap-2 hover:transition duration-200 ease-in-out cursor-pointer"
       >
-        <span>Visit Course</span>
+        <span>{{ buttonText }}</span>
         <span class="text-[#918F8F] h-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -39,10 +56,3 @@
     </div>
   </div>
 </template>
-<script>
-export default {
-  props: {
-    article: Object, // Define a prop for the article data
-  },
-};
-</script>

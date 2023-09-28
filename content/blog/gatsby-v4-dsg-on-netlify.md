@@ -6,19 +6,15 @@ authors:
 date: 2021-10-18
 lastmod: 2021-10-18
 featured: false
-image: "https://res.cloudinary.com/kennyy/image/upload/v1634570072/blogging/Gatsby_SSG_Og.png"
+image: 'https://res.cloudinary.com/kennyy/image/upload/v1634570072/blogging/Gatsby_SSG_Og.png'
 topics:
   - tutorials
-tags:
-  - gatsby
-  - ssg
-  - netlify
-
-category: "Gatsby"
+tags: ['gatsby', 'netlify']
+category: 'Gatsby'
 format: blog
 seo:
-  metatitle: "Learn How to set up a Gatsby 4 project on Netlify with DSG rendering mode"
-  metadescription: "Check out this post to explore Gatsby v4 rendering mode on Netlify. Learn how to deploy Gatsby 4 projects on Netlify with DSG rendering mode"
+  metatitle: 'Learn How to set up a Gatsby 4 project on Netlify with DSG rendering mode'
+  metadescription: 'Check out this post to explore Gatsby v4 rendering mode on Netlify. Learn how to deploy Gatsby 4 projects on Netlify with DSG rendering mode'
 ---
 
 So Gatsby v4 is out and it came in hot!.
@@ -91,7 +87,7 @@ And then update your `gatsby-config.js` file with the plugin like so:
 
 ```js
 module.exports = {
-  plugins: ["gatsby-plugin-netlify"]
+  plugins: ['gatsby-plugin-netlify'],
 };
 ```
 

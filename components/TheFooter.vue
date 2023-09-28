@@ -1,3 +1,42 @@
+<script setup>
+const socialLinks = [
+  {
+    name: 'Github',
+    url: 'https://github.com/kenny-io',
+  },
+  {
+    name: 'Linkedin',
+    url: 'https://www.linkedin.com/in/ekeneeze/',
+  },
+  {
+    name: 'Twitter',
+    url: 'https://twitter.com/kenny_io',
+  },
+  {
+    name: 'Polywork',
+    url: 'https://polywork.com/kenny_io',
+  },
+];
+
+const dubaiTime = displayDubaiTime();
+
+function displayDubaiTime() {
+  // Create a new Date object with the current time in Dubai
+  const dubaiTime = new Date().toLocaleString('en-US', {
+    timeZone: 'Asia/Dubai',
+  });
+
+  // Format the Dubai time in a 12-hour format
+  const formattedDubaiTime = new Date(dubaiTime).toLocaleTimeString('en-US', {
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: true,
+  });
+
+  // Return the formatted Dubai time
+  return formattedDubaiTime;
+}
+</script>
 <template>
   <footer>
     <TheWrapper>
@@ -78,43 +117,3 @@
     </TheWrapper>
   </footer>
 </template>
-
-<script setup>
-const socialLinks = [
-  {
-    name: 'Github',
-    url: 'https://github.com/kenny-io',
-  },
-  {
-    name: 'Linkedin',
-    url: 'https://www.linkedin.com/in/ekeneeze/',
-  },
-  {
-    name: 'Twitter',
-    url: 'https://twitter.com/kenny_io',
-  },
-  {
-    name: 'Polywork',
-    url: 'https://polywork.com/kenny_io',
-  },
-];
-
-const dubaiTime = displayDubaiTime();
-
-function displayDubaiTime() {
-  // Create a new Date object with the current time in Dubai
-  const dubaiTime = new Date().toLocaleString('en-US', {
-    timeZone: 'Asia/Dubai',
-  });
-
-  // Format the Dubai time in a 12-hour format
-  const formattedDubaiTime = new Date(dubaiTime).toLocaleTimeString('en-US', {
-    hour: 'numeric',
-    minute: 'numeric',
-    hour12: true,
-  });
-
-  // Return the formatted Dubai time
-  return formattedDubaiTime;
-}
-</script>

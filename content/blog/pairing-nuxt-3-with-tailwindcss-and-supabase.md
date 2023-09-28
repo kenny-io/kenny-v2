@@ -8,15 +8,12 @@ date: 2021-11-01
 lastmod: 2021-11-01
 topics:
   - tutorials
-tags:
-  - Nuxt 3
-  - TailwindCSS
-  - Supabase
-tweet: ""
+tags: ['nuxt', 'tailwind', 'supabase']
+tweet: ''
 
-canonical_url: "https://www.netlify.com/blog/2021/10/29/pairing-nuxt-3-with-tailwindcss-and-supabase/?utm_campaign=devex-ke&utm_source=twitter&utm_medium=social&utm_content=Nuxt3%20with%20Tailwind%20and%20Supabase%20post"
-image: "https://res.cloudinary.com/kennyy/image/upload/v1635771373/blogging/Nuxt_3_Tailwind_OG.png"
-thumbnail: "v1635771373/blogging/Nuxt_3_Tailwind_OG.png"
+canonical_url: 'https://www.netlify.com/blog/2021/10/29/pairing-nuxt-3-with-tailwindcss-and-supabase/?utm_campaign=devex-ke&utm_source=twitter&utm_medium=social&utm_content=Nuxt3%20with%20Tailwind%20and%20Supabase%20post'
+image: 'https://res.cloudinary.com/kennyy/image/upload/v1635771373/blogging/Nuxt_3_Tailwind_OG.png'
+thumbnail: 'v1635771373/blogging/Nuxt_3_Tailwind_OG.png'
 format: blog
 seo:
   metatitle: Learn how to work with with TailwindCSS and Supabase in Nuxt 3 projects
@@ -96,22 +93,22 @@ This command will create a `tailwind.config.js` file at the root of your project
 ```js
 // tailwind.config.js
 module.exports = {
-  mode: "jit",
+  mode: 'jit',
   purge: [
-    "./components/**/*.{vue,js}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./nuxt.config.{js,ts}"
+    './components/**/*.{vue,js}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {}
+    extend: {},
   },
   variants: {
-    extend: {}
+    extend: {},
   },
-  plugins: []
+  plugins: [],
 };
 ```
 
@@ -126,20 +123,20 @@ Next, we need to include Tailwind in our CSS file. Mine is located at this path:
 Finally, we need to tell Nuxt how to find that file and also set up our post CSS options to include both the Tailwind and autoprefixer plugins. Open `nuxt.config.ts` and update it with:
 
 ```js
-import { defineNuxtConfig } from "nuxt3";
+import { defineNuxtConfig } from 'nuxt3';
 
 export default defineNuxtConfig({
-  css: ["~/assets/css/tailwind.css"],
+  css: ['~/assets/css/tailwind.css'],
   build: {
     postcss: {
       postcssOptions: {
         plugins: {
           tailwindcss: {},
-          autoprefixer: {}
-        }
-      }
-    }
-  }
+          autoprefixer: {},
+        },
+      },
+    },
+  },
 });
 ```
 
@@ -239,8 +236,8 @@ The first thing we need to do is get the user's email from our form and then pos
 And that's it. What's happening here is, when a user provides their email in our newsletter form, we'll collect the email and send it to our Nuxt API route at this path `/server/api/subscribe` which we haven't created yet. So, create the file and set it up like so:
 
 ```js
-import * as url from "url";
-import { createClient } from "@supabase/supabase-js";
+import * as url from 'url';
+import { createClient } from '@supabase/supabase-js';
 
 export default async (req, res) => {
   const queryObject = url.parse(req.url, true).query;
@@ -252,17 +249,17 @@ export default async (req, res) => {
     const { email } = queryObject;
     if (email) {
       // Save user to Supabase database
-      const { data, error } = await supabase.from("Subscribers").upsert({
-        email: email
+      const { data, error } = await supabase.from('Subscribers').upsert({
+        email: email,
       });
       response = data;
     }
-    res.writeHead(200, { "Content-Type": "application/json" });
+    res.writeHead(200, { 'Content-Type': 'application/json' });
     res.write(JSON.stringify(response));
     res.end();
   } catch (error) {
     console.log(error);
-    res.writeHead(500, { "Content-Type": "application/json" });
+    res.writeHead(500, { 'Content-Type': 'application/json' });
     res.write(JSON.stringify(error));
     res.end();
   }

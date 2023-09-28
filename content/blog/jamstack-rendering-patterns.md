@@ -4,16 +4,14 @@ description: I'm happy to announce that I've started a mentorship program to hel
 authors:
   - Ekene-Eze
 
-thumbnail: "v1651622029/jamstack_rendering_patterns_sdwnds.png"
-image: "https://res.cloudinary.com/kennyy/image/upload/v1651622029/jamstack_rendering_patterns_sdwnds.png"
+thumbnail: 'v1651622029/jamstack_rendering_patterns_sdwnds.png'
+image: 'https://res.cloudinary.com/kennyy/image/upload/v1651622029/jamstack_rendering_patterns_sdwnds.png'
 date: 2022-03-14
 lastmod: 2022-03-14
 topics:
   - tutorials
-tags:
-  - devrel
-  - mentorship
-tweet: ""
+tags: ['jamstack', 'rendering']
+tweet: ''
 format: blog
 featured: true
 ---
@@ -80,7 +78,7 @@ With [Incremental Static Regeneration (ISR)](https://nextjs.org/docs/basic-featu
 function Blog({ posts }) {
   return (
     <ul>
-      {posts.map(post => (
+      {posts.map((post) => (
         <li key={post.id}>{post.title}</li>
       ))}
     </ul>
@@ -88,27 +86,27 @@ function Blog({ posts }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("https://.../posts");
+  const res = await fetch('https://.../posts');
   const posts = await res.json();
 
   return {
     props: {
-      posts
+      posts,
     },
-    revalidate: 10 // In seconds
+    revalidate: 10, // In seconds
   };
 }
 
 export async function getStaticPaths() {
-  const res = await fetch("https://.../posts", { limit: 100 });
+  const res = await fetch('https://.../posts', { limit: 100 });
   const posts = await res.json();
 
   // Get the paths we want to pre-render based on posts
-  const paths = posts.map(post => ({
-    params: { id: post.id }
+  const paths = posts.map((post) => ({
+    params: { id: post.id },
   }));
 
-  return { paths, fallback: "blocking" };
+  return { paths, fallback: 'blocking' };
 }
 
 export default Blog;
@@ -121,7 +119,7 @@ In April 2021, Netlify announced a new rendering pattern called [Distributed Per
 Along with the DPR announcement, Netlify also launched [on-demand builders](https://docs.netlify.com/configure-builds/on-demand-builders/) — A special type of serverless function that generates content on-demand, caches it at the edge, and works across all frameworks. This brought ISR-like capabilities to every other static site generator and meta-framework.
 
 ```js
-const { builder } = require("@netlify/functions");
+const { builder } = require('@netlify/functions');
 async function myfunction(event, context) {
   // logic to generate the required content
 }
@@ -143,7 +141,7 @@ export async function config() {
 
   return ({ params }) => {
     return {
-      defer: true
+      defer: true,
     };
   };
 }

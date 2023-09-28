@@ -10,11 +10,7 @@ date: 2022-01-27
 lastmod: 2022-01-27
 topics:
   - tutorials
-tags:
-  - cdn
-  - cloud
-  - edge
-  - serverless
+tags: ['serverless', 'cdn', 'edge', 'cloud']
 tweet: ''
 format: blog
 # featured: true

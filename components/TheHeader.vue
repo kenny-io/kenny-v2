@@ -7,24 +7,24 @@ const navLinks = ref([
     path: '/',
   },
   {
-    slug: 'Courses',
-    path: '/courses',
-  },
-  {
     slug: 'Articles',
     path: '/articles',
-  },
-  {
-    slug: 'Uses',
-    path: '/uses',
   },
   {
     slug: 'Speaking',
     path: '/speaking',
   },
   {
+    slug: 'Courses',
+    path: '/courses',
+  },
+  {
     slug: 'Demo',
     path: '/demos',
+  },
+  {
+    slug: 'Uses',
+    path: '/uses',
   },
 ]);
 </script>

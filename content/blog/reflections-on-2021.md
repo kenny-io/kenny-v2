@@ -4,15 +4,14 @@ description: I've come to find value in documenting my experiences, choices, the
 authors:
   - Ekene-Eze
 
-image: "https://res.cloudinary.com/kennyy/image/upload/v1640965849/blogging/reflecting-on-2021.jpg"
-thumbnail: "v1640965849/blogging/reflecting-on-2021.jpg"
+image: 'https://res.cloudinary.com/kennyy/image/upload/v1640965849/blogging/reflecting-on-2021.jpg'
+thumbnail: 'v1640965849/blogging/reflecting-on-2021.jpg'
 date: 2021-12-31
 lastmod: 2021-12-31
 topics:
   - tutorials
-tags:
-  - netlify-dns
-tweet: ""
+tags: ['2021', 'reflections']
+tweet: ''
 format: blog
 # featured: true
 seo:

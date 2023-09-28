@@ -6,15 +6,14 @@ description:
 authors:
   - Ekene-Eze
 
-image: "https://res.cloudinary.com/kennyy/image/upload/v1640949795/blogging/custom_domains_banner.png"
-thumbnail: "v1640949795/blogging/custom_domains_banner.png"
+image: 'https://res.cloudinary.com/kennyy/image/upload/v1640949795/blogging/custom_domains_banner.png'
+thumbnail: 'v1640949795/blogging/custom_domains_banner.png'
 date: 2021-12-20
 lastmod: 2021-12-15
 topics:
   - tutorials
-tags:
-  - netlify-dns
-tweet: ""
+tags: ['netlify', 'domains', 'dns']
+tweet: ''
 format: blog
 # featured: true
 seo:

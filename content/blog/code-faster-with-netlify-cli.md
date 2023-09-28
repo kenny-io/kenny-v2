@@ -10,10 +10,7 @@ date: 2022-01-21
 lastmod: 2022-01-21
 topics:
   - tutorials
-tags:
-  - netlify
-  - netlify-cli
-
+tags: ['netlify', 'cli']
 tweet: ''
 format: blog
 featured: true

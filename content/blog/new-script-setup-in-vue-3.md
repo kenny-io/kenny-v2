@@ -4,18 +4,14 @@ description: Learn the fundamentals of Vue 3.2 script setup feature with special
 authors:
   - Ekene-Eze
 
-image: "https://res.cloudinary.com/kennyy/image/upload/v1644517485/script_setup_vue_3_po3y9u.png"
-thumbnail: "v1644517485/script_setup_vue_3_po3y9u.png"
+image: 'https://res.cloudinary.com/kennyy/image/upload/v1644517485/script_setup_vue_3_po3y9u.png'
+thumbnail: 'v1644517485/script_setup_vue_3_po3y9u.png'
 date: 2022-01-13
 lastmod: 2022-01-13
 topics:
   - tutorials
-tags:
-  - vue
-  - script-setup
-  - vue3
-
-tweet: ""
+tags: ['vue', 'vue3']
+tweet: ''
 format: blog
 # featured: true
 ---

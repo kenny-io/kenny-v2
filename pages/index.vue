@@ -1,3 +1,18 @@
+<script setup lang="ts">
+import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types';
+const query: QueryBuilderParams = {
+  path: '/blog',
+  where: [{ format: 'blog' }],
+  limit: 2,
+  sort: [{ date: -1 }],
+};
+const videoquery: QueryBuilderParams = {
+  path: '/externals',
+  where: [{ category: 'forms' }],
+  limit: 2,
+  sort: [{ date: -1 }],
+};
+</script>
 <template>
   <main>
     <section class="py-[100px]">
@@ -186,19 +201,3 @@
     </section>
   </main>
 </template>
-
-<script setup lang="ts">
-import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types';
-const query: QueryBuilderParams = {
-  path: '/blog',
-  where: [{ format: 'blog' }],
-  limit: 2,
-  sort: [{ date: -1 }],
-};
-const videoquery: QueryBuilderParams = {
-  path: '/externals',
-  where: [{ category: 'forms' }],
-  limit: 2,
-  sort: [{ date: -1 }],
-};
-</script>

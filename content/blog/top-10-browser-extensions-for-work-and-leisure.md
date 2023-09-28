@@ -4,18 +4,14 @@ description: Browser extensions make it easier and enhances our experiences as w
 authors:
   - Ekene-Eze
 
-image: "https://res.cloudinary.com/kennyy/image/upload/v1662370959/browser-extension-2_mexlzl.png"
-thumbnail: "v1662370959/browser-extension-2_mexlzl.png"
+image: 'https://res.cloudinary.com/kennyy/image/upload/v1662370959/browser-extension-2_mexlzl.png'
+thumbnail: 'v1662370959/browser-extension-2_mexlzl.png'
 date: 2022-09-05
 lastmod: 2022-09-05
 topics:
   - tutorials
-tags:
-  - browser
-  - chrome
-  - productivity
-  - work
-tweet: ""
+tags: ['browser', 'extensions', 'web']
+tweet: ''
 format: blog
 # featured: true
 ---
