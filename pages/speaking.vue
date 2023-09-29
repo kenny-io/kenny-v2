@@ -32,7 +32,7 @@ const talkList = ref<Talk[]>(
         <section class="pt-20">
             <TheWrapper>
                 <div class="flex flex-col items-center md:flex-row text-[#ABABAB] px-16">
-                    <div class="md:w-3/4 md:mt-20 mt-6 order-2 md:order-none">
+                    <div class="md:w-3/4 md:mt-0 mt-6 order-2 md:order-none">
                         <h1
                             class="md:text-left text-center text-4xl md:text-6xl font-semibold tracking-tighter text-[#fff]">
                             Speaking</h1>

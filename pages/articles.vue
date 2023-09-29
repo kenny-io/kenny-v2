@@ -6,8 +6,8 @@ const articleCategories = ref<string[]>(["web3", "External Articles", "Javascrip
     <main>
         <section class="pt-20">
             <TheWrapper>
-                <div class="flex flex-col items-center md:flex-row text-[#ABABAB] px-16">
-                    <div class="md:w-3/4 md:mt-20 mt-6 order-2 md:order-none">
+                <div class="flex flex-col items-center md:flex-row md:justify-center text-[#ABABAB] px-16">
+                    <div class="md:w-3/4 md:mt-0 mt-6 order-2 md:order-none">
                         <h1 class="md:text-left text-center text-4xl md:text-6xl font-semibold tracking-tighter text-[#fff]">Articles</h1>
                         <p class="text-base w-[350px] sm:w-full md:text-xl mt-6 text-center md:text-left">
                             Writing is a huge part of my content delivery approach. It's the fastest way I know to quickly share the things I've learnt in the course of my work and other activities. 

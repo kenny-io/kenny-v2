@@ -16,8 +16,8 @@
   },
   "dependencies": {
     "@hypernym/nuxt-gsap": "^2.2.2",
-    "@pinia/nuxt": "^0.4.11",
-    "nuxt-lenis": "^1.0.2",
-    "pinia": "^2.1.6"
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
+    "js-confetti": "^0.11.0",
+    "nuxt-lenis": "^1.0.2"
   }
 }

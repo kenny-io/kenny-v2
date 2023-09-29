@@ -55,7 +55,7 @@ const navLinks = ref([
           :class="{
             'top-[9%] z-50': state.isMobileNavOpen
           }">
-          <ul class="flex items-start justify-start md:flex-row flex-col md:items-center md:gap-[2.5vw] gap-8">
+          <ul class="flex items-start justify-start md:flex-row flex-col md:items-center md:gap-4 gap-8">
             <li v-for=" link  in  navLinks " :key="link.slug" class="text-[#b5b5b5] text-base">
               <NuxtLink :to="link.path">{{ link.slug }}</NuxtLink>
             </li>
