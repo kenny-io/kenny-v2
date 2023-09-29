@@ -1,6 +1,4 @@
 <script setup>
-import { ref, inject, watch, onMounted } from 'vue';
-
 const scrollState = inject('scrollState');
 const lenisRef = ref(null);
 const lenisOptions = ref({
@@ -11,20 +9,20 @@ const lenisOptions = ref({
 })
 
 watch(scrollState, async (val) => {
-  console.log('scrollState', val)
+  // console.log('scrollState', val)
 })
 
 const scrollEmitter = (val) => {
-  console.log('scrollEmitter', val)
+  // console.log('scrollEmitter', val)
 }
 
 onMounted(() => {
-  console.log('ref', lenisRef.value)
+  // console.log('ref', lenisRef.value)
 })
 </script>
 <template>
   <lenis id="test" ref="lenisRef" :options="lenisOptions" @scroll="scrollEmitter">
-    <div class="py-5 bg-black">
+    <div class="py-5 bg-black overflow-x-hidden">
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
