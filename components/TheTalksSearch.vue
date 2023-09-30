@@ -73,7 +73,7 @@ const clearSelectedCategory = () => {
     </div>
 
     <div class="text-[#999] flex items-center py-4">
-      <p class="text-base tracking-[-0.56px] mr-6">Filter by:</p>
+      <p class="text-base tracking-[-0.56px] mr-6 whitespace-nowrap">Filter by:</p>
       <TheChip
         v-for="talk in talkCategories"
         :key="talk"

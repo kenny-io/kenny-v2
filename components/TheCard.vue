@@ -7,16 +7,15 @@ const { article, buttonText } = defineProps<{
   buttonText: String,
   type?: String,
   tag?: String
-  //   content: String,
-  //   video: Object,
 }>();
 
-const truncateText = (text: String) => {
-  const words = text.split(' ');
-  if (words.length <= 50) return text;
 
-  const truncated = words.slice(0, 30).join(' ');
-  return `${truncated}...`;
+const truncateDescription = (description: string) => {
+  // Split the description into words
+  const words = description?.split(' ');
+  // Limit the description to 50 words
+  const truncatedDescription = words?.slice(0, 20).join(' ');
+  return truncatedDescription;
 };
 </script>
 
@@ -24,12 +23,12 @@ const truncateText = (text: String) => {
   <div
     class="hover:border-gray-200/50 cursor-pointer hover:transition-colors hover:duration-1000 ease-in-out border border-gray-200/20 rounded-r-2xl rounded-l-2xl overflow-hidden relative">
     <div class="w-full h-[490px]">
-      <img class="object-cover w-full" :src="article?.image" alt="card-header-image">
+      <img class="object-cover w-full" :src="article?.image || 'https://res.cloudinary.com/kennyy/image/upload/v1695921469/AI_Generated_Image_13_d1aaw0.jpg'" alt="card-header-image">
     </div>
     <div class="px-8 py-6 bg-gradient-to-t from-black/80 to-transparent backdrop-blur absolute bottom-0">
       <h4 class="text-2xl md:text-4xl font-bold tracking-tighter text-white">{{ article?.title }}</h4>
       <p class="text-lg md:text-xl text-white/70 mt-4">
-        {{ truncateText(article?.description) }}
+        {{ truncateDescription(article?.description) }}
       </p>
       <a :href="article?.url">
         <div

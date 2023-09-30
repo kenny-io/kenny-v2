@@ -34,6 +34,86 @@ const filteredArticles = computed(() => {
 const clearSelectedCategory = () => {
   selectedCategory.value = '';
 };
+
+// USE THIS BLOCK FOR HASHNODE API WHEN READY
+// import { ref, computed, onMounted } from 'vue';
+// import axios from 'axios'; // You may need to install axios if not already done
+
+// const articleCategories = ref([
+//   'nuxt',
+//   'netlify',
+//   'web',
+//   'devrel',
+//   'cdn',
+//   'rendering',
+// ]);
+
+// const searchQuery = ref('');
+// const selectedCategory = ref('');
+// const articles = ref([]);
+
+// const fetchData = async () => {
+//   try {
+//     const response = await axios.post(
+//       'https://api.hashnode.com',
+//       {
+//         query: `
+//           query {
+//             user(username: "ekeneeze") {
+//               publication {
+//                 posts(page: 0) {
+//                   slug
+//                   title
+//                   brief
+//                   coverImage
+//                   tags{
+//                     name
+//                   }
+//                 }
+//               }
+//             }
+//           }
+//         `,
+//       },
+//       {
+//         headers: {
+//           Authorization: 'dd6d990a-ccde-41f3-b072-831afcde032d',
+//         },
+//       }
+//     );
+//     if (response.data.data) {
+//       articles.value = response.data.data.user.publication.posts;
+//       console.log(articles.value);
+//     }
+//   } catch (error) {
+//     console.error('Error fetching articles:', error);
+//   }
+// };
+
+// onMounted(() => {
+//   fetchData();  
+// });
+
+// const filteredArticles = computed(() => {
+//   if (!searchQuery.value.trim() && !selectedCategory.value.trim()) {
+//     return articles.value;
+//   }
+
+//   return articles.value.filter((article) => {
+//     const matchesSearchQuery =
+//       !searchQuery.value.trim() ||
+//       article.title?.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
+//       article.brief?.toLowerCase().includes(searchQuery.value.toLowerCase());
+//     const matchesSelectedCategory =
+//       !selectedCategory.value.trim() ||
+//       article.tags?.includes(selectedCategory.value);
+//     return matchesSearchQuery && matchesSelectedCategory;
+//   });
+// });
+
+// const clearSelectedCategory = () => {
+//   selectedCategory.value = '';
+// };
 </script>
 
 <template>
@@ -93,13 +173,13 @@ const clearSelectedCategory = () => {
       </TheWrapper>
     </section>
     <section class="mb-64">
-      <TheWrapper>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-10 md:gap-y-24">
-          <TheCard v-for="article in filteredArticles" :key="article._path" :article="article"
-            :button-text="'Read More'" />
-        </div>
-        <TheButton class="mx-auto mt-24">Show More</TheButton>
-      </TheWrapper>
-    </section>
+        <TheWrapper>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-10 md:gap-y-24">
+            <TheCard v-for="article in filteredArticles" :key="article._path" :article="article"
+              :button-text="'Read More'" />
+          </div>
+          <TheButton class="mx-auto mt-24">Show More</TheButton>
+        </TheWrapper>
+      </section>
   </main>
 </template>

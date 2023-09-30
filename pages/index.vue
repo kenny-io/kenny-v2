@@ -53,8 +53,8 @@ const videoquery: QueryBuilderParams = {
               </div>
             </div>
           </div>
-          <div class="hidden md:flex self-end my-24 items-center">
-            <p class="text-[#969696] mr-4">Scroll down</p>
+          <div class="hidden md:flex self-end my-24 items-center animate-bounce">
+            <p class="text-[#969696] mr-4 ">Scroll down</p>
             <div>
               <img src="../assets/images/icon-arrow-down.svg" class="w-4 h-4" />
             </div>

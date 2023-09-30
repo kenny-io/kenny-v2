@@ -3,40 +3,47 @@ import { ref, onMounted } from 'vue';
 import videosData from '../content/videos.json';
 
 interface Video {
-  title: string;
-  description: string;
-  date: string;
-  url: string;
-  etag: string;
-  image: string;
+    title: string;
+    description: string;
+    date: string;
+    url: string;
+    etag: string;
+    image: string;
 }
 
 const videos = ref<Video[]>([]);
 
 // Fetch videos data from the imported JSON file
 function fetchvideos() {
-  videos.value = videosData.items;
+    videos.value = videosData.items;
 }
 onMounted(() => {
-  fetchvideos();
+    fetchvideos();
 });
 const courseCateogries = ref([
-    "Javascript",
-    "Developer Relations",
-    "Vue",
-    "Leadership",
-    "Mentorship",
-    "React",
-    "Nuxt",
-    "Next",
-    "Javascript",
-    "Developer Relations",
-    "Vue",
-    "Leadership",
-    "Mentorship",
-    "React",
-    "Nuxt",
-    "Next"
+    'Javascript',
+    'Typescript',
+    'Vue',
+
+    'Web3',
+    'Fintech',
+    'Web',
+    'DevRel',
+    'React',
+    'Jamstack',
+    'AI',
+    'Next.js',
+    'Netlify',
+    'Gridsome',
+    'Vercel',
+    'Tailwind',
+    'Serverless',
+    'Nuxt.js',
+    'GraphQL',
+    'Node.js',
+    'Svelte',
+    'Supabase',
+    'Fauna',
 ])
 </script>
 
@@ -48,11 +55,10 @@ const courseCateogries = ref([
                     <div class="md:w-3/4 w-full md:mt-0 mt-6 order-2 md:order-none">
                         <h1
                             class="md:text-left text-center text-4xl md:text-6xl font-semibold tracking-tighter text-[#fff]">
-                            Level up as a devrel</h1>
+                            Level up with me</h1>
                         <p class="text-lg md:text-xl mt-6 text-center md:text-left">
-                            I am a developer based in Lagos, Nigeria focused on creating interactive digital experiences on
-                            the
-                            web
+                            Like most developers, I am always learning. As a result, I'm equally enthusiastic about sharing my knowledge. <br><br> I've authored a couple of articles, produced some comprehensive courses, and regularly host workshops and tutorials on my YouTube Channel. You can explore my treasure trove of educational content right here.
+
                         </p>
                     </div>
                     <div class="w-1/3 md:w-2/4">
@@ -64,8 +70,9 @@ const courseCateogries = ref([
         <section class="mt-28 md:-mt-7">
             <div class="space-x-4 whitespace-nowrap py-8 bg-[#7856FF] transform">
                 <TheSlider styles="text-7xl tracking-tighter md:text-base">
-                    <span v-for="courseCategory in courseCateogries" :key="courseCategory + Math.random()" class="mr-2 space-x-2 whitespace-nowrap">
-                        <span class="inline-block text-base tracking-[-0.25px] text-[#fff]">{{courseCategory}}</span>
+                    <span v-for="courseCategory in courseCateogries" :key="courseCategory + Math.random()"
+                        class="mr-2 space-x-2 whitespace-nowrap">
+                        <span class="inline-block text-base tracking-[-0.25px] text-[#fff]">{{ courseCategory }}</span>
                         <span class="inline-block"><img src="../assets/images/flak.svg"
                                 alt="Divider Element in the shape of a muted star"></span>
                     </span>
@@ -83,15 +90,38 @@ const courseCateogries = ref([
         </section>
         <section class="mb-64">
             <TheWrapper>
-              <div class="grid grid-cols-2 gap-4 gap-y-24">
-          <TheCard
-            v-for="video in videos"
-            :key="video.etag"
-            :article="video"
-            :button-text="'Watch Now'"
-            :type="'video'"
-          />
-        </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-10 md:gap-y-24">
+                    <TheCard v-for="video in videos" :key="video.etag" :article="video" :button-text="'Watch Now'"
+                        :type="'video'" />
+                </div>
             </TheWrapper>
-    </section>
-</main></template>
+        </section>
+    </main>
+</template>
+
+
+<!-- const courseCateogries = ref([
+    'Javascript',
+    'Typescript',
+    'Vue',
+
+    'Web3',
+    'Fintech',
+    'Web',
+    'DevRel',
+    'React',
+    'Jamstack',
+    'AI',
+    'Next.js',
+    'Netlify',
+    'Gridsome',
+    'Vercel',
+    'Tailwind',
+    'Serverless',
+    'Nuxt.js',
+    'GraphQL',
+    'Node.js',
+    'Svelte',
+    'Supabase',
+    'Fauna',
+]) -->

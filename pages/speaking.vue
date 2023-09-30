@@ -1,12 +1,6 @@
 <script setup lang="ts">
-const talkCategories = ref<string[]>(["web3", "External Articles", "Javascript", "DevRel", "Jokes", "AI"]);
+import { ref } from 'vue';
 const talks = await queryContent('talks').sort({ title: 1 }).find();
-const showStripe = ref<boolean>(true);
-
-interface Talk {
-    title: string,
-    isUpcoming: boolean
-}
 
 // const talkCategoriesFromPosts = Array.from(
 //   new Set(
@@ -15,93 +9,84 @@ interface Talk {
 //     )
 //   )
 // );
+const talkCategories = ref<string[]>([
+  'web3',
+  'fintech',
+  'web',
+  'devrel',
+  'jamstack',
+  'ai',
+]);
 
-const talkList = ref<Talk[]>(
-    [
-        {
-            title: 'Leveraging community for product growth',
-            isUpcoming: false
-        },
-        {
-            title: 'Token Gating on the web',
-            isUpcoming: true
-        },
-        {
-            title: 'Writing Documentations That Don’t Suck!',
-            isUpcoming: false
-        }
-    ]
-);
+const sendEmail = () => {
+  const email = 'hello@kenny.engineer';
+  const subject = 'Speak at my conference';
+  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+  window.location.href = mailtoLink;
+};
 </script>
 
 <template>
-    <main>
-        <section class="pt-20">
-            <TheWrapper>
-                <div class="flex flex-col items-center md:flex-row text-[#ABABAB] px-16">
-                    <div class="md:w-3/4 md:mt-0 mt-6 order-2 md:order-none">
-                        <h1
-                            class="md:text-left text-center text-4xl md:text-6xl font-semibold tracking-tighter text-[#fff]">
-                            Speaking</h1>
-                        <p class="text-base w-[350px] sm:w-full md:text-xl mt-6 text-center md:text-left">
-                            I have spoken at a couple of conferences, global and home. If you'd like to have me come speak
-                            at your conference or do a private workshop at your work. Come say hi
-                        </p>
-                        <TheButton class="mx-auto md:mx-0">Invite Me to your Awesome Event</TheButton>
-                    </div>
-                    <div class="w-1/2 md:w-2/4">
-                        <img class="w-[406px]" src="../assets/images/speaking-hero-image.png" />
-                    </div>
+  <main>
+    <section class="pt-20">
+      <TheWrapper>
+        <div class="flex text-[#ABABAB] px-16">
+          <div class="w-3/4 mt-20">
+            <h1 class="text-8xl font-semibold tracking-tighter text-[#fff]">
+              Speaking
+            </h1>
+            <p class="text-xl mt-6">
+              I've had the privilege of sharing insights and experiences at a variety of conferences, both on a global
+              stage and within local communities. <br> <br>
+              If you're interested in having me as a speaker at your upcoming conference or arranging a specialized
+              workshop for your organization, don't hesitate to reach out and start a conversation with me. Feel free to
+              get in touch; I'd love to discuss the possibilities further.
+            </p>
+            <TheButton @click="sendEmail">Invite Me to your Awesome Event</TheButton>
+          </div>
+          <div class="w-2/4 hidden sm:block">
+
+            <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
+              <div
+                class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
+                <div class="relative">
+                  <img src="../assets/images/kenny-with-hands.png" alt=""
+                    class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                  <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                 </div>
-            </TheWrapper>
-        </section>
-        <!-- <section class="mb-24 sticky top-0 pt-20 md:pt-6 bg-black/80 backdrop-blur-lg">
-            <TheWrapper>
-                <div>
-                    <div class="w-full px-4 py-2 md:py-4 border border-[#383838] rounded-md relative flex items-center">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 28 28" fill="none">
-                                <path
-                                    d="M12.6653 23.3306C18.5555 23.3306 23.3306 18.5555 23.3306 12.6653C23.3306 6.77501 18.5555 2 12.6653 2C6.77501 2 2 6.77501 2 12.6653C2 18.5555 6.77501 23.3306 12.6653 23.3306Z"
-                                    stroke="#626262" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M25.9985 25.9971L20.1992 20.1979" stroke="#626262" stroke-width="4"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <input
-                            class="bg-transparent rounded-xl w-full h-[45px] pl-4 py-3 text-[#999] text-xl md:text-2xl font-semibold tracking-[-0.84px] focus:border-none active:border-none focus-visible:border-none focus:outline-none placeholder:text-[#878787]"
-                            placeholder="Search articles" type="text" id="name" name="name" required>
-                    </div>
+              </div>
+              <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
+                <div class="relative">
+                  <img src="../assets/images/stage2.jpg" alt=""
+                    class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                  <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                 </div>
-                <div class="text-[#999] flex items-center py-4">
-                    <p class="text-base tracking-[-0.56px] mr-6 whitespace-nowrap">Filter by:</p>
-                    <div class="flex overflow-x-scroll scrollbar-hide snap-x">
-                        <TheChip class="snap-start scroll-ml-4" v-for="talkCategory in talkCategories" :key="talkCategory">
-                            {{ talkCategory }}
-                        </TheChip>
-                    </div>
+                <div class="relative">
+                  <img src="../assets/images/stage3.jpg" alt=""
+                    class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                  <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                 </div>
-            </TheWrapper>
-        </section> -->
-        <!-- <section v-if="showStripe" class="md:mt-12 mb-40">
-            <TheWrapper>
-                <div>
-                    <div v-for="talk in talkList" :key="talk.title" class="border-b cursor-pointer group py-10 border-[#434343]">
-                        <div class="flex items-center gap-7">
-                            <h2
-                                class="group-hover:text-white transition duration-300 ease-in-out text-[#898989] text-4xl md:text-6xl tracking-tighter md:tracking-[-4.16px]">
-                                {{ talk.title }}</h2>
-                            <TheChip v-if="talk.isUpcoming" class="text-green-400 border-green-300">Upcoming</TheChip>
-                        </div>
-                    </div>
+              </div>
+              <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
+                <div class="relative">
+                  <img src="../assets/images/stage1.jpg" alt=""
+                    class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                  <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                 </div>
-                <TheButton class="mx-auto">Show All</TheButton>
-            </TheWrapper>
-        </section> -->
-        <section class="mb-24 sticky top-0 pt-6 bg-black/80 backdrop-blur-lg">
-            <TheWrapper>
-                <TheTalksSearch :content="talks" :categories="talkCategories" :button-text="'View Talk'" />
-            </TheWrapper>
-        </section>
-    </main>
-</template>
+                <div class="relative">
+                  <img src="../assets/images/laststage.webp" alt=""
+                    class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+                  <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </TheWrapper>
+    </section>
+    <section class="mb-24 sticky top-0 pt-6 bg-black/80 backdrop-blur-lg">
+      <TheWrapper>
+        <TheTalksSearch :content="talks" :categories="talkCategories" :button-text="'View Talk'" />
+    </TheWrapper>
+  </section>
+</main></template>
