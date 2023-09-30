@@ -1,11 +1,20 @@
 <script setup lang="ts">
 const talkCategories = ref<string[]>(["web3", "External Articles", "Javascript", "DevRel", "Jokes", "AI"]);
+const talks = await queryContent('talks').sort({ title: 1 }).find();
 const showStripe = ref<boolean>(true);
 
 interface Talk {
     title: string,
     isUpcoming: boolean
 }
+
+// const talkCategoriesFromPosts = Array.from(
+//   new Set(
+//     talks.flatMap((talk) =>
+//       talk.category.map((cat: { name: string }) => cat.name)
+//     )
+//   )
+// );
 
 const talkList = ref<Talk[]>(
     [
@@ -23,10 +32,8 @@ const talkList = ref<Talk[]>(
         }
     ]
 );
-
-
-
 </script>
+
 <template>
     <main>
         <section class="pt-20">
@@ -48,7 +55,7 @@ const talkList = ref<Talk[]>(
                 </div>
             </TheWrapper>
         </section>
-        <section class="mb-24 sticky top-0 pt-20 md:pt-6 bg-black/80 backdrop-blur-lg">
+        <!-- <section class="mb-24 sticky top-0 pt-20 md:pt-6 bg-black/80 backdrop-blur-lg">
             <TheWrapper>
                 <div>
                     <div class="w-full px-4 py-2 md:py-4 border border-[#383838] rounded-md relative flex items-center">
@@ -75,8 +82,8 @@ const talkList = ref<Talk[]>(
                     </div>
                 </div>
             </TheWrapper>
-        </section>
-        <section v-if="showStripe" class="md:mt-12 mb-40">
+        </section> -->
+        <!-- <section v-if="showStripe" class="md:mt-12 mb-40">
             <TheWrapper>
                 <div>
                     <div v-for="talk in talkList" :key="talk.title" class="border-b cursor-pointer group py-10 border-[#434343]">
@@ -89,6 +96,11 @@ const talkList = ref<Talk[]>(
                     </div>
                 </div>
                 <TheButton class="mx-auto">Show All</TheButton>
+            </TheWrapper>
+        </section> -->
+        <section class="mb-24 sticky top-0 pt-6 bg-black/80 backdrop-blur-lg">
+            <TheWrapper>
+                <TheTalksSearch :content="talks" :categories="talkCategories" :button-text="'View Talk'" />
             </TheWrapper>
         </section>
     </main>

@@ -1,0 +1,31 @@
+{
+  "conference": "InfoBip Shift Conference 2022",
+  "title": "Bridging Design and Development in Style",
+  "description": "We follow a very traditional path when developing web applications and websites. We sketch out the ideas, and product designers create designs in Figma, while engineers build them to pixel perfection. This approach takes a lot of work from everyone, as designers must create the designs, prototype, and hand off all the resources and assets. From there, engineers must build the project, integrate it with the right frameworks, test it, and ship it to production.",
+  "date": "2022-09-19",
+  "country": "Croatia",
+  "site": "https://shift.infobip.com",
+  "category": [
+    {
+      "id": "1",
+      "name": "jamstack"
+    },
+    {
+      "id": "2",
+      "name": "web"
+    },
+    {
+      "id": "3",
+      "name": "no-code"
+    },
+    {
+      "id": "4",
+      "name": "infobip-shift"
+    }
+  ],
+  "video": "https://www.youtube.com/watch?v=-z0sUhIu9yM",
+  "slides": "",
+  "status": "done",
+  "image": "https://res.cloudinary.com/kennyy/image/upload/v1633878358/kenny-3_iomjbk.jpg",
+  "ready": true
+}

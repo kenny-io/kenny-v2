@@ -1,6 +1,6 @@
 export default defineEventHandler(async (event) => {
   const runtimeConfig = useRuntimeConfig();
-  const { email } = await readBody(event);
+  const { email, first_name } = await readBody(event);
   let result;
 
   if (!email) {
@@ -15,7 +15,10 @@ export default defineEventHandler(async (event) => {
   try {
     const response = await mailchimp.lists.addListMember(runtimeConfig.MAILCHIMP_AUDIENCE_ID, {
       email_address: email,
-      status: "subscribed"
+      status: "subscribed",
+      merge_fields: {
+        FNAME: first_name
+      }
     });
     result = { message: `Email ${response.email_address} subscribed to Mailchimp`, status: 200 };
   } catch (err) {

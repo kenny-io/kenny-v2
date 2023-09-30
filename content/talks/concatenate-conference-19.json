@@ -1,0 +1,19 @@
+{
+  "conference": "Concatenate conference 2019",
+  "title": "Building customizable checkout experiences wt Flutterwave",
+  "description": "In this presentation, you'll learn how to build diverse checkout experiences and customize them to suit your different user needs using Flutterwave",
+  "date": "2019-10-15",
+  "country": "Kenya",
+  "site": "https://concatenate.io",
+  "category": [
+    {
+      "id": "1",
+      "name": "fintech"
+    }
+  ],
+  "video": "https://youtu.be/aFI5RY_4meY",
+  "slides": "https://speakerdeck.com/kenny_io/building-customizable-checkout-experiences-with-flutterwave",
+  "status": "done",
+  "image": "https://res.cloudinary.com/kennyy/image/upload/v1633878358/kenny-3_iomjbk.jpg",
+  "ready": true
+}

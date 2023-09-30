@@ -1,0 +1,23 @@
+{
+  "conference": "Vuejs London 2021",
+  "title": "Advanced Rendering patterns in the Jamstack",
+  "description": "The Jamstack way of building the web is highly optimized for speed and performance. This is owing to the fact that all the assets required in your site will be pre-generated at build time and made available to your users. However, this introduces a huge overhead for developers and enterprises building large sites as the build times can quickly get out of hand. Lately, we've seen new patterns and techniques emerge from the community that solves this overhead in very practical ways. In this session, I'll go over these patterns (Sharding, ISR, DPR, DSG) and show our viewers and 2million+ other Jamstack developers how to leverage them to build large sites without the overhead on lengthy build times.",
+  "date": "2021-10-20",
+  "country": "UK",
+  "site": "https://vuejslive.com",
+  "category": [
+    {
+      "id": "1",
+      "name": "vue"
+    },
+    {
+      "id": "2",
+      "name": "jamstack"
+    }
+  ],
+  "video": "",
+  "slides": "",
+  "status": "done",
+  "ready": false,
+  "image": "https://res.cloudinary.com/kennyy/image/upload/v1633878358/kenny-3_iomjbk.jpg"
+}
