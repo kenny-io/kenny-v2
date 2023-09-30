@@ -1,0 +1,23 @@
+{
+  "conference": "JSWorld Conference 2022",
+  "title": "Reactivity in Vue3",
+  "description": "Have you ever wondered “Should I use ref or reactive?” When working with Vue 3’s Composition API? During the #JSWORLDAfrica conference, @kenny_io walks us through the technical differences between themStar-struck ",
+  "date": "2022-02-08",
+  "country": "Africa",
+  "site": "https://www.jsworldconference.com/",
+  "category": [
+    {
+      "id": "1",
+      "name": "vue"
+    },
+    {
+      "id": "2",
+      "name": "reactivity"
+    }
+  ],
+  "video": "",
+  "slides": "https://docs.google.com/presentation/d/1JNpPpcJ802avX3O90V_opozH19uk68jDxh8TGgqG-Uk/edit?usp=sharing",
+  "status": "done",
+  "ready": false,
+  "image": "https://res.cloudinary.com/kennyy/image/upload/v1633878358/kenny-3_iomjbk.jpg"
+}

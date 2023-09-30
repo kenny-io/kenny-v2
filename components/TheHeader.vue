@@ -35,7 +35,6 @@ const navLinks = ref([
     slug: 'Uses',
     path: '/uses'
   }])
-
 </script>
 
 <template>
@@ -48,7 +47,6 @@ const navLinks = ref([
           </span>
         </NuxtLink>
       </div>
-
       <nav class="flex justify-between items-center mx-auto">
         <div
           class="top-[-100%] duration-500 md:static absolute md:min-h-fit min-h-[100vh] left-0 md:w-auto w-full flex items-start pt-5 md:pt-0 px-5 bg-black"

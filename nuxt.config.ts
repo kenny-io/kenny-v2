@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     'nuxt-lenis',
     '@hypernym/nuxt-gsap',
     'nuxt-icon',
+    '@nuxt/content'
   ],
   gsap: {
     extraPlugins: {
@@ -19,5 +20,5 @@ export default defineNuxtConfig({
     MAILCHIMP_SERVER_PREFIX: process.env.MAILCHIMP_SERVER_PREFIX,
     MAILCHIMP_AUDIENCE_ID: process.env.MAILCHIMP_AUDIENCE_ID,
   },
-  
+  css: ['@/assets/css/globals.css'],
 });

@@ -1,0 +1,27 @@
+{
+  "conference": "Strapi Conf 2021",
+  "title": "How to Jamstack in a dynamic era",
+  "description": "There’s a general misconception that since Jamstack sites and applications don't rely on traditional server architectures, they come at the cost of dynamic, powerful experiences. The reality is, Jamstack sites are great for creating highly dynamic, interactions using powerful tools like serverless functions and a variety of third-party services. In this session, we'll look at how a Jamstack architecture, with serverless functions and Strapi CMS, help developers deliver scale, performance, and a rich content authoring experience, without the burden of servers or infrastructure to maintain",
+  "date": "2021-04-22",
+  "country": "Online",
+  "site": "https://conf.strapi.io/",
+  "category": [
+    {
+      "id": "1",
+      "name": "jamstack"
+    },
+    {
+      "id": "2",
+      "name": "strapi"
+    },
+    {
+      "id": "3",
+      "name": "web"
+    }
+  ],
+  "video": "https://youtu.be/Vn9OASpqQZk",
+  "slides": "",
+  "status": "done",
+  "image": "https://res.cloudinary.com/kennyy/image/upload/v1633878358/kenny-3_iomjbk.jpg",
+  "ready": true
+}

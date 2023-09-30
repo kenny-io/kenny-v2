@@ -1,0 +1,7 @@
+{
+  "title": "Why you should use refs sparingly in production",
+  "description": "A general rule of thumb is to consider how possible it'll be to do exactly what you want to do with props and state...",
+  "url": "https://blog.logrocket.com/why-you-should-use-refs-sparingly-in-production/",
+  "category": "refs",
+  "date": "2020/02/28"
+}

@@ -1,0 +1,23 @@
+{
+  "conference": "Flutterwave DevJam 2022",
+  "title": "Leveraging community for product growth",
+  "description": "When you build a community the right way, the immediate results are organic customer acquisition and retention & quality feedback.",
+  "date": "2022-10-15",
+  "country": "Lagos, Nigeria",
+  "site": "",
+  "category": [
+    {
+      "id": "1",
+      "name": "community"
+    },
+    {
+      "id": "2",
+      "name": "devrel"
+    }
+  ],
+  "video": "",
+  "slides": "",
+  "status": "done",
+  "ready": false,
+  "image": "https://res.cloudinary.com/kennyy/image/upload/v1633878358/kenny-3_iomjbk.jpg"
+}

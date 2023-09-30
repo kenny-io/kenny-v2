@@ -1,0 +1,27 @@
+{
+  "conference": "FEDSA Meetup",
+  "title": "Fedsa meetup live Q&A with Phil and Kenny",
+  "description": "Front-end Development South Africa (https://fedsa.org) is a registered non-profit organisation. In this event, they invited myself and Phil Hawksworth to have a chat about all things Netlify and the Jamstack",
+  "date": "2021-08-06",
+  "country": "Online",
+  "site": "https://www.meetup.com/fedsa-community/events/279420423/",
+  "category": [
+    {
+      "id": "1",
+      "name": "jamstack"
+    },
+    {
+      "id": "2",
+      "name": "netlify"
+    },
+    {
+      "id": "3",
+      "name": "fedsa-meetup"
+    }
+  ],
+  "video": "https://youtu.be/Z55mBK6Nv4M",
+  "slides": "",
+  "status": "done",
+  "image": "https://res.cloudinary.com/kennyy/image/upload/v1633878358/kenny-3_iomjbk.jpg",
+  "ready": true
+}

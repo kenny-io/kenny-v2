@@ -1,0 +1,27 @@
+{
+  "conference": "Vue Conf Toronto 2021",
+  "title": "Bridge'ing the Nuxt Gap",
+  "description": "Nuxt 3 is out in public beta with new features like the new nuxi CLI command, SSR and SSG, Script setup, Nitro engine and so on. We are all excited about these improvements, but what does it mean for the rest of our Nuxt 2 applications? Are we left out of the fun and improvements? Well, no. In this session, I’ll show you how to progressively enhance a Nuxt 2 application to use Nuxt 3 features using the Nuxt Bridge module.",
+  "date": "2021-11-23",
+  "country": "Canada",
+  "site": "https://www.vuetoronto.com/",
+  "category": [
+    {
+      "id": "1",
+      "name": "nuxt.js"
+    },
+    {
+      "id": "2",
+      "name": "nuxt 2"
+    },
+    {
+      "id": "3",
+      "name": "nuxt 3"
+    }
+  ],
+  "video": "https://youtu.be/6vuvxBFqqrg",
+  "slides": "https://docs.google.com/presentation/d/14doSUCkpvqGOymUi4iWRJMDCw1AdJjZ_/edit?usp=sharing&ouid=110196232365146183174&rtpof=true&sd=true",
+  "status": "done",
+  "ready": true,
+  "image": "https://res.cloudinary.com/kennyy/image/upload/v1633878358/kenny-3_iomjbk.jpg"
+}

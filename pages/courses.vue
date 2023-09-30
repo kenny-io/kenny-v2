@@ -1,4 +1,25 @@
-<script setup>
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
+import videosData from '../content/videos.json';
+
+interface Video {
+  title: string;
+  description: string;
+  date: string;
+  url: string;
+  etag: string;
+  image: string;
+}
+
+const videos = ref<Video[]>([]);
+
+// Fetch videos data from the imported JSON file
+function fetchvideos() {
+  videos.value = videosData.items;
+}
+onMounted(() => {
+  fetchvideos();
+});
 const courseCateogries = ref([
     "Javascript",
     "Developer Relations",
@@ -62,10 +83,15 @@ const courseCateogries = ref([
         </section>
         <section class="mb-64">
             <TheWrapper>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-10 md:gap-y-24">
-                    <TheCard v-for="x in 4" :key="x" />
-                    <TheCard tag="Ethereum" />
-                </div>
+              <div class="grid grid-cols-2 gap-4 gap-y-24">
+          <TheCard
+            v-for="video in videos"
+            :key="video.etag"
+            :article="video"
+            :button-text="'Watch Now'"
+            :type="'video'"
+          />
+        </div>
             </TheWrapper>
     </section>
 </main></template>
