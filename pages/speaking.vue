@@ -15,7 +15,6 @@ const talkCategories = ref<string[]>([
   'web',
   'devrel',
   'jamstack',
-  'ai',
 ]);
 
 const sendEmail = () => {

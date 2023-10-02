@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, toRefs } from 'vue';
-
+import useDateFormatter from '~/composables/useDate';
 const props = defineProps({
   content: Object,
   categories: Array,
@@ -11,7 +11,7 @@ const showDetails = ref<{ [key: string]: boolean }>({});
 const toggleDetails = (title: string) => {
   showDetails.value[title] = !showDetails.value[title];
 };
-
+const { formatDate } = useDateFormatter();
 const localSearchQuery = ref('');
 const selectedCategory = ref('') as any;
 const talkCategories = categories || (ref([]) as any);
@@ -166,7 +166,7 @@ const clearSelectedCategory = () => {
           </p>
 
           <div class="flex items-center gap-7 text-[#898989] mt-8">
-            <h2>{{ talk.date }}</h2>
+            <h2>{{ formatDate(talk.date) }}</h2>
             <a :href="talk?.site">Conference</a>
           </div>
 
