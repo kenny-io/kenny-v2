@@ -50,7 +50,6 @@ onMounted(() => {
 });
 
 const handleMouseEnter = () => {
-   
     tl.pause();
 }
 

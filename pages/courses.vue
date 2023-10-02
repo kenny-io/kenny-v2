@@ -1,30 +1,31 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import videosData from '../content/videos.json';
+// import videosData from '../content/videos.json';
 
-interface Video {
-    title: string;
-    description: string;
-    date: string;
-    url: string;
-    etag: string;
-    image: string;
-}
+// interface Video {
+//     title: string;
+//     description: string;
+//     date: string;
+//     url: string;
+//     etag: string;
+//     image: string;
+// }
 
-const videos = ref<Video[]>([]);
+// const videos = ref<Video[]>([]);
 
-// Fetch videos data from the imported JSON file
-function fetchvideos() {
-    videos.value = videosData.items;
-}
-onMounted(() => {
-    fetchvideos();
-});
+// // Fetch videos data from the imported JSON file
+// function fetchvideos() {
+//     videos.value = videosData.items;
+//     console.log(videos.value);
+    
+// }
+// onMounted(() => {
+//     fetchvideos();
+// });
 const courseCateogries = ref([
     'Javascript',
     'Typescript',
     'Vue',
-
     'Web3',
     'Fintech',
     'Web',
@@ -45,6 +46,47 @@ const courseCateogries = ref([
     'Supabase',
     'Fauna',
 ])
+
+interface Video {
+    id: {
+        videoId: string;
+    };
+    snippet: {
+        title: string;
+        description: string;
+        publishedAt: string;
+        thumbnails: {
+            high: {
+                url: string;
+                width: number;
+                height: number;
+            };
+        };
+    };
+}
+
+const videos = ref<Video[]>([]);
+const API_KEY = 'AIzaSyAaHa76sFHWIp4LuFj_KMJ-sTevrTJp2y8';
+const CHANNEL_ID = 'UC16hs-fk97lq0gudiN5Ni5g';
+
+// Fetch videos data from YouTube channel
+async function fetchVideos() {
+    try {
+        const response = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=20`);
+        const data = await response.json();
+        videos.value = data.items;
+    } catch (error) {
+        console.error('Error fetching videos:', error);
+    }
+}
+
+function getVideoUrl(videoId: string): string {
+    return `https://www.youtube.com/watch?v=${videoId}`;
+}
+
+onMounted(() => {
+    fetchVideos();
+});
 </script>
 
 <template>
@@ -88,40 +130,21 @@ const courseCateogries = ref([
                 </div>
             </TheWrapper>
         </section>
-        <section class="mb-64">
+        <!-- <section class="mb-64">
             <TheWrapper>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-10 md:gap-y-24">
                     <TheCard v-for="video in videos" :key="video.etag" :article="video" :button-text="'Watch Now'"
                         :type="'video'" />
                 </div>
             </TheWrapper>
+        </section> -->
+
+            <section class="mb-64">
+          <TheWrapper>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-10 md:gap-y-24">
+              <TheCard v-for="video in videos" :key="video.id.videoId" :article="video.snippet" :button-text="'Watch Now'" :type="'video'" :video-url="getVideoUrl(video.id.videoId)" />
+            </div>
+          </TheWrapper>
         </section>
     </main>
 </template>
-
-
-<!-- const courseCateogries = ref([
-    'Javascript',
-    'Typescript',
-    'Vue',
-
-    'Web3',
-    'Fintech',
-    'Web',
-    'DevRel',
-    'React',
-    'Jamstack',
-    'AI',
-    'Next.js',
-    'Netlify',
-    'Gridsome',
-    'Vercel',
-    'Tailwind',
-    'Serverless',
-    'Nuxt.js',
-    'GraphQL',
-    'Node.js',
-    'Svelte',
-    'Supabase',
-    'Fauna',
-]) -->

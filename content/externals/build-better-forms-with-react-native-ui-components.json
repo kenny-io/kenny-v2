@@ -2,7 +2,8 @@
   "title": "Building React Native forms with UI components",
   "description": "Learn how to build various performant React Native forms within your app using native React Native UI components.",
   "url": "https://blog.logrocket.com/build-better-forms-with-react-native-ui-components/",
-  "category": "forms",
+  "category": ["forms", "react", "web"],
   "date": "2021/03/01",
-  "image": "https://blog.logrocket.com/wp-content/uploads/2021/03/building-react-native-forms-with-ui-components.png"
+  "image": "https://blog.logrocket.com/wp-content/uploads/2021/03/building-react-native-forms-with-ui-components.png",
+  "tags": ["netlify", "react", "webdev"]
 }

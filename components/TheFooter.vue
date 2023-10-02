@@ -121,7 +121,7 @@ function displayDubaiTime() {
                             placeholder="koha@gmail.com" type="email" id="email" name="email" required>
                     </div>
                     <button @click="handleOnNewsletterSubscribe" type="button"
-                        class="w-full md:w-[233px] h-[45px] px-5 py-6 mt-4 md:mt-0 bg-[#B7CD14] rounded-md text-[#090909] text-xl tracking-tight font-semibold flex items-center relative">
+                        class="w-full md:w-[233px] h-[45px] px-5 py-6 mt-4 md:mt-0 bg-[#1ed760] rounded-md text-[#090909] text-xl tracking-tight font-semibold flex items-center relative">
                         <span class="block mx-auto">
                             Subscribe
                         </span>

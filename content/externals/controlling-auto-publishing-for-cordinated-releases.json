@@ -3,6 +3,9 @@
   "description": "Locking deploys is helpful technique for coordinating lots of updates for a big launch or announcement. Everything can be readied and verified, and then all go live instantly at the click of a button. Learn how.",
   "url": "https://blog.logrocket.com/create-animated-react-components-with-kendo-ui-d16e65ddcf7b/",
   "category": "Styling",
+  "tags": [
+    "productivity"
+  ],
   "date": "2021/12/04",
   "image": "https://res.cloudinary.com/kennyy/image/upload/v1695816371/AI_Generated_Image_uce0eu.jpg"
 }

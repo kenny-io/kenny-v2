@@ -92,7 +92,7 @@ const clearSelectedCategory = () => {
 
     <div>
       <div
-        v-for="talk in filteredContent"
+        v-for="talk in filteredContent" :key="talk.title"
         class="border-b cursor-pointer group py-10 border-[#434343]"
       >
         <div class="flex items-center gap-7">

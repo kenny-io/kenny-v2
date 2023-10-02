@@ -29,15 +29,15 @@
     </section>
     <section>
       <TheSlider slide-to="right" class="transform -rotate-6 text-7xl tracking-tight md:text-[140px]">
-        Director of Developer Relations - Content Creator - Youtuber - Drone Pilot -
+       Developer Relations - Software Engineer - Mentor - Drone Pilot - Keynote Speaker - Content Creator - Author  -
       </TheSlider>
     </section>
     <section class="my-64">
       <TheWrapper>
         <ContentList path="/demos">
-          <template #default="{ list }">
-            <!-- Add the Tailwind markup for the Uses page design-->
-          </template>
+          <!-- <template #default="{ list }">
+            Add the Tailwind markup for the Uses page design
+          </template> -->
         </ContentList>
       </TheWrapper>
     </section>
