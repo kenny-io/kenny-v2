@@ -43,7 +43,9 @@ const vquery: QueryBuilderParams = {
           developer advocates get started with DevRel. Think that’s you, check
           when the next cohort would open for application.
         </p>
-        <TheButton>APPLY TO DXMENTORSHIP</TheButton>
+        <a href="https://www.dxmentorship.com">
+          <TheButton>APPLY TO DXMENTORSHIP</TheButton></a
+        >
       </TheWrapper>
     </section>
     <section>
