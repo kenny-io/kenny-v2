@@ -3,5 +3,7 @@
   "description": "In this post, allow me to show you the fastest, quickest and smoothest way to deploy your Remix apps on Netlify.",
   "url": "https://www.netlify.com/blog/how-to-deploy-remix-apps-on-netlify",
   "category": "remix deploy",
-  "date": "2022/03/10"
+  "date": "2022/03/10",
+  "image": "https://res.cloudinary.com/kennyy/image/upload/v1695921468/AI_Generated_Image_9_sx67m8.jpg",
+  "tags": ["remix", "webdev", "netlify"]
 }

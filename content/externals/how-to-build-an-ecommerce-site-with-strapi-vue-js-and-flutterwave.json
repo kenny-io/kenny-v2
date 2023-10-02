@@ -3,5 +3,7 @@
   "description": "As a frontend developer, I was excited by how fast I could build backend services that communicate effortlessly with my frontend application.",
   "url": "https://blog.logrocket.com/how-to-build-an-ecommerce-site-with-strapi-vue-js-and-flutterwave/",
   "category": "ecommerce fintech",
-  "date": "2020/06/04"
+  "date": "2020/06/04",
+  "image": "https://blog.logrocket.com/wp-content/uploads/2020/06/flutterwavestrapivue.png",
+  "tags": ["ecommerce", "fintech", "flutterwave"]
 }

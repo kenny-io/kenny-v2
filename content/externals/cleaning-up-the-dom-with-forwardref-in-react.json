@@ -4,5 +4,6 @@
   "url": "https://blog.logrocket.com/cleaning-up-the-dom-with-forwardref-in-react/",
   "category": "forwardRef",
   "date": "2021/03/18",
-  "image": "https://res.cloudinary.com/kennyy/image/upload/v1695816371/AI_Generated_Image_uce0eu.jpg"
+  "image": "https://blog.logrocket.com/wp-content/uploads/2021/03/use-forwardref-react.png",
+  "tags": ["react", "forwardRef"]
 }

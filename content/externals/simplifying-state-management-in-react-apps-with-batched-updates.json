@@ -3,5 +3,7 @@
   "description": "In this post, we will take a closer look at the batched updates feature in React.",
   "url": "https://blog.logrocket.com/simplifying-state-management-in-react-apps-with-batched-updates/",
   "category": "state management",
-  "date": "2019/09/10"
+  "date": "2019/09/10",
+  "image": "https://blog.logrocket.com/wp-content/uploads/2019/09/batchedupdates.png",
+  "tags": ["react", "webdev", "performance"]
 }
