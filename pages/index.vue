@@ -74,10 +74,9 @@ const vquery: QueryBuilderParams = {
             </ContentList>
           </div>
         </div>
-        <TheButton
-          ><a href="https://www.youtube.com/c/EkeneEze" target="_blank"
-            >Watch More</a
-          ></TheButton
+
+        <a href="https://www.youtube.com/c/EkeneEze" target="_blank"
+          ><TheButton> Watch More </TheButton></a
         >
       </TheWrapper>
     </section>
@@ -110,7 +109,9 @@ const vquery: QueryBuilderParams = {
             </ContentList>
           </div>
         </div>
-        <TheButton><a href="/articles">See More</a></TheButton>
+        <a href="/articles">
+          <TheButton>See More</TheButton>
+        </a>
       </TheWrapper>
     </section>
     <section class="mb-32 md:mb-[220px] mt-10">
