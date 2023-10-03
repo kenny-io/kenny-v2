@@ -3,5 +3,7 @@
   "description": "Revert your deployed changes globally in milliseconds, thanks to instant deploy rollbacks.",
   "url": "https://www.netlify.com/blog/2021/12/08/instant-deploy-rollbacks/",
   "category": "rollbacks",
-  "date": "2021/12/08"
+  "date": "2021/12/08",
+  "image": "https://res.cloudinary.com/kennyy/image/upload/v1696276744/AI_Generated_Image_26_ebmsef.jpg",
+  "tags": ["rollbacks", "netlify", "webdev"]
 }

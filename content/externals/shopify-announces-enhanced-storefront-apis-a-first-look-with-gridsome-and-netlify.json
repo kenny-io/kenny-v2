@@ -3,5 +3,7 @@
   "description": "Get a first look at Shopify's headless commerce solution - the Storefront API with Gridsome and Netlify.",
   "url": "https://www.netlify.com/blog/2021/07/19/shopify-announces-enhanced-storefront-apis-a-first-look-with-gridsome-and-netlify/",
   "category": "shopify",
-  "date": "2021/07/19"
+  "date": "2021/07/19",
+  "tags": ["shopify", "gridsome", "netlify"],
+  "image": "https://res.cloudinary.com/kennyy/image/upload/v1696276660/AI_Generated_Image_17_lgwd12.jpg"
 }

@@ -1,7 +1,9 @@
 {
   "title": "How to speed up incremental builds with Gatsby’s Slice API",
   "description": "Using the Slice API in Gatsby projects can help enhance the speed of incremental builds, improving your site performance and productivity.",
-  "url": "https://blog.logrocket.com/speed-incremental-builds-gatsby-slice-api/",
+  "url": "https://blog.logrocket.com/speed-incremental-builds-gatsby-slice-api",
   "category": "performance",
-  "date": "2023/02/15"
+  "date": "2023/02/15",
+  "tags": ["gatsby", "performance", "slice-api"],
+  "image": "https://blog.logrocket.com/wp-content/uploads/2023/02/Speed-up-incremental-builds-Gatsby-Slice-API.png"
 }
