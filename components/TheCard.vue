@@ -2,7 +2,7 @@
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types';
 
 // Define props
-const { article, buttonText } = defineProps<{
+const { article, buttonText, videoURL } = defineProps<{
   article: ParsedContent;
   buttonText: String;
   type?: String;
@@ -44,7 +44,7 @@ const truncateDescription = (description: string) => {
       <p class="text-lg md:text-xl text-white/70 mt-4">
         {{ truncateDescription(article?.description) }}
       </p>
-      <a :href="article?.url || article.videoURL">
+      <a :href="article?.url || videoURL">
         <div
           class="mt-8 w-fit text-[#AFADAD] flex items-center gap-1 hover:gap-2 hover:transition duration-200 ease-in-out cursor-pointer"
         >

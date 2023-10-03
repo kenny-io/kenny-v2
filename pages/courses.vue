@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-const config = useRuntimeConfig();
 const courseCateogries = ref([
   'Javascript',
   'Typescript',
@@ -45,29 +44,36 @@ interface Video {
 }
 
 const videos = ref<Video[]>([]);
-const API_KEY =
-  config.YOUTUBE_API_KEY || 'AIzaSyBTogrPu2GNXrIxdW6SEFIE50cNwCAvtKY';
-console.log(API_KEY);
-
-console.log(config);
-
-const CHANNEL_ID = 'UC16hs-fk97lq0gudiN5Ni5g';
-
 // Fetch videos data from YouTube channel
 async function fetchVideos() {
+  const cacheKey = 'cached_videos';
+  const timestampKey = 'videos_timestamp';
+
+  const currentTimestamp = new Date().getTime();
+  const cachedTimestamp = Number(localStorage.getItem(timestampKey));
+  const twoDaysInMilliseconds = 48 * 60 * 60 * 1000;
+
+  // Check if the cached data is still valid based on the timestamp
+  if (currentTimestamp - cachedTimestamp < twoDaysInMilliseconds) {
+    const cachedVideos = localStorage.getItem(cacheKey);
+    if (cachedVideos) {
+      videos.value = JSON.parse(cachedVideos);
+      return;
+    }
+  }
+
+  // If not in cache or cache is stale, fetch from API
   try {
-    const response = await fetch(
-      `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=20`
-    );
+    const response = await fetch('/api/youtube');
     const data = await response.json();
-    videos.value = data.items;
+    videos.value = data.data.items;
+
+    // Cache the fetched videos and timestamp in localStorage
+    localStorage.setItem(cacheKey, JSON.stringify(videos.value));
+    localStorage.setItem(timestampKey, currentTimestamp.toString());
   } catch (error) {
     console.error('Error fetching videos:', error);
   }
-}
-
-function getVideoUrl(videoId: string): string {
-  return `https://www.youtube.com/watch?v=${videoId}`;
 }
 
 onMounted(() => {
@@ -147,7 +153,7 @@ onMounted(() => {
             :article="video.snippet"
             :button-text="'Watch Now'"
             :type="'video'"
-            :video-url="getVideoUrl(video.id.videoId)"
+            :videoURL="`https://www.youtube.com/watch?v=${video.id.videoId}`"
           />
         </div>
       </TheWrapper>
