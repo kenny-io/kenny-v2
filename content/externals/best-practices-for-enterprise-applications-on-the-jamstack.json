@@ -2,7 +2,8 @@
   "title": "Best Practices for Enterprise Applications on the Jamstack",
   "description": "The Jamstack model is currently capable of powering large enterprises, however, we've heard claims that Jamstack is only for small and static sites. Let's take a look at the reality of that in this post.",
   "url": "https://www.netlify.com/blog/2021/05/03/best-practices-for-enterprise-applications-on-the-jamstack/",
-  "category": "jamstack",
+  "category": ["jamstack", "web", "netlify", "enterprise"],
   "date": "2021/05/03",
-  "image": "https://res.cloudinary.com/kennyy/image/upload/v1695816371/AI_Generated_Image_uce0eu.jpg"
+  "image": "https://res.cloudinary.com/kennyy/image/upload/v1696276744/AI_Generated_Image_26_ebmsef.jpg",
+  "tags": ["animations", "react", "webdev"]
 }

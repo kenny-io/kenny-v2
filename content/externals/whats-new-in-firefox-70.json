@@ -3,5 +3,7 @@
   "description": "In this post, we'll look at all the new features of Firefox 70 and demonstrate how they help increase our browsing experience.",
   "url": "https://blog.logrocket.com/whats-new-in-firefox-70/",
   "category": "Firefox",
-  "date": "2019/11/20"
+  "date": "2019/11/20",
+  "image": "https://blog.logrocket.com/wp-content/uploads/2019/11/firefox70.png",
+  "tags": ["firefox", "browser", "webdev", "webdevelopment"]
 }

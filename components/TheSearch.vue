@@ -103,7 +103,7 @@ const clearSelectedCategory = () => {
 
     <div class="grid grid-cols-2 gap-4 gap-y-24">
       <TheCard
-        :buttonText="buttonText"
+        :buttonText="buttonText!"
         v-for="article in filteredContent"
         :key="article._path"
         :article="article"

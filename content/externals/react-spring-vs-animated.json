@@ -3,5 +3,7 @@
   "description": "In this post, we will look at some of the strengths and weaknesses of both React Spring and Animated.",
   "url": "https://blog.logrocket.com/react-spring-vs-animated/",
   "category": "Animations",
-  "date": "2019/08/25"
+  "date": "2019/08/25",
+  "image": "https://blog.logrocket.com/wp-content/uploads/2019/08/reactspringvsanimated-1.png",
+  "tags": ["react", "logrocket", "animated", "animation"]
 }

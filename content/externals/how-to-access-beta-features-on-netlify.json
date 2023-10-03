@@ -3,5 +3,7 @@
   "description": "Very often, companies need a structured way to roll out experimental and beta features to users. At Netlify, this is done via Netlify Labs.",
   "url": "https://www.netlify.com/blog/how-to-access-beta-features-on-netlify",
   "category": "productivity",
-  "date": "2022/02/03"
+  "date": "2022/02/03",
+  "image": "https://res.cloudinary.com/kennyy/image/upload/v1696276743/AI_Generated_Image_24_ivszks.jpg",
+  "tags": ["netlify", "productivity", "webdev"]
 }

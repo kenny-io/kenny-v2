@@ -3,5 +3,7 @@
   "description": "Combine 3rd party tools and services with your Netlify site using build hooks",
   "url": "https://www.netlify.com/blog/2021/12/22/power-your-site-with-apis-and-build-hooks/",
   "category": "build-hooks",
-  "date": "2021/12/22"
+  "date": "2021/12/22",
+  "image": "https://res.cloudinary.com/kennyy/image/upload/v1696276744/AI_Generated_Image_25_auybkp.jpg",
+  "tags": ["api", "webhooks", "automation", "netlify"]
 }

@@ -3,5 +3,7 @@
   "description": "While testing can be a very controversial concept, something we can all agree on is testing is a very critical aspect of any product...",
   "url": "https://blog.logrocket.com/testing-react-applications-in-2019/",
   "category": "Testing",
-  "date": "2019/09/19"
+  "date": "2019/09/19",
+  "image": "https://blog.logrocket.com/wp-content/uploads/2019/09/reacttesting.png",
+  "tags": ["react", "testing", "jest", "enzyme", "cypress"]
 }

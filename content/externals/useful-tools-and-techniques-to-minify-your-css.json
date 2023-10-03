@@ -3,5 +3,7 @@
   "description": "Faster page speed, better performance, overall improved user experience — these are the advantages of minifying your CSS files. This may seem obvious, yet it remains...",
   "url": "https://blog.logrocket.com/useful-tools-and-techniques-to-minify-your-css-bee9b539e074/",
   "category": "styling",
-  "date": "2019/05/30"
+  "date": "2019/05/30",
+  "image": "https://blog.logrocket.com/wp-content/uploads/2019/05/useful-tools-minify-css.jpg",
+  "tags": ["css", "logrocket", "performance"]
 }
