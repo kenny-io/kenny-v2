@@ -22,7 +22,7 @@ onMounted(() => {
 </script>
 <template>
   <lenis id="test" ref="lenisRef" :options="lenisOptions" @scroll="scrollEmitter">
-    <div class="py-5 bg-black overflow-x-hidden">
+    <div class="py-5 bg-black">
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>

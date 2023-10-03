@@ -38,18 +38,24 @@ const videoquery: QueryBuilderParams = {
           </div>
           <div class="flex items-center mt-1 md:mt-2">
             <p class="text-[#999] text-xs md:text-base mr-2">Previously at</p>
-            <div class="flex items-center space-x-1">
-              <div class="flex items-start">
-                <img src="../assets/images/plasmic.svg" class="aspect-square w-5 h-5 md:w-[24px] md:h-[24px]" />
-                <span class="text-white w-0 opacity-0 hidden">Plasmic</span>
+            <div class="flex items-center">
+              <div class=" cursor-pointer flex items-start group/ex">
+                <div class="py-1 px-2 flex items-center transition duration-500 ease-in-out group-hover/ex:border-gray-300 border border-transparent rounded-full border-gray-300">
+                  <img src="../assets/images/plasmic.svg" class="aspect-square w-5 h-5 md:w-[24px] md:h-[24px]" />
+                  <span class="transition duration-500 ease-in-out text-[#B2B2B2] w-0 opacity-0 hidden group-hover/ex:block group-hover/ex:opacity-100 group-hover/ex:w-full">Plasmic</span>
+                </div>
               </div>
-              <div class="flex items-start">
-                <img src="../assets/images/netlify.svg" class="aspect-square w-5 h-5 md:w-[24px] md:h-[24px]" />
-                <span class="w-0 opacity-0 hidden">Netlify</span>
+              <div class=" cursor-pointer flex items-start  group/ex">
+                <div class="py-1 px-2 flex items-center transition duration-500 ease-in-out group-hover/ex:border-gray-300 border border-transparent rounded-full border-gray-300">
+                  <img src="../assets/images/netlify.svg" class="aspect-square w-5 h-5 md:w-[24px] md:h-[24px]" />
+                  <span class="transition duration-500 ease-in-out text-[#B2B2B2] w-0 opacity-0 hidden group-hover/ex:block group-hover/ex:opacity-100 group-hover/ex:w-full">Netlify</span>
+                </div>
               </div>
-              <div class="flex items-start">
-                <img src="../assets/images/flutterwave.svg" class="aspect-square w-5 h-5 md:w-[24px] md:h-[24px]" />
-                <span class="w-0 opacity-0 hidden">Flutterwave</span>
+              <div class=" cursor-pointer flex items-start  group/ex">
+                <div class="py-1 px-2 flex items-center transition duration-500 ease-in-out group-hover/ex:border-gray-300 border border-transparent rounded-full border-gray-300">
+                  <img src="../assets/images/flutterwave.svg" class="aspect-square w-5 h-5 md:w-[24px] md:h-[24px]" />
+                  <span class="transition duration-500 ease-in-out text-[#B2B2B2] w-0 opacity-0 hidden group-hover/ex:block group-hover/ex:opacity-100 group-hover/ex:w-full">Flutterwave</span>
+                </div>
               </div>
             </div>
           </div>
