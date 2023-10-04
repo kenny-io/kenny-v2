@@ -54,9 +54,9 @@
           </div>
         </div>
       </div>
-      <div class="z-10 mt-5 md:mt-0">
-        <div class="transform md:rotate-2 relative">
-          <img src="../assets/images/kenny-with-hands.png" width="600" />
+      <div class="mt-5 md:mt-0">
+        <div class=" relative">
+          <img src="../assets/images/kenny-with-hands.png" class="contain scale-[98%] hover:scale-100 tranition duration-1000 ease-in-out transform md:hover:rotate-2" />
           <!-- <div
                   class="absolute top-2 right-5 w-[100px] h-[100px] rounded-full bg-[#A4EF28] hidden md:flex justify-center items-center">
                   <span class="text-xl tracking-tighter text-[#373737]">Play me</span>

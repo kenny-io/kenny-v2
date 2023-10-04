@@ -71,16 +71,7 @@ const usesSoftwareList = [
         Speaker - Content Creator - Author -
       </TheSlider>
     </section>
-    <section class="my-64">
-      <TheWrapper>
-        <ContentList path="/demos">
-          <!-- <template #default="{ list }">
-            Add the Tailwind markup for the Uses page design
-          </template> -->
-        </ContentList>
-      </TheWrapper>
-    </section>
-    <section class="my-64 text-gray-200">
+    <section class="my-48 text-gray-200">
       <TheWrapper>
         <div class="hardwareWrapper flex">
           <div class="left h-screen w-1/3 sticky top-0 flex items-center">

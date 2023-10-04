@@ -8,6 +8,8 @@ const lenisOptions = ref({
   infinite: false
 })
 
+const {isInitialRender} = useTempStore();
+
 watch(scrollState, async (val) => {
   // console.log('scrollState', val)
 })
@@ -22,6 +24,10 @@ onMounted(() => {
 </script>
 <template>
   <lenis id="test" ref="lenisRef" :options="lenisOptions" @scroll="scrollEmitter">
+    <SeoKit />
+    <Teleport to="body">
+        <ThePreloader v-if="isInitialRender"/>
+    </Teleport>
     <div class="py-5 bg-black">
       <NuxtLayout>
         <NuxtPage />

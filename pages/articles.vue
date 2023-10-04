@@ -141,7 +141,7 @@ onMounted(() => {
       </TheWrapper>
     </section>
     <section
-      class="mb-24 sticky top-0 pt-20 md:pt-6 bg-black/80 backdrop-blur-lg"
+      class="z-20 mb-24 sticky top-0 pt-20 md:pt-6 bg-black/80 backdrop-blur-lg"
     >
       <TheWrapper>
         <div>
@@ -207,7 +207,7 @@ onMounted(() => {
         </div>
       </TheWrapper>
     </section>
-    <section class="mb-64">
+    <section class="mb-64 z-10">
       <TheWrapper>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-10 md:gap-y-24">
           <TheCard

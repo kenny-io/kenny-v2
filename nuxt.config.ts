@@ -9,7 +9,10 @@ export default defineNuxtConfig({
     'nuxt-lenis',
     '@hypernym/nuxt-gsap',
     'nuxt-icon',
-    '@nuxt/content',
+    '@nuxt/content'
+  ],
+  extends: [
+    'nuxt-seo-kit'
   ],
   gsap: {
     extraPlugins: {
@@ -22,6 +25,12 @@ export default defineNuxtConfig({
     MAILCHIMP_AUDIENCE_ID: process.env.MAILCHIMP_AUDIENCE_ID,
     YOUTUBE_API_KEY: process.env.YOUTUBE_API_KEY,
     YOUTUBE_CHANNEL_ID: process.env.YOUTUBE_CHANNEL_ID,
+    public: {
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://kenny.engineer',
+      siteName: 'Ekene Eze',
+      siteDescription: "Hey, I'm Kenny! A Developer Advocate with over 5 years experience. Welcome to a piece of the internet that is mine.",
+      language: 'en-US',
+    },
   },
   css: ['@/assets/css/globals.css'],
 });
