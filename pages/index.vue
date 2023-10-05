@@ -40,7 +40,7 @@ const vquery: QueryBuilderParams = {
           class="w-4/5 md:w-2/5 mt-2 text-lg md:text-2xl text-[#999] leading-[150%] tracking-[-1.2px]"
         >
           I run a DevRel mentorship program where I help other intending
-          developer advocates get started with DevRel. Think that’s you, check
+          developer advocates get started with DevRel. Think that’s you? Check
           when the next cohort would open for application.
         </p>
         <a href="https://www.dxmentorship.com">
@@ -122,10 +122,10 @@ const vquery: QueryBuilderParams = {
       >
         <h3 class="text-xl md:text-2xl tracking-tight">PODCAAAAAST</h3>
         <p class="w-4/5 md:w-2/5 mt-2 tracking-tighter text-[#999]">
-          This is a work in progress, but I am working on a podcast where I talk
-          to people in the all spheres of life about their journey and how they
-          got to where they are today. If you want to be notified when it
-          launches, subscribe to my newsletter below.
+          This is a work in progress! I'm starting a podcast where I talk to
+          people in the all spheres of life about their journey and how they got
+          to where they are today. If you want to be notified when it launches,
+          subscribe to my newsletter below.
         </p>
         <TheButton :rightIcon="true">
           Listen On
