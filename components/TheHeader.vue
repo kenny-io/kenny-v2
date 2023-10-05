@@ -56,7 +56,7 @@ const navLinks = ref([
       </div>
       <nav class="flex justify-between items-center mx-auto">
         <div
-          class="top-[-100%] duration-500 md:static absolute md:min-h-fit pb-4 left-0 md:w-auto w-full flex items-start pt-5 md:pt-0 px-5 bg-black"
+          class="top-[-100%] md:z-20 duration-500 md:static absolute md:min-h-fit pb-4 left-0 md:w-auto w-full flex items-start pt-5 md:pt-0 px-5 bg-black"
           :class="{
             'top-[9%] z-40': state.isMobileNavOpen,
             '-z-10': !state.isMobileNavOpen
