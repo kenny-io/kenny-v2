@@ -23,6 +23,24 @@ const sendEmail = () => {
   const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
   window.location.href = mailtoLink;
 };
+
+useSeoMeta({
+  title: 'Ekene Eze - Developer Advocate, Software Engineer, Content Creator',
+  description:
+    'As an international keynote speaker, I have had the privilege of sharing insights and experiences at a variety of conferences, both on a global stage and within local communities.',
+  ogTitle: 'Ekene Eze - Website',
+  ogDescription:
+    'As an international keynote speaker, I have had the privilege of sharing insights and experiences at a variety of conferences, both on a global stage and within local communities.',
+  ogImage:
+    'https://res.cloudinary.com/kennyy/image/upload/v1696602621/CleanShot_2023-10-06_at_18.29.45_2x_t3c846.png',
+  ogUrl: 'https://kenny.engineer',
+  twitterTitle: 'Ekene Eze - Website',
+  twitterDescription:
+    'As an international keynote speaker, I have had the privilege of sharing insights and experiences at a variety of conferences, both on a global stage and within local communities.',
+  twitterImage:
+    'https://res.cloudinary.com/kennyy/image/upload/v1696602800/CleanShot_2023-10-06_at_18.32.54_2x_oerykz.png',
+  twitterCard: 'summary',
+});
 </script>
 
 <template>
@@ -30,11 +48,11 @@ const sendEmail = () => {
     <section class="pt-20">
       <TheWrapper>
         <div class="flex text-[#ABABAB] px-16">
-          <div class="w-3/4 mt-20">
+          <div class="w-auto mt-20">
             <h1 class="text-8xl font-semibold tracking-tighter text-[#fff]">
               Speaking
             </h1>
-            <p class="text-xl mt-6">
+            <p class="text-xl mt-6 text-center md:text-left">
               I've had the privilege of sharing insights and experiences at a
               variety of conferences, both on a global stage and within local
               communities. <br />
@@ -49,7 +67,8 @@ const sendEmail = () => {
               >Invite Me to your Awesome Event</TheButton
             >
           </div>
-          <div class="w-2/4 hidden sm:block">
+
+          <div class="w-2/4 hidden md:hidden lg:flex">
             <div
               class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0"
             >
@@ -118,7 +137,7 @@ const sendEmail = () => {
         </div>
       </TheWrapper>
     </section>
-    <section class="mb-24 sticky top-0 pt-6 bg-black/80 backdrop-blur-lg">
+    <section>
       <TheWrapper>
         <TheTalksSearch
           :content="talks"
