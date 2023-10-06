@@ -48,11 +48,11 @@ useSeoMeta({
     <section class="pt-20">
       <TheWrapper>
         <div class="flex text-[#ABABAB] px-16">
-          <div class="w-3/4 mt-20">
+          <div class="w-auto mt-20">
             <h1 class="text-8xl font-semibold tracking-tighter text-[#fff]">
               Speaking
             </h1>
-            <p class="text-xl mt-6">
+            <p class="text-xl mt-6 text-center md:text-left">
               I've had the privilege of sharing insights and experiences at a
               variety of conferences, both on a global stage and within local
               communities. <br />
@@ -67,7 +67,8 @@ useSeoMeta({
               >Invite Me to your Awesome Event</TheButton
             >
           </div>
-          <div class="w-2/4 hidden sm:block">
+
+          <div class="w-2/4 hidden md:hidden lg:flex">
             <div
               class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0"
             >
@@ -136,7 +137,7 @@ useSeoMeta({
         </div>
       </TheWrapper>
     </section>
-    <section class="mb-24 sticky top-0 pt-6 bg-black/80 backdrop-blur-lg">
+    <section>
       <TheWrapper>
         <TheTalksSearch
           :content="talks"

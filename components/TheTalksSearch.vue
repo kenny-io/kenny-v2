@@ -19,7 +19,6 @@ const filteredContent = computed(() => {
   // sort by date
   let results = content?.value || [];
   results.sort((a: any, b: any) => {
-    // assuming date is in YYYY-MM-DD format, you can use new Date(dateString) to convert it into a Date object
     const dateA = new Date(a.date);
     const dateB = new Date(b.date);
     return dateB.getTime() - dateA.getTime();
@@ -53,78 +52,89 @@ const clearSelectedCategory = () => {
 };
 </script>
 <template>
-  <div>
+  <div
+    class="mb-24 pt-6 bg-black/80 backdrop-blur-lg flex flex-col items-center"
+  >
     <div
-      class="w-full px-4 py-4 border border-[#383838] rounded-md relative flex items-center"
+      class="w-full px-4 py-4 border border-[#383838] rounded-md flex items-center justify-center"
     >
       <div>
         <TheSearchIcon />
       </div>
       <input
         v-model="localSearchQuery"
-        class="bg-transparent rounded-xl w-full h-[45px] pl-4 py-3 text-[#999] text-2xl font-semibold tracking-[-0.84px] focus:border-none active:border-none focus-visible:border-none focus:outline-none placeholder:text-[#878787]"
+        class="bg-transparent rounded-xl w-full h-[45px] pl-4 py-3 text-[#999] text-2xl font-semibold tracking-[-0.84px] focus:border-none active:border-none focus-visible:border-none focus:outline-none placeholder:text-[#878787] md:text-left"
         placeholder="Search"
         type="text"
         required
       />
     </div>
 
-    <div class="text-[#999] flex items-center py-4">
-      <p class="text-base tracking-[-0.56px] mr-6 whitespace-nowrap">
+    <div
+      class="text-[#999] flex flex-col md:flex-row items-center justify-center py-4 text-center"
+    >
+      <p
+        class="text-base tracking-[-0.56px] mb-4 md:mb-0 md:mr-6 whitespace-nowrap"
+      >
         Filter by:
       </p>
-      <TheChip
-        v-for="talk in talkCategories"
-        :key="talk"
-        @click="selectedCategory = talk"
-      >
-        {{ talk }}
-      </TheChip>
-      <button
-        v-if="selectedCategory"
-        @click="clearSelectedCategory"
-        class="ml-4 px-3 py-1 rounded-md bg-gray-200 text-gray-800"
-      >
-        Clear
-      </button>
+      <div class="flex items-center justify-center gap-2 md:gap-0">
+        <TheChip
+          v-for="talk in talkCategories"
+          :key="talk"
+          @click="selectedCategory = talk"
+        >
+          {{ talk }}
+        </TheChip>
+        <button
+          v-if="selectedCategory"
+          @click="clearSelectedCategory"
+          class="ml-4 px-3 py-1 rounded-md bg-gray-200 text-gray-800"
+        >
+          Clear
+        </button>
+      </div>
     </div>
-
-    <!-- THIS IMPLEMENTATION IS NOT PERFECT. THE ELEMENTS EXIST IN THE DOM SO THEY
-    TAKE UP SPACE ON SCREEN WHEN THE HOVER STATE IS NOT ACTIVE. -->
-
-    <!-- <div>
+  </div>
+  <div class="mb-20 flex flex-col items-center">
+    <div
+      v-for="talk in filteredContent"
+      :key="talk.title"
+      class="border-b cursor-pointer group py-10 border-[#434343] relative w-full max-w-xl text-center md:text-left"
+      @click="toggleDetails(talk.title)"
+    >
+      <div class="flex flex-col md:flex-row items-center justify-center gap-7">
+        <h2
+          class="text-[#898989] text-6xl tracking-[-4.16px] group-hover:text-white transition duration-300 ease-in-out"
+          :class="{ 'text-white': showDetails[talk.title] }"
+        >
+          {{ talk.title }}
+        </h2>
+        <TheChip
+          v-if="talk.status === 'upcoming'"
+          class="text-green-400 border-green-300"
+          >Upcoming</TheChip
+        >
+      </div>
       <div
-        v-for="talk in filteredContent"
-        :key="talk.title"
-        class="border-b cursor-pointer group py-10 border-[#434343] relative"
+        v-if="showDetails[talk.title]"
+        class="transition-opacity duration-300"
       >
-        <div class="flex items-center gap-7">
-          <h2
-            class="group-hover:text-white transition duration-300 ease-in-out text-[#898989] text-6xl tracking-[-4.16px] w-5/6"
-          >
-            {{ talk.title }}
-          </h2>
-          <TheChip
-            v-if="talk.status === 'upcoming'"
-            class="text-green-400 border-green-300"
-            >Upcoming</TheChip
-          >
-        </div>
-        <div
-          class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        >
-          <p class="text-white mt-8 w-3/4">
-            {{ talk.description || 'Something' }}
-          </p>
+        <p class="mt-8 w-full md:w-3/4 text-[#898989] mx-auto">
+          {{ talk.description || 'Something' }}
+        </p>
 
-          <div class="flex items-center gap-7 text-white mt-8">
-            <h2>{{ talk.date }}</h2>
-            <a :href="talk?.site">Link</a>
-          </div>
-        </div>
         <div
-          class="absolute top-0 right-0 mt-8 mr-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          class="flex flex-col md:flex-row items-center gap-7 text-[#898989] mt-8 justify-center"
         >
+          <h2>{{ formatDate(talk.date) }}</h2>
+          <a :href="talk?.site">Conference</a>
+        </div>
+
+        <div
+          class="mt-8 mx-auto md:absolute md:top-0 md:right-0 md:mt-8 md:mr-8"
+        >
+          <!-- Position the image at the center on mobile and at the far right on desktop -->
           <img
             :src="talk.image"
             :alt="talk.title"
@@ -134,56 +144,7 @@ const clearSelectedCategory = () => {
           />
         </div>
       </div>
-    </div> -->
-
-    <div>
-      <div
-        v-for="talk in filteredContent"
-        :key="talk.title"
-        class="border-b cursor-pointer group py-10 border-[#434343] relative"
-        @click="toggleDetails(talk.title)"
-      >
-        <div class="flex items-center gap-7">
-          <h2
-            class="text-[#898989] text-6xl tracking-[-4.16px] w-5/6 group-hover:text-white transition duration-300 ease-in-out"
-            :class="{ 'text-white': showDetails[talk.title] }"
-          >
-            {{ talk.title }}
-          </h2>
-          <TheChip
-            v-if="talk.status === 'upcoming'"
-            class="text-green-400 border-green-300"
-            >Upcoming</TheChip
-          >
-        </div>
-        <div
-          v-if="showDetails[talk.title]"
-          class="transition-opacity duration-300"
-        >
-          <!-- This div is visible when showDetails is true -->
-          <p class="mt-8 w-3/4 text-[#898989]">
-            {{ talk.description || 'Something' }}
-          </p>
-
-          <div class="flex items-center gap-7 text-[#898989] mt-8">
-            <h2>{{ formatDate(talk.date) }}</h2>
-            <a :href="talk?.site">Conference</a>
-          </div>
-
-          <div class="absolute top-0 right-0 mt-8 mr-8">
-            <!-- Position the image at the far right -->
-            <img
-              :src="talk.image"
-              :alt="talk.title"
-              width="200"
-              height="200"
-              class="rotate-12 border border-[#383838] rounded-md"
-            />
-          </div>
-        </div>
-      </div>
     </div>
-
-    <TheButton class="mx-auto mt-24">Show More</TheButton>
   </div>
+  <!-- <TheButton class="mx-auto mt-24">Show More</TheButton> -->
 </template>
