@@ -23,6 +23,24 @@ const sendEmail = () => {
   const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
   window.location.href = mailtoLink;
 };
+
+useSeoMeta({
+  title: 'Ekene Eze - Developer Advocate, Software Engineer, Content Creator',
+  description:
+    'As an international keynote speaker, I have had the privilege of sharing insights and experiences at a variety of conferences, both on a global stage and within local communities.',
+  ogTitle: 'Ekene Eze - Website',
+  ogDescription:
+    'As an international keynote speaker, I have had the privilege of sharing insights and experiences at a variety of conferences, both on a global stage and within local communities.',
+  ogImage:
+    'https://res.cloudinary.com/kennyy/image/upload/v1696602621/CleanShot_2023-10-06_at_18.29.45_2x_t3c846.png',
+  ogUrl: 'https://kenny.engineer',
+  twitterTitle: 'Ekene Eze - Website',
+  twitterDescription:
+    'As an international keynote speaker, I have had the privilege of sharing insights and experiences at a variety of conferences, both on a global stage and within local communities.',
+  twitterImage:
+    'https://res.cloudinary.com/kennyy/image/upload/v1696602800/CleanShot_2023-10-06_at_18.32.54_2x_oerykz.png',
+  twitterCard: 'summary',
+});
 </script>
 
 <template>

@@ -198,6 +198,24 @@ const usesSoftwareList = [
     link: 'https://cleanshot.com/',
   },
 ];
+
+useSeoMeta({
+  title: 'Ekene Eze - Developer Advocate, Software Engineer, Content Creator',
+  description:
+    "I've been evolving my tools for half a decade now and here is the current state.",
+  ogTitle: 'Ekene Eze - Website',
+  ogDescription:
+    "I've been evolving my tools for half a decade now and here is the current state.",
+  ogImage:
+    'https://res.cloudinary.com/kennyy/image/upload/v1696605503/domenico-loia-hGV2TfOh0ns-unsplash_b3hpqg.jpg',
+  ogUrl: 'https://kenny.engineer',
+  twitterTitle: 'Ekene Eze - Website',
+  twitterDescription:
+    "I've been evolving my tools for half a decade now and here is the current state.",
+  twitterImage:
+    'https://res.cloudinary.com/kennyy/image/upload/v1696605503/domenico-loia-hGV2TfOh0ns-unsplash_b3hpqg.jpg',
+  twitterCard: 'summary',
+});
 </script>
 <template>
   <main>
@@ -215,9 +233,10 @@ const usesSoftwareList = [
             <p
               class="text-base w-[350px] sm:w-full md:text-xl mt-6 text-center md:text-left"
             >
-              I have spoken at a couple of conferences, global and home. If
-              you'd like to have me come speak at your conference or do a
-              private workshop at your work. Come say hi
+              I've been evolving my tools for half a decade. Definitely have a
+              long way to go but here is the current state. PS: Some of these
+              things are a bit of an overkill so don't feel pressured to get
+              them.
             </p>
           </div>
           <div class="w-1/2 md:w-2/4">
@@ -227,14 +246,14 @@ const usesSoftwareList = [
       </TheWrapper>
     </section>
     <section>
-      <TheWrapper>
+      <!-- <TheWrapper>
         <div class="text-center w-5/6 pt-20 pb-52 px-28 mx-auto">
           <h2 class="text-2xl md:text-4xl text-[#FFFAEA] tracking-[-1.26px]">
             I've been evolving my tools for half a decade now and here is the
             current state.
           </h2>
         </div>
-      </TheWrapper>
+      </TheWrapper> -->
     </section>
     <section>
       <TheSlider

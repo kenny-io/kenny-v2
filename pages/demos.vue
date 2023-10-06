@@ -21,6 +21,24 @@ function fetchDemos() {
 onMounted(() => {
   fetchDemos();
 });
+
+useSeoMeta({
+  title: 'Ekene Eze - Developer Advocate, Software Engineer, Content Creator',
+  description:
+    'I build Proof of Concepts (POCs) for various purposes, with the primary intent being to validate an idea or teach a concept I find interesting.',
+  ogTitle: 'Ekene Eze - Website',
+  ogDescription:
+    'I build Proof of Concepts (POCs) for various purposes, with the primary intent being to validate an idea or teach a concept I find interesting. ',
+  ogImage:
+    'https://res.cloudinary.com/kennyy/image/upload/v1696605869/lee-campbell-DtDlVpy-vvQ-unsplash_cl9fy9.jpg',
+  ogUrl: 'https://kenny.engineer',
+  twitterTitle: 'Ekene Eze - Website',
+  twitterDescription:
+    'I build Proof of Concepts (POCs) for various purposes, with the primary intent being to validate an idea or teach a concept I find interesting.',
+  twitterImage:
+    'https://res.cloudinary.com/kennyy/image/upload/v1696605869/lee-campbell-DtDlVpy-vvQ-unsplash_cl9fy9.jpg',
+  twitterCard: 'summary',
+});
 </script>
 <template>
   <main>
