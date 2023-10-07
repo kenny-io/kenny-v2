@@ -30,19 +30,6 @@ useSeoMeta({
     'https://res.cloudinary.com/kennyy/image/upload/v1696602243/kennyio_1_epxtwy.jpg',
   twitterCard: 'summary',
 });
-
-useHead({
-  htmlAttrs: {
-    lang: 'en',
-  },
-  link: [
-    {
-      rel: 'icon',
-      type: 'image/png',
-      href: '/favicon.png',
-    },
-  ],
-});
 </script>
 
 <template>

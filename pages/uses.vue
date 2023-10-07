@@ -217,142 +217,6 @@ useSeoMeta({
   twitterCard: 'summary',
 });
 </script>
-<!-- <template>
-  <main>
-    <section class="pt-20">
-      <TheWrapper>
-        <div
-          class="flex flex-col items-center md:flex-row text-[#ABABAB] px-16"
-        >
-          <div class="md:w-3/4 md:mt-0 mt-6 order-2 md:order-none">
-            <h1
-              class="md:text-left text-center text-4xl md:text-6xl font-semibold tracking-tighter text-[#fff]"
-            >
-              Gears and Gizmos
-            </h1>
-            <p
-              class="text-base w-[350px] sm:w-full md:text-xl mt-6 text-center md:text-left"
-            >
-              I've been evolving my tools for half a decade. Definitely have a
-              long way to go but here is the current state. PS: Some of these
-              things are a bit of an overkill so don't feel pressured to get
-              them.
-            </p>
-          </div>
-          <div class="w-1/2 md:w-2/4">
-            <img class="w-[406px]" src="../assets/images/uses-hero-image.png" />
-          </div>
-        </div>
-      </TheWrapper>
-    </section>
-    <section>
-      
-    </section>
-    <section>
-      <TheSlider
-        slide-to="right"
-        class="text-7xl tracking-tight md:text-[140px]"
-      >
-        Developer Relations - Software Engineer - Mentor - Drone Pilot - Keynote
-        Speaker - Content Creator - Author -
-      </TheSlider>
-    </section>
-    <section class="my-48 text-gray-200">
-      <TheWrapper>
-        <div class="hardwareWrapper flex md:flex-row flex-col">
-          <div class="left md:h-screen w-1/3 sticky top-0 flex items-center">
-            <div class="inner-wrapper md:-translate-y-40">
-              <div class="sectionHeader">
-                <h2 class="text-7xl text-[#565656] tracking-tighter">
-                  Hardware
-                </h2>
-              </div>
-            </div>
-          </div>
-          <div class="right relative -translate-x-4 pt-96">
-            <div class="inner-wrapper">
-              <div
-                v-for="item in usesHardwareList"
-                :key="item.image"
-                class="sectionItem flex items-center gap-5 md:gap-32 mt-40"
-              >
-                <div class="itemPhoto min-w-[200px]">
-                  <img :src="'/uses/' + item.image" alt="mac" />
-                </div>
-                <div class="itemContent group cursor-pointer">
-                  <h4 class="text-[#85827A] text-5xl tracking-tighter">
-                    {{ item.title }}
-                  </h4>
-                  <p
-                    class="w-[420px] text-[#FFFAEA] tracking-tighter lg:text-3xl text-base mt-4"
-                  >
-                    {{ item.description }}
-                  </p>
-                  <a :href="item.link" ref="kenny.engineer" target="_blank">
-                    <span
-                      class="mt-6 h-6 w-6 rounded-full flex items-center justify-center border text-[#FFFAEA]"
-                    >
-                      <Icon
-                        class="w-4 h-4 group-hover:-rotate-45 duration-500 ease-in-out"
-                        name="material-symbols:arrow-right-alt-rounded"
-                      />
-                    </span>
-                  </a>
-                </div>
-              </div>
-              <div class="h-[30vh]"></div>
-            </div>
-          </div>
-        </div>
-        <div class="softwareWrapper flex md:flex-row flex-col">
-          <div class="left md:h-screen w-1/3 sticky top-0 flex items-center">
-            <div class="inner-wrapper md:-translate-y-40">
-              <div class="sectionHeader">
-                <h2 class="text-7xl text-[#565656] tracking-tighter">
-                  Software
-                </h2>
-              </div>
-            </div>
-          </div>
-          <div class="right relative -translate-x-4 md:pt-96">
-            <div class="inner-wrapper">
-              <div
-                v-for="item in usesSoftwareList"
-                :key="item.image"
-                class="sectionItem flex items-center gap-5 md:gap-32 mt-40"
-              >
-                <div class="itemPhoto min-w-[160px] max-w-[300px]">
-                  <img :src="'/uses/' + item.image" alt="mac" />
-                </div>
-                <div class="itemContent group cursor-pointer">
-                  <h4 class="text-[#85827A] text-5xl tracking-tighter">
-                    {{ item.title }}
-                  </h4>
-                  <p
-                    class="w-[420px] text-[#FFFAEA] tracking-tighter lg:text-3xl text-base mt-4"
-                  >
-                    {{ item.description }}
-                  </p>
-                  <a :href="item.link" ref="kenny.engineer" target="_blank">
-                    <span
-                      class="mt-6 h-6 w-6 rounded-full flex items-center justify-center border text-[#FFFAEA]"
-                    >
-                      <Icon
-                        class="w-4 h-4 group-hover:-rotate-45 duration-500 ease-in-out"
-                        name="material-symbols:arrow-right-alt-rounded"
-                      />
-                    </span>
-                  </a>
-                </div>
-              </div>
-              <div class="h-[80vh]"></div>
-            </div>
-          </div>
-        </div>
-      </TheWrapper>
-    </section>
-  </main>
-</template> -->
 
 <template>
   <main>
@@ -388,8 +252,11 @@ useSeoMeta({
     <section>
       <!-- content commented out -->
     </section>
-    <section>
-      <TheSlider slide-to="right" class="text-4xl md:text-7xl tracking-tight">
+    <section class="mt-16">
+      <TheSlider
+        slide-to="right"
+        styles="text-7xl tracking-tighter md:text-[140px]"
+      >
         Developer Relations - Software Engineer - Mentor - Drone Pilot - Keynote
         Speaker - Content Creator - Author -
       </TheSlider>
@@ -421,7 +288,7 @@ useSeoMeta({
                 <div class="itemPhoto w-full max-w-[200px]">
                   <img :src="'/uses/' + item.image" alt="mac" />
                 </div>
-                <div class="itemContent group cursor-pointer w-full">
+                <div class="itemContent group w-full">
                   <h4
                     class="text-[#85827A] text-4xl md:text-5xl tracking-tighter"
                   >

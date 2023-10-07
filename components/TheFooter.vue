@@ -194,13 +194,13 @@ function displayDubaiTime() {
               </li>
             </ul>
           </div>
-          <div class="border text-[#6F6F6F] rounded-full">
+          <!-- <div class="border text-[#6F6F6F] rounded-full">
             <p
               class="py-1 px-4 text-[#6F6F6F] text-sm uppercase tracking-tight font-semibold"
             >
               Light
             </p>
-          </div>
+          </div> -->
         </div>
       </div>
     </TheWrapper>

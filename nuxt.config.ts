@@ -27,7 +27,7 @@ export default defineNuxtConfig({
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://kenny.engineer',
       siteName: 'Ekene Eze',
       siteDescription:
-        "Hey, I'm Kenny! A Developer Advocate with over 5 years experience. Welcome to a piece of the internet that is mine.",
+        "Hey, I'm Kenny! A Developer Advocate, Software Engineer and Content Create with over 5 years experience. Welcome to my corner of the internet!",
       language: 'en-US',
     },
   },
