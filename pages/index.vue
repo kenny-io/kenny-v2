@@ -13,28 +13,61 @@ const vquery: QueryBuilderParams = {
   sort: [{ date: -1 }],
 };
 
-  head: {
-    title: "Ekene Eze | Developer Advocate, Software Engineer and Content Creator",
-    meta: [
-      {
-        hid: "description",
-        name: "description",
-        content:
-          "Hi, I’m Ekene Eze, a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker. I help developers build better products and companies build better developer communities.."
-      },
-      {
-        hid: "og:image",
-        property: "og:image",
-        content:
-          "https://res.cloudinary.com/kennyy/image/upload/v1696601563/Ekene_Eze_kswpgu.png"
-      },
-      {
-        hid: "twitter:card",
-        name: "twitter:card",
-        content: "summary_large_image"
-      }
-    ]
-  }
+// head: {
+//   title: "Ekene Eze | Developer Advocate, Software Engineer and Content Creator",
+//   meta: [
+//     {
+//       hid: "description",
+//       name: "description",
+//       content:
+//         "Hi, I’m Ekene Eze, a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker. I help developers build better products and companies build better developer communities.."
+//     },
+//     {
+//       hid: "og:image",
+//       property: "og:image",
+//       content:
+//         "https://res.cloudinary.com/kennyy/image/upload/v1696601563/Ekene_Eze_kswpgu.png"
+//     },
+//     {
+//       hid: "twitter:card",
+//       name: "twitter:card",
+//       content: "summary_large_image"
+//     }
+//   ]
+// }
+
+useHead({
+  htmlAttrs: {
+    lang: 'en',
+  },
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.png',
+    },
+  ],
+  title: 'Ekene Eze - Developer Advocate, Software Engineer, Content Creator',
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content:
+        'Hi, I’m Ekene Eze, a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker. I help developers build better products and companies build better developer communities..',
+    },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content:
+        'https://res.cloudinary.com/kennyy/image/upload/v1696601563/Ekene_Eze_kswpgu.png',
+    },
+    {
+      hid: 'twitter:card',
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+  ],
+});
 
 // useSeoMeta({
 //   title: 'Ekene Eze - Developer Advocate, Software Engineer, Content Creator',
