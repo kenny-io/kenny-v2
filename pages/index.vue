@@ -13,23 +13,46 @@ const vquery: QueryBuilderParams = {
   sort: [{ date: -1 }],
 };
 
-useSeoMeta({
-  title: 'Ekene Eze - Developer Advocate, Software Engineer, Content Creator',
-  description:
-    'Hi, I’m Ekene Eze, a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker. I help developers build better products and companies build better developer communities.',
-  ogTitle: 'Ekene Eze - Website',
-  ogDescription:
-    'Hi, I’m Ekene Eze, a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker. I help developers build better products and companies build better developer communities.',
-  ogImage:
-    'https://res.cloudinary.com/kennyy/image/upload/v1696601563/Ekene_Eze_kswpgu.png',
-  ogUrl: 'https://kenny.engineer',
-  twitterTitle: 'Ekene Eze - Website',
-  twitterDescription:
-    'Get a glimpse into my activities as a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker.',
-  twitterImage:
-    'https://res.cloudinary.com/kennyy/image/upload/v1696602243/kennyio_1_epxtwy.jpg',
-  twitterCard: 'summary',
-});
+  head: {
+    title: "Ekene Eze | Developer Advocate, Software Engineer and Content Creator",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Hi, I’m Ekene Eze, a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker. I help developers build better products and companies build better developer communities.."
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content:
+          "https://res.cloudinary.com/kennyy/image/upload/v1696601563/Ekene_Eze_kswpgu.png"
+      },
+      {
+        hid: "twitter:card",
+        name: "twitter:card",
+        content: "summary_large_image"
+      }
+    ]
+  }
+
+// useSeoMeta({
+//   title: 'Ekene Eze - Developer Advocate, Software Engineer, Content Creator',
+//   description:
+//     'Hi, I’m Ekene Eze, a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker. I help developers build better products and companies build better developer communities.',
+//   ogTitle: 'Ekene Eze - Website',
+//   ogDescription:
+//     'Hi, I’m Ekene Eze, a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker. I help developers build better products and companies build better developer communities.',
+//   ogImage:
+//     'https://res.cloudinary.com/kennyy/image/upload/v1696601563/Ekene_Eze_kswpgu.png',
+//   ogUrl: 'https://kenny.engineer',
+//   twitterTitle: 'Ekene Eze - Website',
+//   twitterDescription:
+//     'Get a glimpse into my activities as a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker.',
+//   twitterImage:
+//     'https://res.cloudinary.com/kennyy/image/upload/v1696602243/kennyio_1_epxtwy.jpg',
+//   twitterCard: 'summary',
+// });
 </script>
 
 <template>
