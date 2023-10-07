@@ -102,21 +102,21 @@ onMounted(() => {
 });
 
 useSeoMeta({
-  title: 'Ekene Eze - Developer Advocate, Software Engineer, Content Creator',
+  title: 'Ekene Eze | Blogposts',
   description:
     "Writing is a huge part of my content delivery approach. It's one of the fastest way I know to quickly share the things I've learnt in the course of my work and other activities.",
-  ogTitle: 'Ekene Eze - Website',
+  ogTitle: 'Ekene Eze | Blogposts',
   ogDescription:
     "Writing is a huge part of my content delivery approach. It's one of the fastest way I know to quickly share the things I've learnt in the course of my work and other activities.",
   ogImage:
     'https://res.cloudinary.com/kennyy/image/upload/v1696605501/jess-bailey-q10VITrVYUM-unsplash_1_xcrw1z.jpg',
   ogUrl: 'https://kenny.engineer',
-  twitterTitle: 'Ekene Eze - Website',
+  twitterTitle: 'Ekene Eze | Blogposts',
   twitterDescription:
     "Writing is a huge part of my content delivery approach. It's one of the fastest way I know to quickly share the things I've learnt in the course of my work and other activities.",
   twitterImage:
     'https://res.cloudinary.com/kennyy/image/upload/v1696607095/AI_Generated_Image_33_b6mmwh.jpg',
-  twitterCard: 'summary',
+  twitterCard: 'summary_large_image',
 });
 </script>
 

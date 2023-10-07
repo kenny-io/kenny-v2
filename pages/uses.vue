@@ -200,21 +200,21 @@ const usesSoftwareList = [
 ];
 
 useSeoMeta({
-  title: 'Ekene Eze - Developer Advocate, Software Engineer, Content Creator',
+  title: 'Ekene Eze | Tools and Tech',
   description:
     "I've been evolving my tools for half a decade now and here is the current state.",
-  ogTitle: 'Ekene Eze - Website',
+  ogTitle: 'Ekene Eze | Tools and Tech',
   ogDescription:
     "I've been evolving my tools for half a decade now and here is the current state.",
   ogImage:
     'https://res.cloudinary.com/kennyy/image/upload/v1696605503/domenico-loia-hGV2TfOh0ns-unsplash_b3hpqg.jpg',
   ogUrl: 'https://kenny.engineer',
-  twitterTitle: 'Ekene Eze - Website',
+  twitterTitle: 'Ekene Eze - Tools and Tech',
   twitterDescription:
     "I've been evolving my tools for half a decade now and here is the current state.",
   twitterImage:
     'https://res.cloudinary.com/kennyy/image/upload/v1696605503/domenico-loia-hGV2TfOh0ns-unsplash_b3hpqg.jpg',
-  twitterCard: 'summary',
+  twitterCard: 'summary_large_image',
 });
 </script>
 
