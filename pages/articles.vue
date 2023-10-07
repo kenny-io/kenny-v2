@@ -10,10 +10,9 @@ const externalPostsFromNuxtContent = await queryContent('externals')
   .sort({ title: 1 })
   .find();
 
-// Fetch Articles from Hashnode v2 API
 const hashnodeArticles = ref([]);
 
-// Function to fetch articles from Hashnode v2 API
+// Fetch articles from Hashnode v2 API
 const fetchHashnodeArticles = async () => {
   try {
     const response = await fetch('https://gql.hashnode.com', {
@@ -217,7 +216,7 @@ useSeoMeta({
             <button
               v-if="selectedCategory"
               @click="clearSelectedCategory"
-              class="ml-4 px-3 py-1 rounded-md bg-gray-200 text-gray-800"
+              class="rounded-full border border-[#999] px-2 py-1.5 text-xs w-fit uppercase mr-2 whitespace-nowrap cursor-pointer hover:bg-[#999] hover:text-white hover:border-[#999] hover:transition duration-200 ease-in-out bg-gray-200 text-gray-800"
             >
               Clear
             </button>
