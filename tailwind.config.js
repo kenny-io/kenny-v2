@@ -12,17 +12,16 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        'suisseIntl': ["'suisse-intl'"],
-        'suisseIntlCond': ["'suisse-intl-cond'"],
-        'suisseIntlWorks': ["'suisse-intl-works'"]
+        suisseIntl: ["'suisse-intl'"],
+        suisseIntlCond: ["'suisse-intl-cond'"],
+        suisseIntlWorks: ["'suisse-intl-works'"],
       },
       colors: {
         gray: {
-          300: '#858585'
-        }
-      }
+          300: '#858585',
+        },
+      },
     },
   },
   plugins: [],
-}
-
+};

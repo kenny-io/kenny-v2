@@ -2,7 +2,7 @@
   <section class="relative pb-20 py-24 md:py-[100px]">
     <TheWrapper class="flex flex-col md:flex-row gap-6">
       <div>
-        <div>
+        <div class="font-nunito">
           <h1
             class="text-4xl md:text-8xl text-[#D4D4D4] tracking-[-1.50px] md:tracking-[-3.84px]"
           >
@@ -24,23 +24,8 @@
         </div>
 
         <div class="flex items-center mt-1 md:mt-2">
-          <p class="text-[#999] text-xs md:text-base mr-2">Previously at</p>
+          <p class="text-[#999] text-xs md:text-base mr-2">Previously:</p>
           <div class="flex items-center">
-            <!-- <div class="cursor-pointer flex items-start group/ex">
-              <div
-                class="py-1 px-2 flex items-center transition duration-500 ease-in-out group-hover/ex:border-gray-300 border border-transparent rounded-full border-gray-300"
-              >
-                <img
-                  src="../assets/images/plasmic.svg"
-                  class="aspect-square w-5 h-5 md:w-[24px] md:h-[24px]"
-                />
-                <span
-                  class="transition duration-500 ease-in-out text-[#B2B2B2] w-0 opacity-0 hidden group-hover/ex:block group-hover/ex:opacity-100 group-hover/ex:w-full"
-                  >Plasmic</span
-                >
-              </div>
-            </div> -->
-
             <div class="cursor-pointer flex items-start group/ex">
               <div
                 class="py-1 px-2 flex items-center transition duration-500 ease-in-out group-hover/ex:border-gray-300 border border-transparent rounded-full border-gray-300"
@@ -66,6 +51,20 @@
                 <span
                   class="transition duration-500 ease-in-out text-[#B2B2B2] w-0 opacity-0 hidden group-hover/ex:block group-hover/ex:opacity-100 group-hover/ex:w-full"
                   >Netlify</span
+                >
+              </div>
+            </div>
+            <div class="cursor-pointer flex items-start group/ex">
+              <div
+                class="py-1 px-2 flex items-center transition duration-500 ease-in-out group-hover/ex:border-gray-300 border border-transparent rounded-full border-gray-300"
+              >
+                <img
+                  src="../assets/images/plasmic.svg"
+                  class="aspect-square w-5 h-5 md:w-[24px] md:h-[24px]"
+                />
+                <span
+                  class="transition duration-500 ease-in-out text-[#B2B2B2] w-0 opacity-0 hidden group-hover/ex:block group-hover/ex:opacity-100 group-hover/ex:w-full"
+                  >Plasmic</span
                 >
               </div>
             </div>
