@@ -70,7 +70,9 @@ const clearSelectedCategory = () => {
     </div>
 
     <div class="text-[#999] flex items-center py-4">
-      <p class="text-base tracking-[-0.56px] mr-6 whitespace-nowrap">
+      <p
+        class="hidden md:flex text-base tracking-[-0.56px] mr-6 whitespace-nowrap"
+      >
         Filter by:
       </p>
       <TheChip
@@ -89,7 +91,7 @@ const clearSelectedCategory = () => {
       </button>
     </div>
   </div>
-  <div class="mb-20">
+  <div class="mb-20 px-8">
     <div
       v-for="talk in filteredContent"
       :key="talk.title"
@@ -98,7 +100,7 @@ const clearSelectedCategory = () => {
     >
       <div class="flex items-center gap-7">
         <h2
-          class="text-[#898989] text-6xl tracking-[-4.16px] w-5/6 group-hover:text-white transition duration-300 ease-in-out text-center md:text-left"
+          class="text-[#898989] text-6xl tracking-[-4.16px] w-5/6 group-hover:text-white transition duration-300 ease-in-out text-left"
           :class="{ 'text-white': showDetails[talk.title] }"
         >
           {{ talk.title }}

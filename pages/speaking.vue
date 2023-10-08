@@ -49,10 +49,12 @@ useSeoMeta({
       <TheWrapper>
         <div class="flex text-[#ABABAB] px-16">
           <div class="w-auto mt-20">
-            <h1 class="text-8xl font-semibold tracking-tighter text-[#fff]">
+            <h1
+              class="text-4xl md:text-6xl font-semibold tracking-tighter text-[#fff]"
+            >
               Speaking
             </h1>
-            <p class="text-xl mt-6 text-center md:text-left">
+            <p class="text-xl mt-6 text-left">
               I've had the privilege of sharing insights and experiences at a
               variety of conferences, both on a global stage and within local
               communities. <br />
