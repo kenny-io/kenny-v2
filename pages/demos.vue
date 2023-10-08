@@ -72,7 +72,7 @@ useSeoMeta({
       </TheWrapper>
     </section>
 
-    <section class="mt-12 mb-40">
+    <section class="mt-12 mb-40 px-8">
       <TheWrapper>
         <div>
           <div

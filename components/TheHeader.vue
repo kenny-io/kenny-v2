@@ -68,7 +68,11 @@ const navLinks = ref([
               :key="link.slug"
               class="text-[#b5b5b5] text-base"
             >
-              <NuxtLink :to="link.path">{{ link.slug }}</NuxtLink>
+              <NuxtLink
+                :to="link.path"
+                @click.native="state.isMobileNavOpen = false"
+                >{{ link.slug }}</NuxtLink
+              >
             </li>
           </ul>
         </div>

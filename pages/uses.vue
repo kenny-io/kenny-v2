@@ -278,7 +278,7 @@ useSeoMeta({
               </div>
             </div>
           </div>
-          <div class="right w-full relative pt-24">
+          <div class="right w-full relative pt-24 px-8">
             <div class="inner-wrapper">
               <div
                 v-for="item in usesHardwareList"
@@ -331,7 +331,7 @@ useSeoMeta({
               </div>
             </div>
           </div>
-          <div class="right w-full relative pt-24 md:pt-96">
+          <div class="right w-full relative pt-24 md:pt-96 px-8">
             <div class="inner-wrapper">
               <div
                 v-for="item in usesSoftwareList"

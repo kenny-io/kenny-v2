@@ -151,7 +151,7 @@ useSeoMeta({
           <div class="w-1/2 md:w-2/4">
             <img
               class="w-[406px]"
-              src="../assets/images/articles-hero-image.png"
+              src="../assets/images/articles-hero-image1.png"
             />
           </div>
         </div>
