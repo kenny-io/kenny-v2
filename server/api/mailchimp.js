@@ -15,7 +15,7 @@ export default defineEventHandler(async (event) => {
   try {
     const response = await mailchimp.lists.addListMember(runtimeConfig.MAILCHIMP_AUDIENCE_ID, {
       email_address: email,
-      status: "subscribed",
+      status: "pending",
       merge_fields: {
         FNAME: first_name
       }

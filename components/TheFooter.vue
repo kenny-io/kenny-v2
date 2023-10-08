@@ -1,17 +1,5 @@
 <script setup>
-import JSConfetti from 'js-confetti';
-
-let confetti;
-const confettiConfig = {
-  emojis: ['🌈', '⚡️', '💥', '✨', '💫'],
-  emojiSize: 30,
-  confettiNumber: 40,
-};
-
-onMounted(() => {
-  confetti = new JSConfetti();
-});
-
+const {newsletter_subscriber_FNAME} = useTempStore();
 const state = reactive({
   showNewLetterSubscriptionSuccessModal: true,
   subscriptionIsLoading: false,
@@ -24,12 +12,13 @@ const state = reactive({
 const clearMessage = () => {
   return setTimeout(() => {
     if (state.showMessage) state.showMessage = false;
-  }, 4500);
+  }, 4800);
 };
 
 const handleOnNewsletterSubscribe = async () => {
   try {
     state.subscriptionIsLoading = true;
+    newsletter_subscriber_FNAME.value = state.subscriberName;
 
     // Validate Email
     if (!state.subscriberEmail || !state.subscriberName) {
@@ -44,13 +33,17 @@ const handleOnNewsletterSubscribe = async () => {
       state.subscriberName
     );
 
-    if (subscriptionResponse && subscriptionResponse.status) {
-      state.subscriptionMessage = `⚡: ${state.subscriberName}, you are now part of the cool team`;
-      state.showMessage = true;
-      confetti.addConfetti(confettiConfig);
+    if (subscriptionResponse && subscriptionResponse.status == '200') {
+      await navigateTo({path: '/newsletter'})
     }
 
-    if (subscriptionResponse && subscriptionResponse.statusCode == '500') {
+    if (subscriptionResponse && subscriptionResponse.statusCode == '400' && subscriptionResponse.statusMessage == 'Member Exists') {
+      state.subscriptionMessage =
+        'You are already a part of the Kennyverse!';
+      state.showMessage = true;
+    }
+
+    if (subscriptionResponse && subscriptionResponse.status == '500') {
       state.subscriptionMessage =
         '😱: Yikes! Something went wrong. Check the Email and try again.';
       state.showMessage = true;
