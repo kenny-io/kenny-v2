@@ -44,7 +44,7 @@ const truncateDescription = (description: string) => {
       <p class="text-lg md:text-xl text-white/70 mt-4">
         {{ truncateDescription(article?.description) }}
       </p>
-      <a :href="article?.url || videoURL">
+      <a :href="article?.url || videoURL" target="_blank">
         <div
           class="mt-8 w-fit text-[#AFADAD] flex items-center gap-1 hover:gap-2 hover:transition duration-200 ease-in-out cursor-pointer"
         >

@@ -98,7 +98,7 @@ const clearSelectedCategory = () => {
     >
       <div class="flex items-center gap-7">
         <h2
-          class="text-[#898989] text-6xl tracking-[-4.16px] w-5/6 group-hover:text-white transition duration-300 ease-in-out text-center md:text-left"
+          class="text-[#898989] text-6xl tracking-[-4.16px] w-5/6 group-hover:text-white transition duration-300 ease-in-out text-left"
           :class="{ 'text-white': showDetails[talk.title] }"
         >
           {{ talk.title }}

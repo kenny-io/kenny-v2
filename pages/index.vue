@@ -13,39 +13,6 @@ const vquery: QueryBuilderParams = {
   sort: [{ date: -1 }],
 };
 
-// useHead({
-//   htmlAttrs: {
-//     lang: 'en',
-//   },
-//   link: [
-//     {
-//       rel: 'icon',
-//       type: 'image/png',
-//       href: '/favicon.png',
-//     },
-//   ],
-//   title: 'Ekene Eze - Developer Advocate, Software Engineer, Content Creator',
-//   meta: [
-//     {
-//       hid: 'description',
-//       name: 'description',
-//       content:
-//         'Hi, I’m Ekene Eze, a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker. I help developers build better products and companies build better developer communities..',
-//     },
-//     {
-//       hid: 'og:image',
-//       property: 'og:image',
-//       content:
-//         'https://res.cloudinary.com/kennyy/image/upload/v1696601563/Ekene_Eze_kswpgu.png',
-//     },
-//     {
-//       hid: 'twitter:card',
-//       name: 'twitter:card',
-//       content: 'summary_large_image',
-//     },
-//   ],
-// });
-
 useSeoMeta({
   title: 'Ekene Eze - Developer Advocate, Software Engineer, Content Creator',
   description:
@@ -94,7 +61,7 @@ useSeoMeta({
           developer advocates get started with DevRel. Think that’s you? Check
           when the next cohort would open for application.
         </p>
-        <a href="https://www.dxmentorship.com">
+        <a href="https://www.dxmentorship.com" target="_blank">
           <TheButton>APPLY TO DXMENTORSHIP</TheButton></a
         >
       </TheWrapper>
