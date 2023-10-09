@@ -66,11 +66,12 @@ const navLinks = ref([
             <li
               v-for="link in navLinks"
               :key="link.slug"
-              class="text-[#b5b5b5] text-base"
+              class="relative text-[#b5b5b5] hover:text-white text-base"
             >
               <NuxtLink
                 :to="link.path"
                 @click.native="state.isMobileNavOpen = false"
+                class="nav-link"
                 >{{ link.slug }}</NuxtLink
               >
             </li>
@@ -103,5 +104,35 @@ const navLinks = ref([
 .router-link-active,
 .router-link-exact-active {
   font-weight: 500;
+}
+/* Updated CSS for the hover effect */
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  /* Position the underline slightly below the text */
+  left: 0;
+  right: 0;
+  height: 2px;
+  /* Thickness of the underline */
+  background: linear-gradient(
+    90deg,
+    #303030 0%,
+    #00dc82 50%,
+    #36e4da 75%,
+    #0047e1 100%
+  ); /* Updated Gradient effect */
+  /* Updated Gradient effect */
+  transform: scaleX(0);
+  /* Initially, the underline is not visible */
+  transition: transform 0.3s ease;
+  /* Animation effect */
+  transform-origin: bottom right;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+  /* On hover, the underline becomes fully visible */
+  transform-origin: bottom left;
 }
 </style>
