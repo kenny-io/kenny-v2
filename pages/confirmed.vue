@@ -16,7 +16,6 @@ onMounted(() => {
   confetti = new JSConfetti();
   confetti.addConfetti(confettiConfig);
 });
-
 useHead({
   link: [
     {
@@ -35,22 +34,28 @@ const handleButton = async () => {
   <main class="h-[calc(100vh-2.5rem)] flex flex-col">
     <section class="">
       <TheWrapper class="pt-4 md:pt-16 flex flex-col items-center">
-        <div class="w-80 relative">
-          <!-- <img class="object-cover" src="../../public/uses/monitor-uses.png" alt="An Image of a ..." srcset=""> -->
-          <video preload autoplay muted loop class="object-fill">
-            <source src="/astroboy-newsletter.mp4" type="video/mp4" />
-          </video>
+        <div class="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="text-green-600 w-28 h-28"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
         </div>
         <div class="mt-6 text-center space-y-4">
-          <h1 class="text-[#646464] text-7xl font-bold">Woohooo!</h1>
-          <p class="text-[#efefefb9] text-xl w-96">
-            {{ newsletter_subscriber_FNAME }}, to complete your subscription,
-            Click the link in the Mail I just sent you
-          </p>
+          <h1 class="text-[#646464] text-7xl font-bold">
+            Subscription successful!
+          </h1>
         </div>
-        <div>
-          <TheButton @click="handleButton">Go Home</TheButton>
-        </div>
+        <TheButton @click="handleButton">Keep browsing</TheButton>
       </TheWrapper>
     </section>
     <section class="mt-auto">
