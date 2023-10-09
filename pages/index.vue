@@ -13,6 +13,16 @@ const vquery: QueryBuilderParams = {
   sort: [{ date: -1 }],
 };
 
+useHead({
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.png'
+    }
+  ]
+})
+
 useSeoMeta({
   title: 'Ekene Eze - Developer Advocate, Software Engineer, Content Creator',
   description:
@@ -21,13 +31,13 @@ useSeoMeta({
   ogDescription:
     'Hi, I’m Ekene Eze, a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker. I help developers build better products and companies build better developer communities.',
   ogImage:
-    'https://res.cloudinary.com/kennyy/image/upload/v1696601563/Ekene_Eze_kswpgu.png',
+    '/og/index-og.png',
   ogUrl: 'https://kenny.engineer',
   twitterTitle: 'Ekene Eze - Website',
   twitterDescription:
     'Get a glimpse into my activities as a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker.',
   twitterImage:
-    'https://res.cloudinary.com/kennyy/image/upload/v1696602243/kennyio_1_epxtwy.jpg',
+    '/og/index-og.png',
   twitterCard: 'summary_large_image',
 });
 </script>

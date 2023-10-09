@@ -199,6 +199,16 @@ const usesSoftwareList = [
   },
 ];
 
+useHead({
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.png'
+    }
+  ]
+})
+
 useSeoMeta({
   title: 'Ekene Eze | Tools and Tech',
   description:
@@ -207,13 +217,13 @@ useSeoMeta({
   ogDescription:
     "I've been evolving my tools for half a decade now and here is the current state.",
   ogImage:
-    'https://res.cloudinary.com/kennyy/image/upload/v1696605503/domenico-loia-hGV2TfOh0ns-unsplash_b3hpqg.jpg',
+    '/og/uses-og.png',
   ogUrl: 'https://kenny.engineer',
   twitterTitle: 'Ekene Eze - Tools and Tech',
   twitterDescription:
     "I've been evolving my tools for half a decade now and here is the current state.",
   twitterImage:
-    'https://res.cloudinary.com/kennyy/image/upload/v1696605503/domenico-loia-hGV2TfOh0ns-unsplash_b3hpqg.jpg',
+    '/og/uses-og.png',
   twitterCard: 'summary_large_image',
 });
 </script>

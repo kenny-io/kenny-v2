@@ -22,6 +22,16 @@ onMounted(() => {
   fetchDemos();
 });
 
+useHead({
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.png'
+    }
+  ]
+})
+
 useSeoMeta({
   title: 'Ekene Eze | POCs and Demos',
   description:
@@ -30,13 +40,13 @@ useSeoMeta({
   ogDescription:
     'I build Proof of Concepts (POCs) for various purposes, with the primary intent being to validate an idea or teach a concept I find interesting. ',
   ogImage:
-    'https://res.cloudinary.com/kennyy/image/upload/v1696605869/lee-campbell-DtDlVpy-vvQ-unsplash_cl9fy9.jpg',
+    '/og/demos-og/png',
   ogUrl: 'https://kenny.engineer',
   twitterTitle: 'Ekene Eze | POCs and Demos',
   twitterDescription:
     'I build Proof of Concepts (POCs) for various purposes, with the primary intent being to validate an idea or teach a concept I find interesting.',
   twitterImage:
-    'https://res.cloudinary.com/kennyy/image/upload/v1696605869/lee-campbell-DtDlVpy-vvQ-unsplash_cl9fy9.jpg',
+    '/og/demos-og.png',
   twitterCard: 'summary_large_image',
 });
 </script>
