@@ -88,13 +88,13 @@ useSeoMeta({
   ogDescription:
     "I've produced some comprehensive courses, and regularly host workshops and tutorials on my YouTube Channel. You can explore my treasure trove of educational content right here",
   ogImage:
-    'https://res.cloudinary.com/kennyy/image/upload/v1696605597/emile-perron-xrVDYZRGdw4-unsplash_jjmu3w.jpg',
+    '/og/courses-og.png',
   ogUrl: 'https://kenny.engineer',
   twitterTitle: 'Ekene Eze | Courses and Tutorials',
   twitterDescription:
     "I've produced some comprehensive courses, and regularly host workshops and tutorials on my YouTube Channel. You can explore my treasure trove of educational content right here",
   twitterImage:
-    'https://res.cloudinary.com/kennyy/image/upload/v1696605597/emile-perron-xrVDYZRGdw4-unsplash_jjmu3w.jpg',
+    '/og/courses-og.png',
   twitterCard: 'summary_large_image',
 });
 </script>
