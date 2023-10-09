@@ -1,5 +1,5 @@
 <script setup>
-const {newsletter_subscriber_FNAME} = useTempStore();
+const { newsletter_subscriber_FNAME } = useTempStore();
 const state = reactive({
   showNewLetterSubscriptionSuccessModal: true,
   subscriptionIsLoading: false,
@@ -23,7 +23,7 @@ const handleOnNewsletterSubscribe = async () => {
     // Validate Email
     if (!state.subscriberEmail || !state.subscriberName) {
       state.subscriptionMessage =
-        '👀: I sense in my spirit that one or both fields are empty. Complete both fields and Try again';
+        '👀: I sense in my spirit that one or both fields are empty. Complete both fields and try again';
       state.showMessage = true;
     }
 
@@ -34,12 +34,15 @@ const handleOnNewsletterSubscribe = async () => {
     );
 
     if (subscriptionResponse && subscriptionResponse.status == '200') {
-      await navigateTo({path: '/newsletter'})
+      await navigateTo({ path: '/newsletter' });
     }
 
-    if (subscriptionResponse && subscriptionResponse.statusCode == '400' && subscriptionResponse.statusMessage == 'Member Exists') {
-      state.subscriptionMessage =
-        'You are already a part of the Kennyverse!';
+    if (
+      subscriptionResponse &&
+      subscriptionResponse.statusCode == '400' &&
+      subscriptionResponse.statusMessage == 'Member Exists'
+    ) {
+      state.subscriptionMessage = 'You are already part of the Kennyverse!';
       state.showMessage = true;
     }
 
@@ -180,7 +183,7 @@ function displayDubaiTime() {
                   :href="link.url"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="uppercase"
+                  class="nav-link uppercase hover:text-white"
                 >
                   {{ link.name }}
                 </a>
