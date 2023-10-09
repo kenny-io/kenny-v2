@@ -27,6 +27,10 @@ useHead({
   ]
 })
 
+const handleButton = async () => {
+    navigateTo('/')
+}
+
 </script>
 <template>
     <main class="h-[calc(100vh-2.5rem)] flex flex-col">
@@ -46,7 +50,7 @@ useHead({
                     </p>
                 </div>
                 <div>
-                    <TheButton>Open Mail</TheButton>
+                    <TheButton @click="handleButton">Go Home</TheButton>
                 </div>
             </TheWrapper>
         </section>
