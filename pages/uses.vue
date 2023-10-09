@@ -204,10 +204,10 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.ico',
-    },
-  ],
-});
+      href: '/favicon.png'
+    }
+  ]
+})
 
 useSeoMeta({
   title: 'Ekene Eze | Tools and Tech',
@@ -216,12 +216,14 @@ useSeoMeta({
   ogTitle: 'Ekene Eze | Tools and Tech',
   ogDescription:
     "I've been evolving my tools for half a decade now and here is the current state.",
-  ogImage: '/og/uses-og.png',
+  ogImage:
+    '/og/uses-og.png',
   ogUrl: 'https://kenny.engineer',
   twitterTitle: 'Ekene Eze - Tools and Tech',
   twitterDescription:
     "I've been evolving my tools for half a decade now and here is the current state.",
-  twitterImage: '/og/uses-og.png',
+  twitterImage:
+    '/og/uses-og.png',
   twitterCard: 'summary_large_image',
 });
 </script>

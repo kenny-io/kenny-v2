@@ -29,10 +29,10 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.ico',
-    },
-  ],
-});
+      href: '/favicon.png'
+    }
+  ]
+})
 
 useSeoMeta({
   title: 'Ekene Eze | Speaking Engagements',
@@ -41,12 +41,14 @@ useSeoMeta({
   ogTitle: 'Ekene Eze - Speaking Engagements',
   ogDescription:
     'As an international keynote speaker, I have had the privilege of sharing insights and experiences at a variety of conferences, both on a global stage and within local communities.',
-  ogImage: '/og/speaking-og.png',
+  ogImage:
+    '/og/speaking-og.png',
   ogUrl: 'https://kenny.engineer',
   twitterTitle: 'Ekene Eze - Speaking Engagements',
   twitterDescription:
     'As an international keynote speaker, I have had the privilege of sharing insights and experiences at a variety of conferences, both on a global stage and within local communities.',
-  twitterImage: '/og/speaking-og.png',
+  twitterImage:
+    '/og/speaking-og.png',
   twitterCard: 'summary_large_image',
 });
 </script>

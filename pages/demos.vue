@@ -27,10 +27,10 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.ico',
-    },
-  ],
-});
+      href: '/favicon.png'
+    }
+  ]
+})
 
 useSeoMeta({
   title: 'Ekene Eze | POCs and Demos',
@@ -39,12 +39,14 @@ useSeoMeta({
   ogTitle: 'Ekene Eze | POCs and Demos',
   ogDescription:
     'I build Proof of Concepts (POCs) for various purposes, with the primary intent being to validate an idea or teach a concept I find interesting. ',
-  ogImage: '/og/demos-og/png',
+  ogImage:
+    '/og/demos-og/png',
   ogUrl: 'https://kenny.engineer',
   twitterTitle: 'Ekene Eze | POCs and Demos',
   twitterDescription:
     'I build Proof of Concepts (POCs) for various purposes, with the primary intent being to validate an idea or teach a concept I find interesting.',
-  twitterImage: '/og/demos-og.png',
+  twitterImage:
+    '/og/demos-og.png',
   twitterCard: 'summary_large_image',
 });
 </script>
