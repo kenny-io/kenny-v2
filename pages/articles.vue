@@ -119,13 +119,13 @@ useSeoMeta({
   ogDescription:
     "Writing is a huge part of my content delivery approach. It's one of the fastest way I know to quickly share the things I've learnt in the course of my work and other activities.",
   ogImage:
-    '/og/articles-og.png',
+    'https://res.cloudinary.com/kennyy/image/upload/v1696867303/articles-og_wexwph.png',
   ogUrl: 'https://kenny.engineer',
   twitterTitle: 'Ekene Eze | Blogposts',
   twitterDescription:
     "Writing is a huge part of my content delivery approach. It's one of the fastest way I know to quickly share the things I've learnt in the course of my work and other activities.",
   twitterImage:
-    '/og/articles-og.png',
+    'https://res.cloudinary.com/kennyy/image/upload/v1696867303/articles-og_wexwph.png',
   twitterCard: 'summary_large_image',
 });
 </script>

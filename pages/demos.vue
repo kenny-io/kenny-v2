@@ -40,13 +40,13 @@ useSeoMeta({
   ogDescription:
     'I build Proof of Concepts (POCs) for various purposes, with the primary intent being to validate an idea or teach a concept I find interesting. ',
   ogImage:
-    '/og/demos-og/png',
+    'https://res.cloudinary.com/kennyy/image/upload/v1696867303/demos-og_ljvjwx.png ',
   ogUrl: 'https://kenny.engineer',
   twitterTitle: 'Ekene Eze | POCs and Demos',
   twitterDescription:
     'I build Proof of Concepts (POCs) for various purposes, with the primary intent being to validate an idea or teach a concept I find interesting.',
   twitterImage:
-    '/og/demos-og.png',
+    'https://res.cloudinary.com/kennyy/image/upload/v1696867303/demos-og_ljvjwx.png ',
   twitterCard: 'summary_large_image',
 });
 </script>
