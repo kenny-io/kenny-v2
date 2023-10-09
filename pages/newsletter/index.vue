@@ -8,7 +8,7 @@ definePageMeta({
 let confetti;
 const confettiConfig = {
   emojis: ['🌈', '⚡️', '💥', '✨', '💫'],
-  emojiSize: 30,
+  emojiSize: 50,
   confettiNumber: 100,
 };
 
