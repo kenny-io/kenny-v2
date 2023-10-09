@@ -101,6 +101,16 @@ onMounted(() => {
   fetchHashnodeArticles();
 });
 
+useHead({
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.png'
+    }
+  ]
+})
+
 useSeoMeta({
   title: 'Ekene Eze | Blogposts',
   description:

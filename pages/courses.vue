@@ -80,6 +80,16 @@ onMounted(() => {
   fetchVideos();
 });
 
+useHead({
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.png'
+    }
+  ]
+})
+
 useSeoMeta({
   title: 'Ekene Eze | Video Courses and Tutorials',
   description:

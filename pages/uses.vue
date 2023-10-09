@@ -199,6 +199,16 @@ const usesSoftwareList = [
   },
 ];
 
+useHead({
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.png'
+    }
+  ]
+})
+
 useSeoMeta({
   title: 'Ekene Eze | Tools and Tech',
   description:

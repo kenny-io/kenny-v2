@@ -13,6 +13,16 @@ const vquery: QueryBuilderParams = {
   sort: [{ date: -1 }],
 };
 
+useHead({
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.png'
+    }
+  ]
+})
+
 useSeoMeta({
   title: 'Ekene Eze - Developer Advocate, Software Engineer, Content Creator',
   description:

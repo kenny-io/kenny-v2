@@ -24,6 +24,16 @@ const sendEmail = () => {
   window.location.href = mailtoLink;
 };
 
+useHead({
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.png'
+    }
+  ]
+})
+
 useSeoMeta({
   title: 'Ekene Eze | Speaking Engagements',
   description:

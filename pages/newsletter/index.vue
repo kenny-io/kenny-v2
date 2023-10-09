@@ -17,6 +17,16 @@ onMounted(() => {
     confetti.addConfetti(confettiConfig);
 });
 
+useHead({
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.png'
+    }
+  ]
+})
+
 </script>
 <template>
     <main class="h-[calc(100vh-2.5rem)] flex flex-col">

@@ -22,6 +22,16 @@ onMounted(() => {
   fetchDemos();
 });
 
+useHead({
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.png'
+    }
+  ]
+})
+
 useSeoMeta({
   title: 'Ekene Eze | POCs and Demos',
   description:
