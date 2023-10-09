@@ -22,7 +22,7 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.ico',
+      href: '/favicon.png',
     },
   ],
 });

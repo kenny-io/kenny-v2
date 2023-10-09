@@ -86,8 +86,8 @@ const articles = computed(() => {
 
   // Sort articles by date in descending order (newest first)
   return filtered.sort((a, b) => {
-    const dateA: any = new Date(a.date || a.publishedAt);
-    const dateB: any = new Date(b.date || b.publishedAt);
+    const dateA:any = new Date(a.date || a.publishedAt);
+    const dateB:any = new Date(b.date || b.publishedAt);
     return dateB - dateA;
   });
 });
@@ -106,10 +106,10 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.ico',
-    },
-  ],
-});
+      href: '/favicon.png'
+    }
+  ]
+})
 
 useSeoMeta({
   title: 'Ekene Eze | Blogposts',
@@ -118,12 +118,14 @@ useSeoMeta({
   ogTitle: 'Ekene Eze | Blogposts',
   ogDescription:
     "Writing is a huge part of my content delivery approach. It's one of the fastest way I know to quickly share the things I've learnt in the course of my work and other activities.",
-  ogImage: '/og/articles-og.png',
+  ogImage:
+    '/og/articles-og.png',
   ogUrl: 'https://kenny.engineer',
   twitterTitle: 'Ekene Eze | Blogposts',
   twitterDescription:
     "Writing is a huge part of my content delivery approach. It's one of the fastest way I know to quickly share the things I've learnt in the course of my work and other activities.",
-  twitterImage: '/og/articles-og.png',
+  twitterImage:
+    '/og/articles-og.png',
   twitterCard: 'summary_large_image',
 });
 </script>
