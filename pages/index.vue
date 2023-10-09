@@ -31,13 +31,13 @@ useSeoMeta({
   ogDescription:
     'Hi, I’m Ekene Eze, a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker. I help developers build better products and companies build better developer communities.',
   ogImage:
-    '/og/index-og.png',
+    'https://res.cloudinary.com/kennyy/image/upload/v1696867303/index-og_kwzcrr.png',
   ogUrl: 'https://kenny.engineer',
   twitterTitle: 'Ekene Eze - Website',
   twitterDescription:
     'Get a glimpse into my activities as a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker.',
   twitterImage:
-    '/og/index-og.png',
+    'https://res.cloudinary.com/kennyy/image/upload/v1696867303/index-og_kwzcrr.png',
   twitterCard: 'summary_large_image',
 });
 </script>

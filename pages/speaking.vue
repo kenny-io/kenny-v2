@@ -42,13 +42,13 @@ useSeoMeta({
   ogDescription:
     'As an international keynote speaker, I have had the privilege of sharing insights and experiences at a variety of conferences, both on a global stage and within local communities.',
   ogImage:
-    '/og/speaking-og.png',
+    'https://res.cloudinary.com/kennyy/image/upload/v1696867304/speaking-og_tynikp.png',
   ogUrl: 'https://kenny.engineer',
   twitterTitle: 'Ekene Eze - Speaking Engagements',
   twitterDescription:
     'As an international keynote speaker, I have had the privilege of sharing insights and experiences at a variety of conferences, both on a global stage and within local communities.',
   twitterImage:
-    '/og/speaking-og.png',
+    'https://res.cloudinary.com/kennyy/image/upload/v1696867304/speaking-og_tynikp.png',
   twitterCard: 'summary_large_image',
 });
 </script>

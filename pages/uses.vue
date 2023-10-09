@@ -217,13 +217,13 @@ useSeoMeta({
   ogDescription:
     "I've been evolving my tools for half a decade now and here is the current state.",
   ogImage:
-    '/og/uses-og.png',
+    'https://res.cloudinary.com/kennyy/image/upload/v1696867304/uses-og_fyoqdz.png',
   ogUrl: 'https://kenny.engineer',
   twitterTitle: 'Ekene Eze - Tools and Tech',
   twitterDescription:
     "I've been evolving my tools for half a decade now and here is the current state.",
   twitterImage:
-    '/og/uses-og.png',
+    'https://res.cloudinary.com/kennyy/image/upload/v1696867304/uses-og_fyoqdz.png',
   twitterCard: 'summary_large_image',
 });
 </script>
