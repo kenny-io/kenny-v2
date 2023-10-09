@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@hypernym/nuxt-gsap',
     'nuxt-icon',
     '@nuxt/content',
+    // '@heroicons/vue/20/solid',
   ],
   extends: ['nuxt-seo-kit'],
   gsap: {
