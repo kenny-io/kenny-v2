@@ -18,10 +18,10 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.png'
-    }
-  ]
-})
+      href: '/favicon.ico',
+    },
+  ],
+});
 
 useSeoMeta({
   title: 'Ekene Eze - Developer Advocate, Software Engineer, Content Creator',
@@ -30,14 +30,12 @@ useSeoMeta({
   ogTitle: 'Ekene Eze - Website',
   ogDescription:
     'Hi, I’m Ekene Eze, a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker. I help developers build better products and companies build better developer communities.',
-  ogImage:
-    '/og/index-og.png',
+  ogImage: '/og/index-og.png',
   ogUrl: 'https://kenny.engineer',
   twitterTitle: 'Ekene Eze - Website',
   twitterDescription:
     'Get a glimpse into my activities as a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker.',
-  twitterImage:
-    '/og/index-og.png',
+  twitterImage: '/og/index-og.png',
   twitterCard: 'summary_large_image',
 });
 </script>
