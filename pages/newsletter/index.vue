@@ -41,8 +41,8 @@ const handleButton = async () => {
             <source src="/astroboy-newsletter.mp4" type="video/mp4" />
           </video>
         </div>
-        <div class="mt-6 text-center space-y-4">
-          <h1 class="text-[#646464] text-7xl font-bold">Woohooo! 🎉</h1>
+        <div class="mt-6 text-center space-y-4 flex flex-col items-center">
+          <h1 class="text-[#646464] text-7xl font-bold">Woohoo! 🎉</h1>
           <p class="text-[#efefefb9] text-xl w-96">
             Hi {{ newsletter_subscriber_FNAME }}, just 1 more step to go! Click
             the link in the email I just sent you to complete your subscription!
