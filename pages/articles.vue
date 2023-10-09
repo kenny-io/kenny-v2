@@ -10,10 +10,9 @@ const externalPostsFromNuxtContent = await queryContent('externals')
   .sort({ title: 1 })
   .find();
 
-// Fetch Articles from Hashnode v2 API
 const hashnodeArticles = ref([]);
 
-// Function to fetch articles from Hashnode v2 API
+// Fetch articles from Hashnode v2 API
 const fetchHashnodeArticles = async () => {
   try {
     const response = await fetch('https://gql.hashnode.com', {
@@ -101,6 +100,24 @@ const clearSelectedCategory = () => {
 onMounted(() => {
   fetchHashnodeArticles();
 });
+
+useSeoMeta({
+  title: 'Ekene Eze | Blogposts',
+  description:
+    "Writing is a huge part of my content delivery approach. It's one of the fastest way I know to quickly share the things I've learnt in the course of my work and other activities.",
+  ogTitle: 'Ekene Eze | Blogposts',
+  ogDescription:
+    "Writing is a huge part of my content delivery approach. It's one of the fastest way I know to quickly share the things I've learnt in the course of my work and other activities.",
+  ogImage:
+    'https://res.cloudinary.com/kennyy/image/upload/v1696605501/jess-bailey-q10VITrVYUM-unsplash_1_xcrw1z.jpg',
+  ogUrl: 'https://kenny.engineer',
+  twitterTitle: 'Ekene Eze | Blogposts',
+  twitterDescription:
+    "Writing is a huge part of my content delivery approach. It's one of the fastest way I know to quickly share the things I've learnt in the course of my work and other activities.",
+  twitterImage:
+    'https://res.cloudinary.com/kennyy/image/upload/v1696607095/AI_Generated_Image_33_b6mmwh.jpg',
+  twitterCard: 'summary_large_image',
+});
 </script>
 
 <template>
@@ -134,7 +151,7 @@ onMounted(() => {
           <div class="w-1/2 md:w-2/4">
             <img
               class="w-[406px]"
-              src="../assets/images/articles-hero-image.png"
+              src="../assets/images/articles-hero-image1.png"
             />
           </div>
         </div>
@@ -199,7 +216,7 @@ onMounted(() => {
             <button
               v-if="selectedCategory"
               @click="clearSelectedCategory"
-              class="ml-4 px-3 py-1 rounded-md bg-gray-200 text-gray-800"
+              class="rounded-full border border-[#999] px-2 py-1.5 text-xs w-fit uppercase mr-2 whitespace-nowrap cursor-pointer hover:bg-[#999] hover:text-white hover:border-[#999] hover:transition duration-200 ease-in-out bg-gray-200 text-gray-800"
             >
               Clear
             </button>

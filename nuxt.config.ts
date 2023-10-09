@@ -2,18 +2,16 @@
 require('dotenv').config();
 
 export default defineNuxtConfig({
-  ssr: false,
-  devtools: { enabled: false },
+  ssr: true,
+  devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss',
     'nuxt-lenis',
     '@hypernym/nuxt-gsap',
     'nuxt-icon',
-    '@nuxt/content'
+    '@nuxt/content',
   ],
-  extends: [
-    'nuxt-seo-kit'
-  ],
+  extends: ['nuxt-seo-kit'],
   gsap: {
     extraPlugins: {
       scrollTrigger: true,
@@ -28,7 +26,8 @@ export default defineNuxtConfig({
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://kenny.engineer',
       siteName: 'Ekene Eze',
-      siteDescription: "Hey, I'm Kenny! A Developer Advocate with over 5 years experience. Welcome to a piece of the internet that is mine.",
+      siteDescription:
+        "Hey, I'm Kenny! A Developer Advocate, Software Engineer and Content Create with over 5 years experience. Welcome to my corner of the internet!",
       language: 'en-US',
     },
   },

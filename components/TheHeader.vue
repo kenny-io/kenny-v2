@@ -47,9 +47,7 @@ const navLinks = ref([
     <TheWrapper class="flex items-center justify-between relative">
       <div class="w-full">
         <NuxtLink to="/">
-          <span
-            class="font-suisseIntl font-bold text-lg md:text-2xl text-gray-300"
-          >
+          <span class="font-suisseIntl text-lg md:text-2xl text-[#b5b5b5]">
             Ekene Eze
           </span>
         </NuxtLink>
@@ -59,7 +57,7 @@ const navLinks = ref([
           class="top-[-100%] md:z-20 duration-500 md:static absolute md:min-h-fit pb-4 left-0 md:w-auto w-full flex items-start pt-5 md:pt-0 px-5 bg-black"
           :class="{
             'top-[9%] z-40': state.isMobileNavOpen,
-            '-z-10': !state.isMobileNavOpen
+            '-z-10': !state.isMobileNavOpen,
           }"
         >
           <ul
@@ -70,7 +68,11 @@ const navLinks = ref([
               :key="link.slug"
               class="text-[#b5b5b5] text-base"
             >
-              <NuxtLink :to="link.path">{{ link.slug }}</NuxtLink>
+              <NuxtLink
+                :to="link.path"
+                @click.native="state.isMobileNavOpen = false"
+                >{{ link.slug }}</NuxtLink
+              >
             </li>
           </ul>
         </div>

@@ -12,6 +12,24 @@ const vquery: QueryBuilderParams = {
   limit: 2,
   sort: [{ date: -1 }],
 };
+
+useSeoMeta({
+  title: 'Ekene Eze - Developer Advocate, Software Engineer, Content Creator',
+  description:
+    'Hi, I’m Ekene Eze, a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker. I help developers build better products and companies build better developer communities.',
+  ogTitle: 'Ekene Eze - Website',
+  ogDescription:
+    'Hi, I’m Ekene Eze, a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker. I help developers build better products and companies build better developer communities.',
+  ogImage:
+    'https://res.cloudinary.com/kennyy/image/upload/v1696601563/Ekene_Eze_kswpgu.png',
+  ogUrl: 'https://kenny.engineer',
+  twitterTitle: 'Ekene Eze - Website',
+  twitterDescription:
+    'Get a glimpse into my activities as a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker.',
+  twitterImage:
+    'https://res.cloudinary.com/kennyy/image/upload/v1696602243/kennyio_1_epxtwy.jpg',
+  twitterCard: 'summary_large_image',
+});
 </script>
 
 <template>
@@ -40,10 +58,10 @@ const vquery: QueryBuilderParams = {
           class="w-4/5 md:w-2/5 mt-2 text-lg md:text-2xl text-[#999] leading-[150%] tracking-[-1.2px]"
         >
           I run a DevRel mentorship program where I help other intending
-          developer advocates get started with DevRel. Think that’s you, check
+          developer advocates get started with DevRel. Think that’s you? Check
           when the next cohort would open for application.
         </p>
-        <a href="https://www.dxmentorship.com">
+        <a href="https://www.dxmentorship.com" target="_blank">
           <TheButton>APPLY TO DXMENTORSHIP</TheButton></a
         >
       </TheWrapper>
@@ -122,10 +140,10 @@ const vquery: QueryBuilderParams = {
       >
         <h3 class="text-xl md:text-2xl tracking-tight">PODCAAAAAST</h3>
         <p class="w-4/5 md:w-2/5 mt-2 tracking-tighter text-[#999]">
-          This is a work in progress, but I am working on a podcast where I talk
-          to people in the all spheres of life about their journey and how they
-          got to where they are today. If you want to be notified when it
-          launches, subscribe to my newsletter below.
+          This is a work in progress! I'm starting a podcast where I talk to
+          people in the all spheres of life about their journey and how they got
+          to where they are today. If you want to be notified when it launches,
+          subscribe to my newsletter below.
         </p>
         <TheButton :rightIcon="true">
           Listen On

@@ -21,6 +21,24 @@ function fetchDemos() {
 onMounted(() => {
   fetchDemos();
 });
+
+useSeoMeta({
+  title: 'Ekene Eze | POCs and Demos',
+  description:
+    'I build Proof of Concepts (POCs) for various purposes, with the primary intent being to validate an idea or teach a concept I find interesting.',
+  ogTitle: 'Ekene Eze | POCs and Demos',
+  ogDescription:
+    'I build Proof of Concepts (POCs) for various purposes, with the primary intent being to validate an idea or teach a concept I find interesting. ',
+  ogImage:
+    'https://res.cloudinary.com/kennyy/image/upload/v1696605869/lee-campbell-DtDlVpy-vvQ-unsplash_cl9fy9.jpg',
+  ogUrl: 'https://kenny.engineer',
+  twitterTitle: 'Ekene Eze | POCs and Demos',
+  twitterDescription:
+    'I build Proof of Concepts (POCs) for various purposes, with the primary intent being to validate an idea or teach a concept I find interesting.',
+  twitterImage:
+    'https://res.cloudinary.com/kennyy/image/upload/v1696605869/lee-campbell-DtDlVpy-vvQ-unsplash_cl9fy9.jpg',
+  twitterCard: 'summary_large_image',
+});
 </script>
 <template>
   <main>
@@ -54,23 +72,8 @@ onMounted(() => {
       </TheWrapper>
     </section>
 
-    <section class="mt-12 mb-40">
+    <section class="mt-12 mb-40 px-8">
       <TheWrapper>
-        <!-- <div>
-          <div
-            v-for="demo in demos"
-            :key="demo.title"
-            class="border-b py-10 border-[#434343]"
-          >
-            <div class="flex items-center gap-7">
-              <h2
-                class="hover:text-white text-[#898989] text-6xl tracking-[-4.16px]"
-              >
-                {{ demo.title }}
-              </h2>
-            </div>
-          </div>
-        </div> -->
         <div>
           <div
             v-for="demo in demos"
