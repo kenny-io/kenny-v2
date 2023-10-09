@@ -22,7 +22,7 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.png'
+      href: '/favicon.ico'
     }
   ]
 })
@@ -37,7 +37,6 @@ const handleButton = async () => {
         <section class="">
             <TheWrapper class="pt-4 md:pt-16 flex flex-col items-center">
                 <div class="w-80 relative ">
-                    <!-- <img class="object-cover" src="../../public/uses/monitor-uses.png" alt="An Image of a ..." srcset=""> -->
                     <video preload autoplay muted loop class="object-fill">
                         <source src="/astroboy-newsletter.mp4" type="video/mp4" />
                     </video>

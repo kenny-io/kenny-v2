@@ -21,7 +21,7 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.png'
+      href: '/favicon.ico'
     }
   ]
 })
@@ -36,19 +36,15 @@ const handleButton = async () => {
         <section class="">
             <TheWrapper class="pt-4 md:pt-16 flex flex-col items-center">
                 <div class="w-80 relative pt-10">
-                    <!-- <img class="object-cover" src="../../public/uses/monitor-uses.png" alt="An Image of a ..." srcset=""> -->
                     <video preload autoplay muted loop class="object-fill rounded-lg">
                         <source src="/flyingboy-newsletter.mp4" type="video/mp4" />
                     </video>
                 </div>
                 <div class="mt-6 text-center space-y-4">
-                    <h1 class="text-[#fded57] text-7xl font-bold">Sweet! </h1>
-                    <p class="text-[#efefefb9] text-xl w-96">
-                        You are all in! Enjoy the ride, fam.
-                    </p>
+                    <h1 class="text-[#646464] text-7xl font-bold tracking-tight">Subscription Successful!</h1>
                 </div>
                 <div>
-                    <TheButton @click="handleButton">Go Home</TheButton>
+                    <TheButton @click="handleButton">Keep browsing</TheButton>
                 </div>
             </TheWrapper>
         </section>
