@@ -58,41 +58,20 @@ const navLinks = ref([
           :class="{
             'top-[9%] z-40': state.isMobileNavOpen,
             '-z-10': !state.isMobileNavOpen,
-          }"
-        >
-          <ul
-            class="flex items-start justify-start md:flex-row flex-col md:items-center md:gap-4 gap-8"
-          >
-            <li
-              v-for="link in navLinks"
-              :key="link.slug"
-              class="relative text-[#b5b5b5] hover:text-white text-base"
-            >
-              <NuxtLink
-                :to="link.path"
-                @click.native="state.isMobileNavOpen = false"
-                class="nav-link"
-                >{{ link.slug }}</NuxtLink
-              >
+          }">
+          <ul class="flex items-start justify-start md:flex-row flex-col md:items-center md:gap-4 gap-8">
+            <li v-for="link in navLinks" :key="link.slug" class="relative text-[#b5b5b5] hover:text-white text-base">
+              <NuxtLink :to="link.path" @click.native="state.isMobileNavOpen = false" class="nav-link">{{ link.slug }}
+              </NuxtLink>
             </li>
           </ul>
         </div>
         <div class="flex justify-center items-center">
           <span class="md:hidden z-50">
-            <Icon
-              v-if="!state.isMobileNavOpen"
-              @click="handleToggleMobileNav"
-              name="ic:outline-menu"
-              size="32px"
-              class="text-[#b5b5b5] cursor-pointer"
-            />
-            <Icon
-              v-else
-              @click="handleToggleMobileNav"
-              name="ic:outline-close"
-              size="32px"
-              class="text-[#b5b5b5] cursor-pointer"
-            />
+            <Icon v-show="!state.isMobileNavOpen" @click="handleToggleMobileNav" name="ic:outline-menu" size="32px"
+              class="text-[#b5b5b5] cursor-pointer" />
+            <Icon v-show="state.isMobileNavOpen"  @click="handleToggleMobileNav" name="ic:outline-close" size="32px"
+              class="text-[#b5b5b5] cursor-pointer" />
           </span>
         </div>
       </nav>
@@ -105,6 +84,7 @@ const navLinks = ref([
 .router-link-exact-active {
   font-weight: 500;
 }
+
 /* Updated CSS for the hover effect */
 .nav-link::before {
   content: '';
@@ -115,13 +95,12 @@ const navLinks = ref([
   right: 0;
   height: 2px;
   /* Thickness of the underline */
-  background: linear-gradient(
-    90deg,
-    #303030 0%,
-    #00dc82 50%,
-    #36e4da 75%,
-    #0047e1 100%
-  ); /* Updated Gradient effect */
+  background: linear-gradient(90deg,
+      #303030 0%,
+      #00dc82 50%,
+      #36e4da 75%,
+      #0047e1 100%);
+  /* Updated Gradient effect */
   /* Updated Gradient effect */
   transform: scaleX(0);
   /* Initially, the underline is not visible */
