@@ -8,17 +8,10 @@ const lenisOptions = ref({
   infinite: false
 })
 
-watch(scrollState, async (val) => {
-  // console.log('scrollState', val)
-})
+watch(scrollState, async (val) => {})
 
-const scrollEmitter = (val) => {
-  // console.log('scrollEmitter', val)
-}
+const scrollEmitter = (val) => {}
 
-onMounted(() => {
-  // console.log('ref', lenisRef.value)
-});
 </script>
 <template>
   <lenis id="test" ref="lenisRef" :options="lenisOptions" @scroll="scrollEmitter">
@@ -35,8 +28,8 @@ onMounted(() => {
 <style>
 .glowball {
   position: absolute;
-  left: -20%;
-  top: -50%;
+  left: -25%;
+  top: 10%;
   width: 860px;
   height: 860px;
   opacity: 0.5;
@@ -55,10 +48,10 @@ onMounted(() => {
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1150px) {
   .glowball {
-  left: -50%;
-  top: -50%;
+  left: -20%;
+  top: 50%;
   width: 300px;
   height: 300px;
 }}
@@ -70,6 +63,4 @@ onMounted(() => {
   width: 400px;
   height: 400px;
 }}
-
-
 </style>
