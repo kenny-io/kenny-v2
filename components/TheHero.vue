@@ -1,7 +1,7 @@
 <template>
   <section class="relative pb-20 py-24 md:py-[100px]">
     <TheWrapper class="flex flex-col md:flex-row gap-6">
-      <div>
+      <div class="relative">
         <div class="font-nunito">
           <h1
             class="text-4xl md:text-8xl text-[#D4D4D4] tracking-[-1.50px] md:tracking-[-3.84px]"
@@ -10,7 +10,7 @@
             <span class="block text-inherit">I'm Ekene Eze</span>
           </h1>
         </div>
-        <div class="w-11/12 md:w-[600px] py-4">
+        <div class="relative w-11/12 md:w-[600px] py-4 z-10">
           <p class="text-lg md:text-2xl text-[#999] tracking-[-1.2px]">
             Kenny for short. I'm a software engineer and developer advocate
             currently based in Dubai. I love bringing insights, tips, and
@@ -23,7 +23,7 @@
           </p>
         </div>
 
-        <div class="flex items-center mt-1 md:mt-2">
+        <div class="relative flex items-center mt-1 md:mt-2 z-20">
           <p class="text-[#999] text-xs md:text-base mr-2">Previously:</p>
           <div class="flex items-center">
             <div class="cursor-pointer flex items-start group/ex">
@@ -70,12 +70,13 @@
             </div>
           </div>
         </div>
-        <div class="hidden md:flex self-end my-8 items-center animate-bounce">
+        <div class="relative z-20 hidden md:flex self-end my-8 items-center animate-bounce">
           <p class="text-[#969696] mr-4">Scroll down</p>
           <div>
             <img src="../assets/images/icon-arrow-down.svg" class="w-4 h-4" />
           </div>
         </div>
+        <div class="glowball absolute"></div>
       </div>
       <div class="mt-5 md:mt-0">
         <div class="relative">

@@ -15,7 +15,6 @@ const scrollEmitter = (val) => {}
 </script>
 <template>
   <lenis id="test" ref="lenisRef" :options="lenisOptions" @scroll="scrollEmitter">
-    <div class="glowball"></div>
     <SeoKit />
     <div class="py-5 bg-black">
       <NuxtLayout>
@@ -27,18 +26,16 @@ const scrollEmitter = (val) => {}
 
 <style>
 .glowball {
-  position: absolute;
-  left: -25%;
-  top: 10%;
-  width: 860px;
-  height: 860px;
+  top: 40%;
+  translate: -20% 0;
+  width: 350px;
+  height: 350px;
   opacity: 0.5;
-  transition: all 2s ease-in-out;
+  transition: all 4s linear;
   pointer-events: none;
-  z-index: -0.25;
   border-radius: 9999px;
-  background-image: linear-gradient(45deg, #00dc82, #36e4da, #a7fd60);
-  filter: blur(70px);
+  background-image: linear-gradient(45deg, #065E24, #065E24, #63bd19);
+  filter: blur(60px);
   animation: spin 5s infinite;
 }
 
@@ -52,15 +49,15 @@ const scrollEmitter = (val) => {}
   .glowball {
   left: -20%;
   top: 50%;
-  width: 300px;
-  height: 300px;
+  width: 50px;
+  height: 50px;
 }}
 
 @media screen and (max-width: 1040px) {
   .glowball {
   left: -40%;
   top: -10%;
-  width: 400px;
-  height: 400px;
+  width: 50px;
+  height: 50px;
 }}
 </style>
