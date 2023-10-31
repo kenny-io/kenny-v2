@@ -1,13 +1,26 @@
 <script setup lang="ts">
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types';
 
+interface Video {
+  id: {
+    videoId: string;
+  };
+  snippet: {
+    title: string;
+    description: string;
+    publishedAt: string;
+    thumbnails: {
+      high: {
+        url: string;
+        width: number;
+        height: number;
+      };
+    };
+  };
+}
 // Define props
-const { article, buttonText, videoURL } = defineProps<{
-  article: ParsedContent;
-  buttonText: String;
-  type?: String;
-  tag?: String;
-  videoURL?: String;
+const { video } = defineProps<{
+  video: Video;
 }>();
 
 const truncateDescription = (description: string) => {
@@ -27,9 +40,7 @@ const truncateDescription = (description: string) => {
       <img
         class="object-cover w-full"
         :src="
-          article?.coverImage?.url ||
-          article?.image ||
-          article?.thumbnails?.high.url ||
+          video?.snippet?.thumbnails?.high.url ||
           'https://res.cloudinary.com/kennyy/image/upload/v1695921469/AI_Generated_Image_13_d1aaw0.jpg'
         "
         alt="card-header-image"
@@ -39,16 +50,19 @@ const truncateDescription = (description: string) => {
       class="px-8 py-6 bg-gradient-to-t from-black/80 to-transparent backdrop-blur absolute bottom-0"
     >
       <h4 class="text-2xl md:text-4xl font-bold tracking-tighter text-white">
-        {{ article?.title }}
+        {{ video?.snippet.title }}
       </h4>
       <p class="text-lg md:text-xl text-white/70 mt-4">
-        {{ truncateDescription(article?.description || article?.brief) }}
+        {{ truncateDescription(video?.snippet.description) }}
       </p>
-      <a :href="article?.url || videoURL" target="_blank">
+      <a
+        :href="`https://www.youtube.com/watch?v=${video.id.videoId}`"
+        target="_blank"
+      >
         <div
           class="mt-8 w-fit text-[#AFADAD] flex items-center gap-1 hover:gap-2 hover:transition duration-200 ease-in-out cursor-pointer"
         >
-          <span>{{ buttonText }}</span>
+          <span>Watch Now</span>
           <span class="text-[#918F8F] h-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -64,12 +78,6 @@ const truncateDescription = (description: string) => {
           </span>
         </div>
       </a>
-    </div>
-    <div
-      v-if="tag"
-      class="px-4 py-1 bg-[#39FF41] text-sm text-black uppercase rounded-2xl absolute top-7 left-8"
-    >
-      <p>{{ tag }}</p>
     </div>
   </div>
 </template>

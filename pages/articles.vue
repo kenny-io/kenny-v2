@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
-
+import { useSplitTextAnimation } from '~/composables/useSplitAnimation';
 // Fetch Articles from Nuxt Content
 const nuxtContentCategories = ref(['netlify', 'webdev', 'productivity']);
 
@@ -86,8 +86,8 @@ const articles = computed(() => {
 
   // Sort articles by date in descending order (newest first)
   return filtered.sort((a, b) => {
-    const dateA:any = new Date(a.date || a.publishedAt);
-    const dateB:any = new Date(b.date || b.publishedAt);
+    const dateA: any = new Date(a.date || a.publishedAt);
+    const dateB: any = new Date(b.date || b.publishedAt);
     return dateB - dateA;
   });
 });
@@ -99,6 +99,7 @@ const clearSelectedCategory = () => {
 // Fetch articles from Hashnode when the component is mounted
 onMounted(() => {
   fetchHashnodeArticles();
+  useSplitTextAnimation('#title');
 });
 
 useHead({
@@ -106,10 +107,10 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.ico'
-    }
-  ]
-})
+      href: '/favicon.ico',
+    },
+  ],
+});
 
 useSeoMeta({
   title: 'Ekene Eze | Blogposts',
@@ -139,6 +140,8 @@ useSeoMeta({
         >
           <div class="md:w-3/4 md:mt-0 mt-6 order-2 md:order-none">
             <h1
+              id="title"
+              style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
               class="md:text-left text-center text-4xl md:text-6xl font-semibold tracking-tighter text-[#fff]"
             >
               Articles

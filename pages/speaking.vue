@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useSplitTextAnimation } from '~/composables/useSplitAnimation';
 const talks = await queryContent('talks').sort({ title: 1 }).find();
 
 // const talkCategoriesFromPosts = Array.from(
@@ -29,10 +30,10 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.ico'
-    }
-  ]
-})
+      href: '/favicon.ico',
+    },
+  ],
+});
 
 useSeoMeta({
   title: 'Ekene Eze | Speaking Engagements',
@@ -51,6 +52,9 @@ useSeoMeta({
     'https://res.cloudinary.com/kennyy/image/upload/v1696867304/speaking-og_tynikp.png',
   twitterCard: 'summary_large_image',
 });
+onMounted(() => {
+  useSplitTextAnimation('#title');
+});
 </script>
 
 <template>
@@ -60,6 +64,8 @@ useSeoMeta({
         <div class="flex text-[#ABABAB] px-16">
           <div class="w-auto mt-20">
             <h1
+              id="title"
+              style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
               class="text-4xl md:text-6xl font-semibold tracking-tighter text-[#fff]"
             >
               Speaking

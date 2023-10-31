@@ -1,0 +1,12 @@
+
+[[redirects]]
+  from = "/blog"
+  to = "/articles/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/blogging"
+  to = "/articles/"
+  status = 301
+  force = true 

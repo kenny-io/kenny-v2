@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import { useSplitTextAnimation } from '~/composables/useSplitAnimation';
+onMounted(() => {
+  useSplitTextAnimation('#hero');
+});
+</script>
+
 <template>
   <section class="relative pb-20 py-24 md:py-[100px]">
     <TheWrapper class="flex flex-col md:flex-row gap-6">
@@ -6,8 +13,13 @@
           <h1
             class="text-4xl md:text-8xl text-[#D4D4D4] tracking-[-1.50px] md:tracking-[-3.84px]"
           >
-            <span class="block text-inherit">Hey there! 👋</span>
-            <span class="block text-inherit">I'm Ekene Eze</span>
+            <div
+              id="hero"
+              style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
+            >
+              <span class="block text-inherit">Hey there! 👋</span>
+              <span class="block text-inherit">I'm Ekene Eze</span>
+            </div>
           </h1>
         </div>
         <div class="w-11/12 md:w-[600px] py-4">

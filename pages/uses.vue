@@ -1,4 +1,5 @@
 <script setup>
+import { useSplitTextAnimation } from '~/composables/useSplitAnimation';
 const usesHardwareList = [
   {
     title: 'Primary Laptop',
@@ -204,10 +205,14 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.ico'
-    }
-  ]
-})
+      href: '/favicon.ico',
+    },
+  ],
+});
+
+onMounted(() => {
+  useSplitTextAnimation('#title');
+});
 
 useSeoMeta({
   title: 'Ekene Eze | Tools and Tech',
@@ -237,6 +242,8 @@ useSeoMeta({
         >
           <div class="w-full md:w-3/4 md:mt-0 mt-6 order-2 md:order-none">
             <h1
+              id="title"
+              style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
               class="md:text-left text-center text-4xl md:text-6xl font-semibold tracking-tighter text-[#fff]"
             >
               Gears and Gizmos

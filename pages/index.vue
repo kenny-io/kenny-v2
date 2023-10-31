@@ -1,28 +1,25 @@
 <script setup lang="ts">
 import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types';
-const aquery: QueryBuilderParams = {
-  path: '/featured',
-  where: [{ type: 'article' }],
-  limit: 2,
-  sort: [{ date: -1 }],
-};
-const vquery: QueryBuilderParams = {
-  path: '/featured',
-  where: [{ type: 'video' }],
-  limit: 2,
-  sort: [{ date: -1 }],
-};
+import { useVideos } from '~/composables/useVideos';
+import { useHashnode } from '~/composables/useHashnode';
+
+const { fetchVideos, featuredVideos } = useVideos();
+const { fetchHashnodeArticles, featuredArticles } = useHashnode();
 
 useHead({
   link: [
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.ico'
-    }
-  ]
-})
+      href: '/favicon.ico',
+    },
+  ],
+});
 
+onMounted(() => {
+  fetchVideos();
+  fetchHashnodeArticles();
+});
 useSeoMeta({
   title: 'Ekene Eze - Developer Advocate, Software Engineer, Content Creator',
   description:
@@ -94,14 +91,11 @@ useSeoMeta({
           <div
             class="grid grid-flow-row grid-cols-1 md:grid-cols-2 mt-8 md:mt-14 gap-4"
           >
-            <ContentList :query="vquery" v-slot="{ list }">
-              <TheCard
-                v-for="article in list"
-                :key="article._path"
-                :article="article"
-                :button-text="'Watch Now'"
-              />
-            </ContentList>
+            <TheVCard
+              v-for="video in featuredVideos"
+              :key="video.id"
+              :video="video"
+            />
           </div>
         </div>
 
@@ -129,14 +123,14 @@ useSeoMeta({
           <div
             class="grid grid-flow-row grid-cols-1 md:grid-cols-2 mt-8 md:mt-14 gap-4"
           >
-            <ContentList :query="aquery" v-slot="{ list }">
-              <TheCard
-                v-for="article in list"
-                :key="article._path"
-                :article="article"
-                :button-text="'Read More'"
-              />
-            </ContentList>
+            <!-- <ContentList :query="aquery" v-slot="{ list }"> -->
+            <TheCard
+              v-for="article in featuredArticles"
+              :key="article.title"
+              :article="article"
+              :button-text="'Read More'"
+            />
+            <!-- </ContentList> -->
           </div>
         </div>
         <a href="/articles">

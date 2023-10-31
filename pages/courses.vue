@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import { useSplitTextAnimation } from '~/composables/useSplitAnimation';
 const courseCateogries = ref([
   'Javascript',
   'Typescript',
@@ -78,6 +79,7 @@ async function fetchVideos() {
 
 onMounted(() => {
   fetchVideos();
+  useSplitTextAnimation('#title');
 });
 
 useHead({
@@ -85,10 +87,10 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.ico'
-    }
-  ]
-})
+      href: '/favicon.ico',
+    },
+  ],
+});
 
 useSeoMeta({
   title: 'Ekene Eze | Video Courses and Tutorials',
@@ -118,6 +120,8 @@ useSeoMeta({
         >
           <div class="md:w-3/4 w-full md:mt-0 mt-6 order-2 md:order-none">
             <h1
+              id="title"
+              style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
               class="md:text-left text-center text-4xl md:text-6xl font-semibold tracking-tighter text-[#fff]"
             >
               Level up with me
