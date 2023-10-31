@@ -1,9 +1,10 @@
 {
-  "title": "Using Shopify Hydrogen to build modern ecommerce storefronts",
-  "description": "In this post, we'll use Shopify Hydrogen and Shopify’s Storefront API to build a dynamic, highly performant shopping experience.",
-  "url": "https://blog.logrocket.com/using-shopify-hydrogen-build-modern-ecommerce-storefronts/",
-  "category": "ecommerce",
+  "title": "Learn Generative AI - Part 1",
+  "description": "Generative AI is a subset of deep learning systems that can create content or generate new data that is similar to, or indistinguishable from...",
+  "url": "https://kenny-io.hashnode.dev/learn-generative-ai-part-1",
+  "category": "ai",
+  "tags": ["ai", "generative-ai"],
   "date": "2022/12/20",
-  "image": "https://blog.logrocket.com/wp-content/uploads/2022/12/Using-Shopify-Hydrogen-build-modern-ecommerce-storefronts.png",
+  "image": "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/2iUrK025cec/upload/2e479d4f02d7f782413bb6b6600cb856.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp",
   "type": "article"
 }

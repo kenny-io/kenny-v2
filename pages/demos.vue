@@ -2,6 +2,7 @@
 import { onMounted, ref } from 'vue';
 import demosData from '../content/demos.json'; // Import the JSON file
 import useDateFormatter from '../composables/useDate';
+import { useSplitTextAnimation } from '~/composables/useSplitAnimation';
 interface Demo {
   title: string;
   description: string;
@@ -20,6 +21,7 @@ function fetchDemos() {
 }
 onMounted(() => {
   fetchDemos();
+  useSplitTextAnimation('#title');
 });
 
 useHead({
@@ -27,10 +29,10 @@ useHead({
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/favicon.ico'
-    }
-  ]
-})
+      href: '/favicon.ico',
+    },
+  ],
+});
 
 useSeoMeta({
   title: 'Ekene Eze | POCs and Demos',
@@ -59,6 +61,8 @@ useSeoMeta({
         >
           <div class="md:w-3/4 w-full md:mt-0 mt-6 order-2 md:order-none">
             <h1
+              id="title"
+              style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
               class="md:text-left text-center text-4xl md:text-6xl font-semibold tracking-tighter text-[#fff]"
             >
               Demos

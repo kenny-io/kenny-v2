@@ -2,10 +2,10 @@
   <div class="py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-4xl text-center">
-        <!-- <h2 class="text-base font-semibold leading-7 text-indigo-400">
-          Pricing
-        </h2> -->
+        <!--  -->
         <p
+          id="title"
+          style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
           class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl"
         >
           Content contracting plans for businesses and projects
@@ -19,30 +19,7 @@
         content with the best features for engaging your audience, creating
         customer loyalty, and driving product adoption.
       </p>
-      <!-- <div class="mt-16 flex justify-center">
-        <RadioGroup
-          v-model="frequency"
-          class="grid grid-cols-2 gap-x-1 rounded-full bg-white/5 p-1 text-center text-xs font-semibold leading-5 text-white"
-        >
-          <RadioGroupLabel class="sr-only">Payment frequency</RadioGroupLabel>
-          <RadioGroupOption
-            as="template"
-            v-for="option in frequencies"
-            :key="option.value"
-            :value="option"
-            v-slot="{ checked }"
-          >
-            <div
-              :class="[
-                checked ? 'bg-indigo-500' : '',
-                'cursor-pointer rounded-full px-2.5 py-1',
-              ]"
-            >
-              <span>{{ option.label }}</span>
-            </div>
-          </RadioGroupOption>
-        </RadioGroup>
-      </div> -->
+
       <div
         class="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3"
       >
@@ -127,9 +104,10 @@
 
 <script setup>
 import { ref } from 'vue';
-import { RadioGroup, RadioGroupLabel, RadioGroupOption } from '@headlessui/vue';
-// import { CheckIcon } from '@heroicons/vue/20/solid';
-
+import { useSplitTextAnimation } from '~/composables/useSplitAnimation';
+onMounted(() => {
+  useSplitTextAnimation('#title');
+});
 const frequencies = [
   { value: 'monthly', label: 'Monthly', priceSuffix: '/month' },
   { value: 'annually', label: 'Annually', priceSuffix: '/year' },
@@ -185,6 +163,4 @@ const tiers = [
     mostPopular: false,
   },
 ];
-
-const frequency = ref(frequencies[0]);
 </script>
