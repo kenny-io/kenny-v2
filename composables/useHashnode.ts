@@ -4,6 +4,7 @@ interface Article {
   title: string;
   brief: string;
   url: string;
+  publishedAt: string | number;
   coverImage: {
     url: string;
   };
@@ -36,6 +37,7 @@ export function useHashnode() {
                       title
                       brief
                       url
+                      publishedAt
                       coverImage{
                         url
                       }

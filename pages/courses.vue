@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import { useSplitTextAnimation } from '~/composables/useSplitAnimation';
+import { useVideos } from '~/composables/useVideos';
+const { videos, fetchVideos } = useVideos();
 const courseCateogries = ref([
   'Javascript',
   'Typescript',
@@ -42,39 +44,6 @@ interface Video {
       };
     };
   };
-}
-
-const videos = ref<Video[]>([]);
-// Fetch videos data from YouTube channel
-async function fetchVideos() {
-  const cacheKey = 'cached_videos';
-  const timestampKey = 'videos_timestamp';
-
-  const currentTimestamp = new Date().getTime();
-  const cachedTimestamp = Number(localStorage.getItem(timestampKey));
-  const twoDaysInMilliseconds = 48 * 60 * 60 * 1000;
-
-  // Check if the cached data is still valid based on the timestamp
-  if (currentTimestamp - cachedTimestamp < twoDaysInMilliseconds) {
-    const cachedVideos = localStorage.getItem(cacheKey);
-    if (cachedVideos) {
-      videos.value = JSON.parse(cachedVideos);
-      return;
-    }
-  }
-
-  // If not in cache or cache is stale, fetch from API
-  try {
-    const response = await fetch('/api/youtube');
-    const data = await response.json();
-    videos.value = data.data.items;
-
-    // Cache the fetched videos and timestamp in localStorage
-    localStorage.setItem(cacheKey, JSON.stringify(videos.value));
-    localStorage.setItem(timestampKey, currentTimestamp.toString());
-  } catch (error) {
-    console.error('Error fetching videos:', error);
-  }
 }
 
 onMounted(() => {
