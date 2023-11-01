@@ -1,63 +1,15 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
 import { useSplitTextAnimation } from '~/composables/useSplitAnimation';
-// Fetch Articles from Nuxt Content
-const nuxtContentCategories = ref(['netlify', 'webdev', 'productivity']);
+import { useHashnode } from '~/composables/useHashnode';
 
+const { hashnodeArticles, fetchHashnodeArticles } = useHashnode();
+const nuxtContentCategories = ref(['netlify', 'webdev', 'productivity']);
 const searchQuery = ref('');
 const selectedCategory = ref('');
 const externalPostsFromNuxtContent = await queryContent('externals')
   .sort({ title: 1 })
   .find();
-
-const hashnodeArticles = ref([]);
-
-// Fetch articles from Hashnode v2 API
-const fetchHashnodeArticles = async () => {
-  try {
-    const response = await fetch('https://gql.hashnode.com', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: 'xxxxxxxxxxxxxxxxx',
-      },
-      body: JSON.stringify({
-        query: `
-          query Publication {
-            publication(host: "kenny-io.hashnode.dev") {
-              isTeam
-              title
-              posts(first: 10) {
-                edges {
-                  node {
-                    title
-                    brief
-                    url
-                    coverImage{
-                      url
-                    }
-                    tags {
-                      name
-                    }
-                  }
-                }
-              }
-            }
-          }
-        `,
-      }),
-    });
-
-    const data = await response.json();
-    console.log(data);
-
-    hashnodeArticles.value = data.data.publication.posts.edges.map(
-      (edge: any) => edge.node
-    );
-  } catch (error) {
-    console.error('Error fetching Hashnode articles:', error);
-  }
-};
 
 const articles = computed(() => {
   // Combine articles from both sources
@@ -71,7 +23,7 @@ const articles = computed(() => {
     const matchesSearchQuery =
       !searchQuery.value.trim() ||
       article.title?.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
-      article.content
+      article?.content
         ?.toLowerCase()
         .includes(searchQuery.value.toLowerCase()) ||
       article.brief?.toLowerCase().includes(searchQuery.value.toLowerCase());

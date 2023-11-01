@@ -115,9 +115,9 @@ useSeoMeta({
     </section>
     <section>
       <TheWrapper class="flex flex-col items-center">
-        <div class="">
+        <div class="mt-24">
           <h2
-            class="text-4xl md:text-6xl tracking-[-3.2px] leading-[-3.2px] text-[#999] font-bold"
+            class="text-4xl md:text-6xl tracking-[-3.2px] leading-[-3.2px] text-[#999] font-bold mb-5"
           >
             Featured Videos
           </h2>
@@ -145,10 +145,10 @@ useSeoMeta({
       </TheWrapper>
     </section>
     <section>
-      <TheWrapper class="mt-32 flex flex-col items-center">
-        <div class="">
+      <TheWrapper class="flex flex-col items-center">
+        <div class="mt-24">
           <h2
-            class="text-4xl md:text-6xl tracking-[-3.2px] leading-[-3.2px] text-[#999] font-bold"
+            class="text-4xl md:text-6xl tracking-[-3.2px] leading-[-3.2px] text-[#999] font-bold mb-5"
           >
             Featured Articles
           </h2>
@@ -178,9 +178,9 @@ useSeoMeta({
         </a>
       </TheWrapper>
     </section>
-    <section class="mb-32 md:mb-[220px] mt-10">
+    <section class="md:mb-[220px]">
       <TheWrapper class="text-white text-center flex flex-col items-center"
-        ><div class="py-16 sm:py-24">
+        ><div class="sm:py-16">
           <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div
               class="relative isolate overflow-hidden px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24 xl:py-32"
@@ -238,19 +238,6 @@ useSeoMeta({
             </div>
           </div>
         </div>
-        <!-- <h3 class="text-xl md:text-2xl tracking-tight">PODCAAAAAST</h3>
-        <p class="w-4/5 md:w-2/5 mt-2 tracking-tighter text-[#999]">
-          This is a work in progress! I'm starting a podcast where I talk to
-          people in the all spheres of life about their journey and how they got
-          to where they are today. If you want to be notified when it launches,
-          subscribe to my newsletter below.
-        </p>
-        <TheButton :rightIcon="true">
-          Listen On
-          <template #icon-right>
-            <img src="../assets/images/logos-spotify.svg" />
-          </template>
-        </TheButton> -->
       </TheWrapper>
     </section>
   </main>
