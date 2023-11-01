@@ -115,13 +115,7 @@ const navLinks = ref([
   right: 0;
   height: 2px;
   /* Thickness of the underline */
-  background: linear-gradient(
-    90deg,
-    #303030 0%,
-    #00dc82 50%,
-    #36e4da 75%,
-    #0047e1 100%
-  ); /* Updated Gradient effect */
+  background: rgb(255, 169, 21); /* Updated Gradient effect */
   /* Updated Gradient effect */
   transform: scaleX(0);
   /* Initially, the underline is not visible */
