@@ -58,6 +58,7 @@ useSeoMeta({
     </section>
     <section>
       <TheWrapper class="text-white text-center flex flex-col items-center">
+        <TheVerticalGrid />
         <div>
           <div class="mx-auto py-8 sm:px-6 sm:py-32 lg:px-8">
             <div
@@ -179,6 +180,7 @@ useSeoMeta({
       </TheWrapper>
     </section>
     <section class="md:mb-[220px]">
+      <TheVerticalGrid />
       <TheWrapper class="text-white text-center flex flex-col items-center"
         ><div class="sm:py-16">
           <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">

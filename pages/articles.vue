@@ -85,7 +85,8 @@ useSeoMeta({
 
 <template>
   <main>
-    <section class="pt-20">
+    <section class="relative pt-20">
+      <TheVerticalGrid />
       <TheWrapper>
         <div
           class="flex flex-col items-center md:flex-row md:justify-center text-[#ABABAB] px-16"
@@ -190,6 +191,7 @@ useSeoMeta({
       </TheWrapper>
     </section>
     <section class="mb-64 z-10">
+      <TheVerticalGrid />
       <TheWrapper>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-10 md:gap-y-24">
           <TheCard

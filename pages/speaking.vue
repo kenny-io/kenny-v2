@@ -60,6 +60,7 @@ onMounted(() => {
 <template>
   <main>
     <section class="pt-20">
+      <TheVerticalGrid />
       <TheWrapper>
         <div class="flex text-[#ABABAB] px-16">
           <div class="w-auto mt-20">

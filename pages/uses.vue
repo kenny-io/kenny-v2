@@ -235,6 +235,7 @@ useSeoMeta({
 
 <template>
   <main>
+    <TheVerticalGrid />
     <section class="pt-20">
       <TheWrapper>
         <div

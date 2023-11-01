@@ -83,6 +83,7 @@ useSeoMeta({
 <template>
   <main>
     <section class="pt-20">
+      <TheVerticalGrid />
       <TheWrapper>
         <div
           class="flex flex-col items-center md:flex-row text-[#ABABAB] px-16"
