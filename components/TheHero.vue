@@ -18,7 +18,9 @@ onMounted(() => {
               style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
             >
               <span class="block text-inherit">Hey there! 👋</span>
-              <span class="block text-inherit">I'm Ekene Eze</span>
+              <span class="block text-inherit"
+                >I'm <span class="text-[#FFA91D]"> Ekene Eze</span></span
+              >
             </div>
           </h1>
         </div>
