@@ -7,6 +7,7 @@ onMounted(() => {
 
 <template>
   <section class="relative pb-20 py-24 md:py-[100px]">
+    <TheVerticalGrid />
     <TheWrapper class="flex flex-col md:flex-row gap-6">
       <div>
         <div class="font-nunito">
