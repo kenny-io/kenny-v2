@@ -1,0 +1,27 @@
+{
+  "conference": "RenderATL 2024",
+  "title": "AI is eating the world, grab a fork",
+  "description": "According to ChatGPT, less than 2% of software engineers are specialized in Machine Learning. Where does that leave the rest of us in the advancement of AI technologies? In this talk, we will explore the current state of AI and discuss the opportunities that exist for regular developers to get involved in the AI space without a CS degree or ML background.",
+  "date": "2024-09-23",
+  "country": "Milan",
+  "site": "https://www.renderatl.com",
+  "category": [
+    {
+      "id": "1",
+      "name": "ai"
+    },
+    {
+      "id": "2",
+      "name": "devrel"
+    },
+    {
+      "id": "3",
+      "name": "web"
+    }
+  ],
+  "video": "",
+  "slides": "",
+  "status": "upcoming",
+  "ready": false,
+  "image": "https://res.cloudinary.com/kennyy/image/upload/v1633878358/kenny-3_iomjbk.jpg"
+}
