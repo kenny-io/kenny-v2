@@ -7,7 +7,7 @@ onMounted(() => {
 
 <template>
   <section class="relative pb-20 py-24 md:py-[100px]">
-    <TheVerticalGrid />
+    <!-- <TheVerticalGrid /> -->
     <TheWrapper class="flex flex-col md:flex-row gap-6">
       <div>
         <div class="font-nunito">
@@ -27,14 +27,20 @@ onMounted(() => {
         </div>
         <div class="w-11/12 md:w-[600px] py-4">
           <p class="text-lg md:text-2xl text-[#999] tracking-[-1.2px]">
-            Kenny for short. I'm a software engineer and developer advocate
-            currently based in Dubai. I love bringing insights, tips, and
-            aha-moments! to developers through the resources I create as I work
-            with different companies to improve the experiences of their
-            developers.
-            <br /><br />
+            Kenny for short. I'm a Software Engineer and Developer Advocate with
+            over 5 years experience working in DevRel across different
+            functions. Recently as a Senior Developer Experience Engineer at
+            <span class="underline">
+              <a href="https//www.netlify.com"> Netlify</a></span
+            >
+            and leading DevRel teams in others! <br /><br />
             On the side, I consult on DevRel for companies, I angel invest, and
-            play video games + fly drones for fun!
+            mentor advocates
+            <span class="underline">
+              <a href="https//www.dxmentorship.com">
+                @dxmentorship program.</a
+              ></span
+            >
           </p>
         </div>
 
@@ -85,12 +91,20 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div class="hidden md:flex self-end my-8 items-center animate-bounce">
+        <div class="flex gap-2">
+          <a target="_blank" href="mailto:ekeneeze3@gmail.com"
+            ><TheButton> Contact Kenny </TheButton></a
+          >
+          <a target="_blank" href="https://www.linkedin.com/in/ekeneeze/"
+            ><TheButton> LinkedIn </TheButton></a
+          >
+        </div>
+        <!-- <div class="hidden md:flex self-end my-8 items-center animate-bounce">
           <p class="text-[#969696] mr-4">Scroll down</p>
           <div>
             <img src="../assets/images/icon-arrow-down.svg" class="w-4 h-4" />
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="mt-5 md:mt-0">
         <div class="relative">

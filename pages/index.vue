@@ -120,7 +120,7 @@ useSeoMeta({
           <h2
             class="text-4xl md:text-6xl tracking-[-3.2px] leading-[-3.2px] text-[#999] font-bold mb-5"
           >
-            Featured Videos
+            Recent Videos
           </h2>
           <p
             class="text-lg md:text-2xl leading-7 tracking-tight text-[#999] mt-2"
@@ -151,7 +151,7 @@ useSeoMeta({
           <h2
             class="text-4xl md:text-6xl tracking-[-3.2px] leading-[-3.2px] text-[#999] font-bold mb-5"
           >
-            Featured Articles
+            Latest Articles
           </h2>
           <p
             class="text-lg md:text-2xl leading-7 tracking-tight text-[#999] mt-2"
