@@ -1,0 +1,9 @@
+{
+  "title": "Build a Jamstack Food Ordering App with Strapi, Gridsome & Snipcart ",
+  "description": "Learn how to create a food ordering app with Gridsome, Snipcart and your favorite headless CMS: Strapi. 1/6",
+  "url": "https://strapi.io/blog/building-a-jamstack-food-ordering-app-with-strapi-gridsome-and-snipcart-1-6",
+  "tags": ["jamstack", "strapi", "webdev"],
+  "isExternal": true,
+  "date": "2020/12/07",
+  "image": "https://d2zv2ciw0ln4h1.cloudfront.net/uploads/Snipcart_Strapi_7abb9287c1.png"
+}
