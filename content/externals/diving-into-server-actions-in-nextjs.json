@@ -1,0 +1,9 @@
+{
+  "title": "Diving into Server Actions in Next.js 14",
+  "description": "Explore Next.js Server Actions to write functions that execute on either the server or client side, and build a to-do app to demonstrate the UI results.",
+  "url": "https://blog.logrocket.com/diving-into-server-actions-next-js-14/",
+  "tags": ["animations", "react", "webdev"],
+  "isExternal": true,
+  "date": "2023/12/21",
+  "image": "https://blog.logrocket.com/wp-content/uploads/2023/12/diving-into-server-actions-next-js-14.png"
+}
