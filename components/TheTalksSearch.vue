@@ -117,12 +117,14 @@ const clearSelectedCategory = () => {
       >
         <!-- This div is visible when showDetails is true -->
         <p class="mt-8 w-3/4 text-[#898989]">
-          {{ talk.description || 'Something' }}
+          {{ talk.description || 'Talk descript will show up here...' }}
         </p>
+        
 
         <div class="flex items-center gap-7 text-[#898989] mt-8">
           <h2>{{ formatDate(talk.date) }}</h2>
-          <a :href="talk?.site">Conference</a>
+          <a target="_blank" :href="talk?.site">Conference</a>
+          <a v-if="talk.video != ''" target="_blank" :href="talk?.video">Watch Talk</a>
         </div>
 
         <div class="absolute top-0 right-0 mt-8 mr-8">
