@@ -11,7 +11,7 @@ const handleToggleMobileNav = () => {
 
 watch(
   route,
-  (old) => {
+  () => {
     state.isMobileNavOpen = false;
   },
   { flush: 'pre', deep: true, immediate: true }
@@ -31,10 +31,7 @@ const navLinks = ref([
     slug: 'Speaking',
     path: '/speaking',
   },
-  {
-    slug: 'Demos',
-    path: '/demos',
-  },
+  
   {
     slug: 'Uses',
     path: '/uses',

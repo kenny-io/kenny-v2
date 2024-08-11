@@ -1,0 +1,23 @@
+{
+  "conference": "Web3 Afrika Community Workshop",
+  "title": "Open Source on the Blockchain: How to contribute",
+  "description": "Open source has gained a lot of momentum over the past few years and sometimes you would ask how you can contribute to it. On this session, we explore open source development and blockchain technology, providing practical steps for developers to engage with and contribute to blockchain-based open source projects. ",
+  "date": "2024-05-18",
+  "country": "online",
+  "site": "https://x.com/web3afrika/status/1791018232939155609",
+  "category": [
+    {
+      "id": "1",
+      "name": "web3"
+    },
+    {
+      "id": "2",
+      "name": "open-source"
+    }
+  ],
+  "video": "https://www.youtube.com/watch?v=CzePrvko9Q0&t=1884s&pp=ygUWd2ViM2FmcmlrYSBvcGVuIHNvdXJjZQ%3D%3D",
+  "slides": "https://docs.google.com/presentation/d/1WiYbymdfflYp18NV6Y9NC2ssMAF2tcFhNVmcMceWP_w/edit?usp=sharing",
+  "status": "done",
+  "ready": true,
+  "image": "https://pbs.twimg.com/media/GNr5k_7XcAAwVpR?format=jpg&name=medium"
+}

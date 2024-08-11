@@ -31,13 +31,13 @@ onMounted(() => {
             over 5 years experience working in DevRel across different
             functions. Recently as a Senior Developer Experience Engineer at
             <span class="underline">
-              <a href="https//www.netlify.com"> Netlify</a></span
+              <a href="https://www.netlify.com"> Netlify</a></span
             >
             and leading DevRel teams in others! <br /><br />
             On the side, I consult on DevRel for companies, I angel invest, and
             mentor advocates
             <span class="underline">
-              <a href="https//www.dxmentorship.com">
+              <a href="https://www.dxmentorship.com">
                 @dxmentorship program.</a
               ></span
             >

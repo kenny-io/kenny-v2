@@ -1,0 +1,8 @@
+{
+  "title": "Using Chrome’s Document Picture-in-Picture API in React",
+  "description": "Chrome’s new Document Picture-in-Picture API builds on the PIP API to open up a wider range of possibilities for user interaction.",
+  "url": "https://blog.logrocket.com/using-chrome-document-picture-in-picture-api-react/",
+  "category": ["react", "webdev", "api"],
+  "date": "2024/06/26",
+  "image": "https://blog.logrocket.com/wp-content/uploads/2024/06/Using-Chrome-Document-Picture-in-Picture-API-React.png"
+}
