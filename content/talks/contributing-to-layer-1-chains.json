@@ -1,0 +1,23 @@
+{
+  "conference": "Web3 Afrika Webinar",
+  "title": "Contributing to Layer 1 Chains",
+  "description": "This talk provides a practical guide for developers interested in contributing to open-source software (OSS) projects focused on layer 1 blockchain protocols. It covers the fundamentals of layer 1 chains, their importance in the blockchain ecosystem, and the unique challenges they present. The talk also covers the process of contributing to OSS projects, including how to find and contribute to projects, how to get involved in the community, and how to get help when needed.",
+  "date": "2024-06-08",
+  "country": "online",
+  "site": "https://x.com/web3afrika/status/1797962480725238034",
+  "category": [
+    {
+      "id": "1",
+      "name": "web3"
+    },
+    {
+      "id": "2",
+      "name": "open-source"
+    }
+  ],
+  "video": "https://www.youtube.com/watch?v=-3vYWOqr1SM&t=1051s&pp=ygUWd2ViM2FmcmlrYSBvcGVuIHNvdXJjZQ%3D%3D",
+  "slides": "https://docs.google.com/presentation/d/1WiYbymdfflYp18NV6Y9NC2ssMAF2tcFhNVmcMceWP_w/edit?usp=sharing",
+  "status": "done",
+  "ready": false,
+  "image": "https://pbs.twimg.com/media/GPOlVhOWcAAMNgQ?format=jpg&name=medium"
+}

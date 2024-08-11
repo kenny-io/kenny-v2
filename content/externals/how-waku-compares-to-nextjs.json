@@ -1,0 +1,9 @@
+{
+  "title": "How Waku compares to Next.js",
+  "description": "Waku is a new lightweight React framework built on top of React Server Components (RSCs). Let’s compare Waku with Next.js in this article.",
+  "url": "https://blog.logrocket.com/waku-vs-next-js/",
+   "tags": ["animations", "react", "webdev"],
+  "isExternal": true,
+  "date": "2024/04/02",
+  "image": "https://blog.logrocket.com/wp-content/uploads/2024/04/Waku-vs-Next-js.png"
+}

@@ -4,6 +4,7 @@ require('dotenv').config();
 export default defineNuxtConfig({
   ssr: true,
   devtools: { enabled: true },
+
   modules: [
     '@nuxtjs/tailwindcss',
     'nuxt-lenis',
@@ -12,12 +13,15 @@ export default defineNuxtConfig({
     '@nuxt/content',
     // '@heroicons/vue/20/solid',
   ],
+
   extends: ['nuxt-seo-kit'],
+
   gsap: {
     extraPlugins: {
       scrollTrigger: true,
     },
   },
+
   runtimeConfig: {
     MAILCHIMP_API_KEY: process.env.MAILCHIMP_API_KEY,
     MAILCHIMP_SERVER_PREFIX: process.env.MAILCHIMP_SERVER_PREFIX,
@@ -32,5 +36,8 @@ export default defineNuxtConfig({
       language: 'en-US',
     },
   },
+
   css: ['@/assets/css/globals.css'],
+
+  compatibilityDate: '2024-08-11',
 });

@@ -1,0 +1,9 @@
+{
+  "title": "Implementing vector search with OpenAI, Next.js, and Supabase",
+  "description": "Let’s build a Next.js app that implements vector search using Supabase and OpenAI to offer better search experiences for users.",
+  "url": "https://blog.logrocket.com/openai-vector-search-next-js-supabase/",
+   "tags": ["ai", "nextjs", "webdev"],
+  "isExternal": true,
+  "date": "2024/02/07",
+  "image": "https://blog.logrocket.com/wp-content/uploads/2024/02/Implementing-vector-search-OpenAI-Next-js-Supabase.png"
+}
