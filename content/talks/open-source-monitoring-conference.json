@@ -1,0 +1,27 @@
+{
+    "conference": "Open Source Monitoring Conference",
+    "title": "Open Sourcing Software at Massive Scale",
+    "description": "We recently open-sourced Shardeum - An autoscaling, sharded, and decentralized L1 chain. In this talk, I'll share the story of how we did it, the challenges we faced, the lessons we learned and the solutions we implemented.",
+    "date": "2024-11-22",
+    "country": "Nuremberg, Germany",
+    "site": "https://osmc.de/talks/open-sourcing-software-at-massive-scale/",
+    "category": [
+        {
+            "id": "1",
+            "name": "opensource"
+        },
+        {
+            "id": "2",
+            "name": "devrel"
+        },
+        {
+            "id": "3",
+            "name": "git"
+        }
+    ],
+    "video": "",
+    "slides": "",
+    "status": "upcoming",
+    "ready": false,
+    "image": "https://res.cloudinary.com/kennyy/image/upload/v1729678146/Ekene_Eze_fvdamt.png"
+}

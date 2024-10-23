@@ -11,7 +11,7 @@ const handleToggleMobileNav = () => {
 
 watch(
   route,
-  () => {
+  (old) => {
     state.isMobileNavOpen = false;
   },
   { flush: 'pre', deep: true, immediate: true }
@@ -31,10 +31,17 @@ const navLinks = ref([
     slug: 'Speaking',
     path: '/speaking',
   },
-  
+  {
+    slug: 'Demos',
+    path: '/demos',
+  },
   {
     slug: 'Uses',
     path: '/uses',
+  },
+  {
+    slug: 'Streams',
+    path: 'https://www.youtube.com/playlist?list=PLh0cCRPj3dyfjP9ka3B-oyMMC1XPuFVrI',
   },
 ]);
 </script>
@@ -60,18 +67,19 @@ const navLinks = ref([
           <ul
             class="flex items-start justify-start md:flex-row flex-col md:items-center md:gap-4 gap-8"
           >
-            <li
-              v-for="link in navLinks"
-              :key="link.slug"
-              class="relative text-[#b5b5b5] hover:text-white text-base"
-            >
-              <NuxtLink
-                :to="link.path"
-                @click.native="state.isMobileNavOpen = false"
-                class="nav-link"
-                >{{ link.slug }}</NuxtLink
+           
+             <li
+                v-for="link in navLinks"
+                :key="link.slug"
+                class="relative text-[#b5b5b5] text-base"
               >
-            </li>
+                <NuxtLink
+                  :to="link.path"
+                  @click.native="state.isMobileNavOpen = false"
+                  class="nav-link hover:text-white "
+                  >{{ link.slug }}</NuxtLink
+                >
+              </li>
           </ul>
         </div>
         <div class="flex justify-center items-center">
@@ -102,9 +110,10 @@ const navLinks = ref([
 .router-link-exact-active {
   font-weight: 500;
 }
+
 /* Updated CSS for the hover effect */
 .nav-link::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   /* Position the underline slightly below the text */
@@ -112,7 +121,7 @@ const navLinks = ref([
   right: 0;
   height: 2px;
   /* Thickness of the underline */
-  background: rgb(255, 169, 21); /* Updated Gradient effect */
+  background:  linear-gradient(90deg, #303030 0%, #00dc82 50%, #36e4da 75%, #0047e1 100%); /* Updated Gradient effect */
   /* Updated Gradient effect */
   transform: scaleX(0);
   /* Initially, the underline is not visible */
@@ -125,5 +134,4 @@ const navLinks = ref([
   transform: scaleX(1);
   /* On hover, the underline becomes fully visible */
   transform-origin: bottom left;
-}
-</style>
+}</style>
