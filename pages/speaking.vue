@@ -72,18 +72,10 @@ onMounted(() => {
               Speaking
             </h1>
             <p class="text-xl mt-6 text-left">
-              I've had the privilege of sharing insights and experiences at a
-              variety of conferences, both on a global stage and within local
-              communities. <br />
-              <br />
-              If you're interested in having me as a speaker at your upcoming
-              conference or arranging a specialized workshop for your
-              organization, don't hesitate to reach out and start a conversation
-              with me. Feel free to get in touch; I'd love to discuss the
-              possibilities further.
+              I'm an experienced conference speaker presenting at over 20 events globally and locally. I'm available for speaking engagements and specialized workshops
             </p>
             <TheButton @click="sendEmail"
-              >Invite Me to your Awesome Event</TheButton
+              >Get in touch</TheButton
             >
           </div>
 

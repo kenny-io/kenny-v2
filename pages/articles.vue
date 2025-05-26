@@ -19,27 +19,27 @@ const articles = computed(() => {
   ];
 
   // Filter articles based on search query and selected category
+  
   const filtered = combinedArticles.filter((article) => {
     const matchesSearchQuery =
       !searchQuery.value.trim() ||
       article.title?.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
-      article?.content
-        ?.toLowerCase()
-        .includes(searchQuery.value.toLowerCase()) ||
       article.brief?.toLowerCase().includes(searchQuery.value.toLowerCase());
 
     const matchesSelectedCategory =
       !selectedCategory.value.toLowerCase().trim() ||
-      article.tags?.includes(selectedCategory.value) ||
-      article.tags?.some((tag: any) => tag.name === selectedCategory.value);
+      (Array.isArray(article.tags) && (
+        article.tags.includes(selectedCategory.value) ||
+        article.tags.some((tag: any) => tag && tag.name === selectedCategory.value)
+      ));
 
     return matchesSearchQuery && matchesSelectedCategory;
   });
 
   // Sort articles by date in descending order (newest first)
   return filtered.sort((a, b) => {
-    const dateA: any = new Date(a.date || a.publishedAt);
-    const dateB: any = new Date(b.date || b.publishedAt);
+    const dateA: any = new Date((a as any).date || (a as any).publishedAt);
+    const dateB: any = new Date((b as any).date || (b as any).publishedAt);
     return dateB - dateA;
   });
 });
@@ -102,16 +102,7 @@ useSeoMeta({
             <p
               class="text-base w-[350px] sm:w-full md:text-xl mt-6 text-center md:text-left"
             >
-              Writing is a huge part of my content delivery approach. It's the
-              fastest way I know to quickly share the things I've learnt in the
-              course of my work and other activities.
-            </p>
-            <p
-              class="text-base w-[350px] sm:w-full md:text-xl text-center md:text-left mt-4"
-            >
-              I have mostly written content that are published on other
-              platforms, but I've also decided to write specifically for my blog
-              here.
+            I use writing as my primary content delivery method to quickly share insights from my work and activities, publishing both on external platforms and my personal blog.
             </p>
           </div>
           <div class="w-1/2 md:w-2/4">
@@ -156,7 +147,7 @@ useSeoMeta({
               </svg>
             </div>
             <input
-              class="bg-transparent rounded-xl w-full h-[45px] pl-4 py-3 text-[#999] text-xl md:text-2xl font-semibold tracking-[-0.84px] focus:border-none active:border-none focus-visible:border-none focus:outline-none placeholder:text-[#878787]"
+              class="bg-transparent rounded-xl w-full h-[45px] pl-4 py-3 text-[#999] text-xl md:text-2xl font-semibold tracking-[-0.84px] border-none focus:border-none active:border-none focus-visible:border-none focus:outline-none placeholder:text-[#878787]"
               placeholder="Search articles"
               type="text"
               id="name"
@@ -190,13 +181,13 @@ useSeoMeta({
         </div>
       </TheWrapper>
     </section>
-    <section class="mb-64 z-10">
+    <section class="mb-8 z-10">
       <TheVerticalGrid />
       <TheWrapper>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-10 md:gap-y-24">
           <TheCard
             v-for="article in articles"
-            :key="article._path"
+            :key="('_path' in article ? article._path : (article.url || article.title))"
             :article="article"
             :button-text="'Read More'"
           />

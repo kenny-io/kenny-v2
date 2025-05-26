@@ -97,12 +97,7 @@ useSeoMeta({
               Level up with me
             </h1>
             <p class="text-lg md:text-xl mt-6 text-center md:text-left">
-              Like most developers, I am always learning. As a result, I'm
-              equally enthusiastic about sharing my knowledge. <br /><br />
-              I've authored a couple of articles, produced some comprehensive
-              courses, and regularly host workshops and tutorials on my YouTube
-              Channel. You can explore my treasure trove of educational content
-              right here.
+              I'm a passionate educator who creates educational content through articles, comprehensive courses, and regular YouTube Streams and tutorials.
             </p>
           </div>
           <div class="w-1/3 md:w-2/4">
