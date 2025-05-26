@@ -23,7 +23,7 @@ const featuredProjects = ref([
     link: 'https://github.com/kenny-io/shardeum-indexer',
   },
   {
-    title: 'Vission EVM',
+    title: 'Vission',
     description: 'A modern web dashboard for real-time analytics and visualizations for the Shardeum blockchain. Track transactions, network health, and blockchain metrics through an intuitive interface built with React, TypeScript, and Tailwind CSS.',
     image: '/images/projects/dataviz.png',
     link: 'http://34.55.111.27:3000/',
@@ -48,14 +48,14 @@ const featuredProjects = ref([
     description: 'A mentorship program for aspiring Developer Advocates, providing guidance, resources, and a supportive community to help individuals grow their careers in Developer Relations.',
     image: '/images/projects/mentorship.jpeg',
     link: 'https://www.dxmentorship.com',
-    github: 'https://github.com/kenny-io/dxmentorship',
+    github: 'https://github.com/Dxmentorship/dxmentorship',
   },
   {
     title: 'Shardeum Documentation',
     description: 'Comprehensive documentation for the Shardeum blockchain, covering network architecture, developer guides, API references, and tutorials to help users and developers build on Shardeum.',
     image: '/images/projects/docs.png',
     link: 'https://docs.shardeum.org',
-    github: 'https://github.com/shardeum/docs',
+    github: 'https://github.com/shardeum/shardeum-docs',
   }
 ]);
 
