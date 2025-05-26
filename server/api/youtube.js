@@ -5,8 +5,8 @@ export default async function (req, res) {
 
   let result;
 
-  const API_KEY = runtimeConfig.YOUTUBE_API_KEY;
-  const CHANNEL_ID = runtimeConfig.YOUTUBE_CHANNEL_ID;
+  const API_KEY = runtimeConfig.YOUTUBE_API_KEY || process.env.YOUTUBE_API_KEY;
+  const CHANNEL_ID = runtimeConfig.YOUTUBE_CHANNEL_ID || process.env.YOUTUBE_CHANNEL_ID;
 
   // Validate the presence of API key and Channel ID
   if (!API_KEY || !CHANNEL_ID) {
@@ -17,6 +17,9 @@ export default async function (req, res) {
       }),
     };
   }
+
+  console.log('API_KEY', API_KEY);
+  console.log('CHANNEL_ID', CHANNEL_ID);
 
   try {
     const response = await fetch(

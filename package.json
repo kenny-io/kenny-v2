@@ -1,28 +1,43 @@
 {
-  "name": "nuxt-app",
+  "name": "kenny-portfolio-v3",
   "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "analyze": "nuxt analyze"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxtjs/tailwindcss": "^6.8.0",
-    "nuxt": "^3.7.4",
-    "nuxt-icon": "^0.5.0"
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@nuxtjs/tailwindcss": "^6.10.0",
+    "eslint": "^8.56.0",
+    "nuxt": "^3.9.0",
+    "nuxt-icon": "^0.5.0",
+    "prettier": "^3.2.0",
+    "typescript": "^5.3.0",
+    "vue-tsc": "^2.2.10"
   },
   "dependencies": {
-    "@hypernym/nuxt-gsap": "^2.2.2",
+    "@hypernym/nuxt-gsap": "^2.0.0",
     "@mailchimp/mailchimp_marketing": "^3.0.80",
-    "@nuxt/content": "^2.8.3",
+    "@nuxt/content": "^2.9.0",
+    "@nuxt/image": "^1.0.0",
+    "@nuxtjs/color-mode": "^3.3.0",
+    "@nuxtjs/robots": "^3.0.0",
     "@tailwindcss/forms": "^0.5.7",
-    "axios": "^1.5.1",
+    "@tailwindcss/typography": "^0.5.10",
+    "@vueuse/core": "^10.6.0",
+    "@vueuse/motion": "^2.0.0",
+    "axios": "^1.6.0",
     "gsap": "^3.12.2",
     "js-confetti": "^0.11.0",
-    "nuxt-lenis": "^1.0.2",
-    "split-type": "^0.3.4"
+    "nuxt-lenis": "^2.0.0",
+    "split-type": "^0.3.3",
+    "vue-sonner": "^1.0.0"
   }
 }
