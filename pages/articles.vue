@@ -115,7 +115,7 @@ useSeoMeta({
       </TheWrapper>
     </section>
     <section
-      class="z-20 mb-24 sticky top-0 pt-20 md:pt-6 bg-black/80 backdrop-blur-lg"
+      class="z-20 mb-24 sticky top-0 pt-20 md:pt-20 bg-black/80 backdrop-blur-lg"
     >
       <TheWrapper>
         <div>
@@ -167,6 +167,7 @@ useSeoMeta({
               v-for="articleCategory in nuxtContentCategories"
               :key="articleCategory"
               @click="selectedCategory = articleCategory"
+              :selected="selectedCategory === articleCategory"
             >
               {{ articleCategory }}
             </TheChip>

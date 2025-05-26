@@ -62,7 +62,7 @@ const clearSelectedCategory = () => {
       </div>
       <input
         v-model="localSearchQuery"
-        class="bg-transparent rounded-xl w-full h-[45px] pl-4 py-3 text-[#999] text-2xl font-semibold tracking-[-0.84px] focus:border-none active:border-none focus-visible:border-none focus:outline-none placeholder:text-[#878787]"
+        class="bg-transparent border-none rounded-xl w-full h-[45px] pl-4 py-3 text-[#999] text-2xl font-semibold tracking-[-0.84px] focus:border-none active:border-none focus-visible:border-none focus:outline-none focus:ring-0 placeholder:text-[#878787]"
         placeholder="Search"
         type="text"
         required
@@ -79,6 +79,7 @@ const clearSelectedCategory = () => {
         v-for="talk in talkCategories"
         :key="talk"
         @click="selectedCategory = talk"
+        :selected="selectedCategory === talk"
       >
         {{ talk }}
       </TheChip>
