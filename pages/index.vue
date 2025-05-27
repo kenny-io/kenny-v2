@@ -4,6 +4,23 @@ import { useVideos } from '~/composables/useVideos';
 import { useHashnode } from '~/composables/useHashnode';
 import BookShowcase from '~/components/BookShowcase.vue';
 
+// Define types
+interface Article {
+  url: string;
+  coverImage: string;
+  title: string;
+  brief: string;
+  dateAdded: string;
+}
+
+interface Course {
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+  dateAdded: string;
+}
+
 // Fetch data from composables
 const { fetchVideos, featuredVideos } = useVideos();
 const { fetchHashnodeArticles, featuredArticles, hashnodeArticles } = useHashnode();
@@ -98,14 +115,14 @@ useSeoMeta({
     <RecentArticles :articles="hashnodeArticles.slice(0, 3).map(article => ({
       ...article,
       coverImage: article.coverImage?.url || 'https://res.cloudinary.com/kennyy/image/upload/v1695921469/AI_Generated_Image_13_d1aaw0.jpg',
-      dateAdded: article.publishedAt
+      dateAdded: String(article.publishedAt)
     }))" />
     <RecentCourses :courses="featuredVideos.slice(0, 3).map(video => ({
       title: video.snippet.title,
       description: video.snippet.description,
       image: video.snippet.thumbnails?.high?.url || 'https://www.youtube.com/placeholder.jpg',
       url: `https://www.youtube.com/watch?v=${video.id.videoId}`,
-      dateAdded: video.snippet.publishedAt
+      dateAdded: String(video.snippet.publishedAt)
     }))" />
     <section class="w-full bg-black py-20 flex items-center justify-center">
       <div class="w-full max-w-5xl mx-auto rounded-3xl border border-white/30 p-10 md:p-16 flex flex-col items-center">

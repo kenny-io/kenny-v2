@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800 py-20">
+  <section class="w-full bg-black py-20">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 px-4">
       <!-- Book Cover -->
       <div class="flex-1 flex justify-center items-center relative">
@@ -10,9 +10,9 @@
       <!-- Book Details -->
       <div class="flex-1 flex flex-col justify-center">
         <!-- Testimonial -->
-        <div class="mb-6 bg-gray-900/80 rounded-xl shadow p-6">
+        <div class="mb-6 bg-[#020617] rounded-xl shadow p-6">
           <div class="flex items-center mb-2">
-            <span class="text-primary-400 text-lg mr-2">★★★★★</span>
+            <span class="text-yellow-400 text-lg mr-2">★★★★★</span>
           </div>
           <p class="text-gray-200 italic mb-2">
             "This book is designed to help developers of all skill levels build, deploy, optimize, and scale web applications efficiently on the Netlify platform."

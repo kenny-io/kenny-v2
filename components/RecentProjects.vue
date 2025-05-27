@@ -19,7 +19,7 @@ const props = defineProps<{ projects: Project[] }>();
         <p class="text-gray-300 max-w-2xl mx-auto">A selection of my latest work and initiatives.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <a v-for="(project, index) in projects" :key="index" :href="project.link" target="_blank" rel="noopener" class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 block focus:outline-none focus:ring-2 focus:ring-primary-400 group relative">
+        <a v-for="(project, index) in projects" :key="index" :href="project.link" target="_blank" rel="noopener" class="bg-black/60 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 block focus:outline-none focus:ring-2 focus:ring-gray-400 group relative">
           <div class="relative overflow-hidden h-48">
             <img :src="project.image" :alt="project.title" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
             <a v-if="project.github" :href="project.github" target="_blank" rel="noopener" @click.stop class="absolute top-2 right-2 bg-gray-800 bg-opacity-80 rounded-full p-2 hover:bg-primary-500 transition-colors" title="View on GitHub">
@@ -28,15 +28,15 @@ const props = defineProps<{ projects: Project[] }>();
               </svg>
             </a>
           </div>
-          <div class="p-6">
+          <div class="p-6 border-x border-b border-gray-700 rounded-b-xl">
             <h3 class="text-xl font-bold mb-2 text-white">{{ project.title }}</h3>
             <p class="text-gray-300 mb-4">{{ project.description }}</p>
-            <span class="inline-flex items-center text-primary-400 font-medium hover:underline">
+            <!-- <span class="inline-flex items-center text-gray-400 font-medium hover:underline">
               Explore Project
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
-            </span>
+            </span> -->
           </div>
         </a>
       </div>

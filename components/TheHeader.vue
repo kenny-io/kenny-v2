@@ -106,11 +106,7 @@ const socialLinks = ref([
 <template>
   <header 
     ref="headerRef"
-    class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
-    :class="{
-      'py-2 backdrop-blur-lg bg-white/70 dark:bg-gray-950/70 shadow-sm': isScrolled,
-      'py-5 bg-transparent': !isScrolled
-    }"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-5 bg-black/60 backdrop-blur-md"
   >
     <TheWrapper class="flex items-center justify-between relative">
       <!-- Logo -->      

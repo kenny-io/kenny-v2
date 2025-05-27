@@ -209,7 +209,7 @@ const statsMotion = useMotion(statsRef, {
                 </a>
               </div>
               <!-- Short bio -->
-              <p class="text-lg text-gray-300 mt-6 mb-4 max-w-2xl">
+              <p class="text-lg text-gray-300 mt-6 max-w-2xl">
                 A Senior Software Engineer and Developer Advocate with 7+ years of Professional Experience. Amongst other things, Kenny is a 
               </p>
               <!-- Typewriter effect -->

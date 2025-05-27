@@ -1,12 +1,17 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
-const props = defineProps({
-  courses: {
-    type: Array,
-    required: true,
-    default: () => []
-  }
-});
+
+interface Course {
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+  dateAdded: string;
+}
+
+const props = defineProps<{
+  courses: Course[];
+}>();
 </script>
 <template>
   <section class="py-20">
@@ -16,7 +21,7 @@ const props = defineProps({
         <p class="text-gray-300 max-w-2xl mx-auto">Level up with my latest courses and workshops.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div v-for="(course, index) in courses" :key="index" class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+        <div v-for="(course, index) in courses" :key="index" class="bg-[#020617] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
           <a :href="course.url" target="_blank" rel="noopener noreferrer" class="block">
             <div class="relative overflow-hidden h-48">
               <img :src="course.image" :alt="course.title" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
@@ -31,7 +36,7 @@ const props = defineProps({
                   </svg>
                   <span>{{ new Date(course.dateAdded).toLocaleDateString() }}</span>
                 </span>
-                <span class="text-primary-400 font-medium hover:underline">View course</span>
+                <!-- <span class="text-gray-400 font-medium hover:underline">View course</span> -->
               </div>
             </div>
           </a>
