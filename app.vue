@@ -24,7 +24,7 @@ onMounted(() => {
   <lenis id="test" ref="lenisRef" :options="lenisOptions" @scroll="scrollEmitter">
     <div class="glowball "></div>
     <SeoKit />
-    <div class="py-5 bg-black">
+    <div class="pt-5 bg-black">
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>

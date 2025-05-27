@@ -1,6 +1,11 @@
+<script setup lang="ts">
+defineProps({ selected: Boolean })
+</script>
 <template>
     <div>
-        <div class="rounded-full border border-[#999] px-2 py-1.5 text-xs w-fit uppercase mr-2 whitespace-nowrap cursor-pointer hover:bg-[#999] hover:text-white hover:border-[#999] hover:transition duration-200 ease-in-out">
+        <div 
+        :class="[selected ? 'bg-gray-200 text-gray-800' : '']"
+        class="rounded-full border border-[#999] px-2 py-1.5 text-xs w-fit uppercase mr-2 whitespace-nowrap cursor-pointer hover:bg-[#999] hover:text-white hover:border-[#999] hover:transition duration-200 ease-in-out">
             <slot/>
         </div>
     </div>
