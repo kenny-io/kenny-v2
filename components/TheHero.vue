@@ -5,16 +5,14 @@ import { ref, type Ref } from 'vue';
 
 // Define roles for the typewriter effect
 const roles = ref([
-  'Developer Advocate',
+  'Founder',
+  'Developer Experience Leader',
+  'AI Product Builder',
   'Software Engineer',
-  'Content Creator',
+  'Keynote Speaker',
   'Published Author',
   'Community Builder',
-  'Open Sourcerer',
-  'Keynote Speaker',
-  'Angel Investor',
   'Mentor',
-  'Drone Pilot',
 
 ]);
 
@@ -210,7 +208,7 @@ const statsMotion = useMotion(statsRef, {
               </div>
               <!-- Short bio -->
               <p class="text-lg text-gray-300 mt-6 max-w-2xl">
-                A Senior Software Engineer and Developer Advocate with 7+ years of Professional Experience. Amongst other things, Kenny is a 
+                I lead developer experience and build technology products across AI infrastructure, commerce, and real estate. With 7+ years across engineering and Developer Relations, I’m currently a 
               </p>
               <!-- Typewriter effect -->
               <div class="min-h-[110px] md:min-h-[130px] lg:min-h-[150px] mb-10 flex items-end">
@@ -299,7 +297,7 @@ const statsMotion = useMotion(statsRef, {
               <div class="absolute bottom-4 left-4 bg-white/95 dark:bg-gray-900/95 backdrop-blur px-3 py-1.5 rounded-full text-sm font-medium shadow-lg animate-float">
                 <span class="flex items-center gap-1.5">
                   <Icon name="ph:code-duotone" class="w-4 h-4 text-secondary" />
-                  Developer Advocate
+                  Product Builder
                 </span>
               </div>
             </div>
