@@ -34,45 +34,23 @@ const podcastSectionRef = ref(null);
 // Featured projects for 2025
 const featuredProjects = ref([
   {
-    title: 'Transaction Indexer',
-    description: 'A high-performance blockchain indexer for the Shardeum network. Processes and stores transaction data in real-time, providing optimized APIs for querying historical metrics and transaction data. Features include caching, batch processing, and support for both forward and backward indexing.',
-    image: '/images/projects/indexer.png',
-    link: 'https://github.com/kenny-io/shardeum-indexer',
+    title: 'Thally',
+    description: 'The product knowledge layer for software teams. Thally turns product changes into accurate, reviewable updates across documentation and other customer-facing knowledge surfaces.',
+    image: 'https://thally.io/brand/thally-og-2026-07-30.png',
+    link: 'https://thally.io',
+    github: 'https://github.com/thallylabs',
   },
   {
-    title: 'Vission',
-    description: 'A modern web dashboard for real-time analytics and visualizations for the Shardeum blockchain. Track transactions, network health, and blockchain metrics through an intuitive interface built with React, TypeScript, and Tailwind CSS.',
-    image: '/images/projects/dataviz.png',
-    link: 'http://34.55.111.27:3000/',
-    github: 'https://github.com/kenny-io/vission',
+    title: 'Peekup',
+    description: 'An on-demand commerce and delivery marketplace connecting customers in Enugu with local restaurants, supermarkets, pharmacies, and riders.',
+    image: 'https://play-lh.googleusercontent.com/K3_go7NjViPXgphFSeLNoCfNu4pI6o6PBsAY8xmRzmc9mytn35nv5mK92wAJ13qLNEtJLcVLYYa7ENYDs-FfNw=s0-br30',
+    link: 'https://apps.apple.com/ng/app/peekup/id6760617895',
   },
   {
-    title: 'Network Monitor',
-    description: 'A network status monitoring system for Shardeum blockchain services. Tracks uptime, response times, and availability of network components using Prometheus metrics, provides real-time status updates through a Next.js frontend, and sends Slack notifications for incidents.',
-    image: '/images/projects/network-monitor-light.png',
-    link: 'http://34.56.12.217:3000/',
-    github: 'https://github.com/shardeum/network-status',
-  },
-  {
-    title: 'Changelog',
-    description: "A Next.js application template to showcase changes in network versions, including new features, improvements, and updates. Easily track what's new in the Shardeum ecosystem.",
-    image: '/images/projects/changelog.png',
-    link: 'https://shardeum-changelog.vercel.app/',
-    github: 'https://github.com/kenny-io/changelog',
-  },
-  {
-    title: 'DX Mentorship Program',
-    description: 'A mentorship program for aspiring Developer Advocates, providing guidance, resources, and a supportive community to help individuals grow their careers in Developer Relations.',
-    image: '/images/projects/mentorship.jpeg',
-    link: 'https://www.dxmentorship.com',
-    github: 'https://github.com/Dxmentorship/dxmentorship',
-  },
-  {
-    title: 'Shardeum Documentation',
-    description: 'Comprehensive documentation for the Shardeum blockchain, covering network architecture, developer guides, API references, and tutorials to help users and developers build on Shardeum.',
-    image: '/images/projects/docs.png',
-    link: 'https://docs.shardeum.org',
-    github: 'https://github.com/shardeum/shardeum-docs',
+    title: 'Lived',
+    description: 'A Dubai rental transparency platform where verified tenants share honest reviews of buildings, amenities, maintenance, noise, and everyday living.',
+    image: 'https://www.lived.ae/lived-social-preview.png',
+    link: 'https://www.lived.ae',
   }
 ]);
 
