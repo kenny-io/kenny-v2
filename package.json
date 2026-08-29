@@ -39,5 +39,6 @@
     "nuxt-lenis": "^2.0.0",
     "split-type": "^0.3.3",
     "vue-sonner": "^1.0.0"
-  }
+  },
+  "packageManager": "pnpm@8.15.9"
 }

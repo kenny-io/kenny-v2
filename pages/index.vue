@@ -1,137 +1,60 @@
 <script setup lang="ts">
-// Import composables
-import { useVideos } from '~/composables/useVideos';
-import { useHashnode } from '~/composables/useHashnode';
-import BookShowcase from '~/components/BookShowcase.vue';
-
-// Define types
-interface Article {
-  url: string;
-  coverImage: string;
-  title: string;
-  brief: string;
-  dateAdded: string;
-}
-
-interface Course {
-  title: string;
-  description: string;
-  image: string;
-  url: string;
-  dateAdded: string;
-}
-
-// Fetch data from composables
-const { fetchVideos, featuredVideos } = useVideos();
-const { fetchHashnodeArticles, featuredArticles, hashnodeArticles } = useHashnode();
-
-// Refs for animation
-const featuredSectionRef = ref(null);
-const articlesSectionRef = ref(null);
-const mentorshipSectionRef = ref(null);
-const podcastSectionRef = ref(null);
-
-// Featured projects for 2025
-const featuredProjects = ref([
-  {
-    title: 'Transaction Indexer',
-    description: 'A high-performance blockchain indexer for the Shardeum network. Processes and stores transaction data in real-time, providing optimized APIs for querying historical metrics and transaction data. Features include caching, batch processing, and support for both forward and backward indexing.',
-    image: '/images/projects/indexer.png',
-    link: 'https://github.com/kenny-io/shardeum-indexer',
-  },
-  {
-    title: 'Vission',
-    description: 'A modern web dashboard for real-time analytics and visualizations for the Shardeum blockchain. Track transactions, network health, and blockchain metrics through an intuitive interface built with React, TypeScript, and Tailwind CSS.',
-    image: '/images/projects/dataviz.png',
-    link: 'http://34.55.111.27:3000/',
-    github: 'https://github.com/kenny-io/vission',
-  },
-  {
-    title: 'Network Monitor',
-    description: 'A network status monitoring system for Shardeum blockchain services. Tracks uptime, response times, and availability of network components using Prometheus metrics, provides real-time status updates through a Next.js frontend, and sends Slack notifications for incidents.',
-    image: '/images/projects/network-monitor-light.png',
-    link: 'http://34.56.12.217:3000/',
-    github: 'https://github.com/shardeum/network-status',
-  },
-  {
-    title: 'Changelog',
-    description: "A Next.js application template to showcase changes in network versions, including new features, improvements, and updates. Easily track what's new in the Shardeum ecosystem.",
-    image: '/images/projects/changelog.png',
-    link: 'https://shardeum-changelog.vercel.app/',
-    github: 'https://github.com/kenny-io/changelog',
-  },
-  {
-    title: 'DX Mentorship Program',
-    description: 'A mentorship program for aspiring Developer Advocates, providing guidance, resources, and a supportive community to help individuals grow their careers in Developer Relations.',
-    image: '/images/projects/mentorship.jpeg',
-    link: 'https://www.dxmentorship.com',
-    github: 'https://github.com/Dxmentorship/dxmentorship',
-  },
-  {
-    title: 'Shardeum Documentation',
-    description: 'Comprehensive documentation for the Shardeum blockchain, covering network architecture, developer guides, API references, and tutorials to help users and developers build on Shardeum.',
-    image: '/images/projects/docs.png',
-    link: 'https://docs.shardeum.org',
-    github: 'https://github.com/shardeum/shardeum-docs',
-  }
-]);
-
-// Lifecycle hooks
-onMounted(() => {
-  fetchVideos();
-  fetchHashnodeArticles();
-});
-
-// SEO metadata
-useHead({
-  link: [
-    {
-      rel: 'icon',
-      type: 'image/png',
-      href: '/favicon.ico',
-    },
-  ],
-});
-
+definePageMeta({ layout: false });
+const { data: home } = await useAsyncData('home-content', () => queryContent('/home').findOne());
+const stagePhotos = [
+  { src: '/images/stage/stage2.jpg', alt: 'Ekene Eze speaking on stage' },
+  { src: '/images/stage/stage3.jpg', alt: 'Ekene Eze with conference attendees' },
+  { src: '/images/stage/stage1.jpg', alt: 'Ekene Eze presenting at a conference' },
+  { src: '/images/stage/laststage.webp', alt: 'Ekene Eze speaking at a conference' },
+];
 useSeoMeta({
-  title: 'Ekene Eze - Developer Advocate, Software Engineer, Content Creator',
-  description: "Hi, I'm Ekene Eze, a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker. I help developers build better products and companies build better developer communities.",
-  ogTitle: 'Ekene Eze - Portfolio 2025',
-  ogDescription: "Hi, I'm Ekene Eze, a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker. I help developers build better products and companies build better developer communities.",
-  ogImage: 'https://res.cloudinary.com/kennyy/image/upload/v1696867303/index-og_kwzcrr.png',
-  ogUrl: 'https://kenny.engineer',
-  twitterTitle: 'Ekene Eze - Portfolio 2025',
-  twitterDescription: 'Get a glimpse into my activities as a Developer Advocate, Software Engineer, Content Creator and Keynote Speaker.',
-  twitterImage: 'https://res.cloudinary.com/kennyy/image/upload/v1696867303/index-og_kwzcrr.png',
-  twitterCard: 'summary_large_image',
+  title: 'Ekene Eze — Developer Advocate & Software Engineer',
+  description: 'Technical Developer Relations engineer helping infrastructure teams make complex developer products easier to understand and adopt.',
+  ogTitle: 'Ekene Eze — Developer Advocate & Software Engineer',
+  ogDescription: 'Technical Developer Relations, developer experience, open source, writing and speaking.',
+  ogImage: 'https://kenny.engineer/og/index-og.png', ogUrl: 'https://kenny.engineer', twitterCard: 'summary_large_image',
 });
 </script>
 
 <template>
-  <div class="home-page bg-black">
-    <TheHero />
-    <RecentProjects :projects="featuredProjects" />
-    <BookShowcase />
-    <RecentArticles :articles="hashnodeArticles.slice(0, 3).map(article => ({
-      ...article,
-      coverImage: article.coverImage?.url || 'https://res.cloudinary.com/kennyy/image/upload/v1695921469/AI_Generated_Image_13_d1aaw0.jpg',
-      dateAdded: String(article.publishedAt)
-    }))" />
-    <RecentCourses :courses="featuredVideos.slice(0, 3).map(video => ({
-      title: video.snippet.title,
-      description: video.snippet.description,
-      image: video.snippet.thumbnails?.high?.url || 'https://www.youtube.com/placeholder.jpg',
-      url: `https://www.youtube.com/watch?v=${video.id.videoId}`,
-      dateAdded: String(video.snippet.publishedAt)
-    }))" />
-    <section class="w-full bg-black py-20 flex items-center justify-center">
-      <div class="w-full max-w-5xl mx-auto rounded-3xl border border-white/30 p-10 md:p-16 flex flex-col items-center">
-        <h2 class="text-4xl md:text-5xl font-bold text-white text-center mb-6">Subscribe to my Newsletter</h2>
-        <p class="text-xl text-gray-300 text-center mb-10 max-w-3xl">
-          I spend most of my time making content like blog posts, video tutorials, courses, speaking at conferences or delivering workshops. If you're interested in web development and Jamstack technologies, or you just want to be up to date with my activities, subscribe here.
-        </p>
-        <NewsletterForm />
-      </div>
-    </section>
+  <div class="paper-site">
+    <header class="site-header"><div class="site-wrap header-inner">
+      <a class="brand" href="#top">Ekene Eze</a>
+      <nav aria-label="Main navigation"><a href="#writing">Writing</a><a href="#speaking">Speaking</a><a href="#work">Work</a><NuxtLink to="/courses">Courses</NuxtLink><NuxtLink to="/uses">Uses</NuxtLink></nav>
+      <a class="availability" href="#hire">{{ home?.availability }}</a>
+    </div></header>
+
+    <main id="top" class="site-wrap">
+      <section class="hero" aria-labelledby="hero-title">
+        <div><p class="mono">Developer advocate · Software engineer · Dubai, UAE</p><h1 id="hero-title">I make complex developer products <span>make sense.</span></h1><p class="bio">Seven years of it: writing the docs, building the demos, and standing on the stage afterwards. Today I do <strong>developer experience and open source</strong> for infrastructure teams — most recently Shardeum, before that Netlify.</p><div class="actions"><a class="button solid" href="#hire">Work with me</a><a class="button ghost" href="https://www.youtube.com/c/EkeneEze" target="_blank" rel="noopener">Watch a talk</a></div></div>
+        <div class="hero-shots" aria-label="Photos of Ekene speaking at conferences"><div class="hero-shot-main"><img src="/images/stage/stage1.jpg" alt="Ekene Eze speaking on stage"></div><div class="hero-shot-overlap"><img src="/images/stage/stage3.jpg" alt="Ekene Eze at a conference"></div></div>
+      </section>
+
+      <div class="proof-strip"><span class="mono proof-label">Written, shipped &amp; spoken for</span><div class="proof-list"><span>Netlify</span><span>Shardeum</span><span>Packt</span><span>LogRocket</span><span>Smashing Magazine</span><span>Strapi</span><span>20+ stages</span><span>100+ articles</span></div></div>
+
+      <section id="writing" class="content-section"><div class="section-head"><h2>Writing</h2><NuxtLink class="mono section-link" to="/articles">All 100+ articles →</NuxtLink></div><div class="posts"><a v-for="article in home?.articles" :key="article.url" class="post" :href="article.url" target="_blank" rel="noopener"><div class="post-thumb"><img :src="article.image" alt=""></div><div><span class="mono">{{ article.source }}</span><h3>{{ article.title }}</h3><p>{{ article.description }}</p></div></a></div></section>
+
+      <section class="book-band" aria-labelledby="book-title"><div class="book-cover"><img src="/images/book/netlify-cover.jpeg" alt="Web Development on Netlify book cover"></div><div><span class="mono book-kicker">Book · Packt</span><h2 id="book-title">Web Development on Netlify</h2><blockquote>“Designed to help developers of all skill levels build, deploy, optimize and scale web applications efficiently on the Netlify platform.”</blockquote><p>Proven strategies for building, deploying and scaling modern applications — from first deploy to production at scale.</p><a class="button book-button" href="https://packt.link/toh2U" target="_blank" rel="noopener">Buy on Amazon</a></div></section>
+
+      <section id="speaking" class="content-section"><div class="section-head"><h2>Speaking</h2><a class="mono section-link" href="mailto:ekeneeze3@gmail.com">Invite me to speak →</a></div><div class="talks"><NuxtLink v-for="talk in home?.talks" :key="talk.title" class="talk" to="/speaking"><span class="talk-title">{{ talk.title }}</span><span :class="talk.upcoming ? 'upcoming' : 'mono'">{{ talk.category }}</span></NuxtLink></div><div class="stage-row"><div v-for="photo in stagePhotos" :key="photo.src"><img :src="photo.src" :alt="photo.alt"></div></div></section>
+
+      <section id="work" class="content-section"><div class="section-head"><h2>Selected work</h2><a class="mono section-link" href="https://github.com/kenny-io" target="_blank" rel="noopener">GitHub →</a></div><div class="work-grid"><a v-for="project in home?.projects" :key="project.title" class="project" :href="project.url" target="_blank" rel="noopener"><div class="project-shot"><img :src="project.image" :alt="project.alt"></div><div><h3>{{ project.title }}</h3><p>{{ project.description }}</p></div></a></div></section>
+
+      <section id="hire" class="hire-block"><h2>Need someone who can build it and explain it?</h2><div><p>Developer experience audits, documentation systems, launch content, workshops and keynotes. Tell me what you're shipping — I reply to everything.</p><div class="actions hire-actions"><a class="button solid" href="mailto:ekeneeze3@gmail.com">ekeneeze3@gmail.com</a><a class="button ghost" href="https://www.linkedin.com/in/ekeneeze/" target="_blank" rel="noopener">LinkedIn</a></div></div></section>
+
+      <footer class="site-footer"><span>© 2026 Ekene Eze — Dubai, UAE</span><span class="footer-links"><a href="https://twitter.com/kenny_io" target="_blank" rel="noopener">X</a><a href="https://github.com/kenny-io" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/ekeneeze/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.youtube.com/c/EkeneEze" target="_blank" rel="noopener">YouTube</a><NuxtLink to="/uses">Uses</NuxtLink></span></footer>
+    </main>
   </div>
 </template>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+.paper-site{--paper:#f6f3ec;--paper-2:#efebe1;--ink:#141310;--ink-70:#4a473f;--ink-45:#84806f;--ink-25:#b3afa3;--rule:#ded9cc;--site-accent:#d2691e;min-height:100vh;background:var(--paper);color:var(--ink);font-family:Archivo,system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}.paper-site *,.paper-site *::before,.paper-site *::after{box-sizing:border-box}.paper-site a{color:var(--ink);text-decoration:none}.paper-site a:hover{color:var(--site-accent)}.paper-site img{display:block;width:100%;height:100%;object-fit:cover}.paper-site h1,.paper-site h2,.paper-site h3,.proof-list,.talk-title{margin:0;font-family:'Bricolage Grotesque',Archivo,sans-serif;font-weight:500;letter-spacing:-.03em;line-height:1.03}.site-wrap{max-width:1200px;margin:0 auto;padding:0 44px}.mono{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-45)}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(246,243,236,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}.header-inner{display:flex;align-items:center;justify-content:space-between;height:66px;gap:24px}.brand{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:18px;letter-spacing:-.03em}.site-header nav{display:flex;gap:30px;font-size:15px;color:var(--ink-70)}.availability{display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--site-accent)!important}.availability::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--site-accent)}
+.hero{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:64px;padding:86px 0 64px;align-items:center}.hero h1{margin-top:20px;font-size:clamp(44px,5.6vw,78px);max-width:15ch;text-wrap:balance}.hero h1 span{color:var(--ink-45)}.hero .bio{margin:28px 0 0;font-size:19.5px;line-height:1.6;color:var(--ink-70);max-width:52ch;text-wrap:pretty}.hero .bio strong{color:var(--ink);font-weight:500}.actions{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;height:52px;padding:0 26px;border-radius:6px;font-size:15.5px;font-weight:500;border:1px solid var(--ink);transition:.16s;white-space:nowrap}.button.solid{background:var(--ink);color:var(--paper)}.button.solid:hover{background:var(--site-accent);border-color:var(--site-accent);color:#fff}.button.ghost{border-color:var(--rule);color:var(--ink-70);background:transparent}.button.ghost:hover{border-color:var(--ink);color:var(--ink)}.hero-shots{position:relative;height:520px}.hero-shot-main{position:absolute;inset:0 0 60px 92px;border-radius:8px;overflow:hidden;background:var(--paper-2)}.hero-shot-overlap{position:absolute;width:200px;height:250px;left:0;bottom:0;border-radius:8px;overflow:hidden;border:6px solid var(--paper);background:var(--paper-2)}
+.proof-strip{display:flex;flex-wrap:wrap;gap:10px 40px;align-items:baseline;padding:26px 0 30px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}.proof-label{color:var(--ink-25)}.proof-list{display:flex;flex-wrap:wrap;gap:8px 26px;font-size:19px;color:var(--ink-70)}.content-section{padding:92px 0}.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:38px}.section-head h2{font-size:34px}.posts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:44px 40px}.post{display:flex;flex-direction:column;gap:16px}.post-thumb{aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:var(--paper-2);border:1px solid var(--rule);transition:.16s}.post:hover .post-thumb{border-color:var(--ink)}.post h3{margin-top:8px;font-size:24px;line-height:1.18}.post p{margin:8px 0 0;color:var(--ink-70);font-size:16px}
+.book-band{background:var(--ink);color:var(--paper);border-radius:12px;display:grid;grid-template-columns:300px minmax(0,1fr);gap:56px;padding:56px;align-items:center}.book-cover{aspect-ratio:3/4;border-radius:6px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.4)}.book-band h2{margin-top:12px;font-size:42px;color:var(--paper)}.book-band blockquote{font-family:'Bricolage Grotesque',sans-serif;font-size:20px;color:var(--paper);border-left:2px solid var(--site-accent);padding-left:18px;margin:24px 0 26px;line-height:1.35}.book-band p{color:#b9b4a7;font-size:18px;margin:0;max-width:48ch}.book-kicker{color:var(--ink-25)}.book-button{margin-top:28px;border-color:var(--paper);color:var(--paper)!important}.book-button:hover{background:var(--site-accent);border-color:var(--site-accent);color:#fff!important}
+.talks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 56px}.talk{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:20px 0;border-bottom:1px solid var(--rule);transition:.16s}.talk:hover{padding-left:10px}.talk-title{font-size:23px;letter-spacing:-.025em;line-height:1.2}.upcoming{color:var(--site-accent);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.13em;text-transform:uppercase;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}.upcoming::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--site-accent)}.stage-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:44px}.stage-row div{aspect-ratio:4/3;border-radius:8px;overflow:hidden;background:var(--paper-2)}
+.work-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}.project{display:flex;flex-direction:column;gap:14px}.project-shot{aspect-ratio:16/10;border-radius:8px;overflow:hidden;border:1px solid var(--rule);background:var(--paper-2);transition:.16s}.project:hover .project-shot{border-color:var(--ink)}.project h3{font-size:21px}.project p{margin:6px 0 0;color:var(--ink-70);font-size:15.5px}.hire-block{padding:110px 0;border-top:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:56px;align-items:end}.hire-block h2{font-size:clamp(34px,4.4vw,56px);max-width:15ch}.hire-block p{color:var(--ink-70);font-size:18px;margin:0 0 24px}.hire-actions{margin-top:0}.site-footer{border-top:1px solid var(--rule);padding:30px 0 44px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--ink-45)}.footer-links{display:flex;gap:22px}
+@media(max-width:960px){.site-wrap{padding-left:22px;padding-right:22px}.site-header nav{display:none}.hero,.posts,.talks,.work-grid,.book-band,.hire-block{grid-template-columns:1fr}.hero{gap:36px;padding-top:56px}.hero-shots{height:380px}.book-band{padding:34px;gap:32px}.book-cover{max-width:220px}.stage-row{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.availability{font-size:10px}.hero-shot-main{left:48px}.section-head{align-items:flex-start;flex-direction:column;gap:10px}.footer-links{flex-wrap:wrap}}
+</style>
