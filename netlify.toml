@@ -1,4 +1,8 @@
 
+[build.environment]
+  NODE_VERSION = "20"
+  PNPM_VERSION = "8.15.9"
+
 [[redirects]]
   from = "/blog"
   to = "/articles/"

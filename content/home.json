@@ -1,0 +1,24 @@
+{
+  "availability": "Open for work",
+  "articles": [
+    {"title":"Using Chrome's Document Picture-in-Picture API in React","source":"LogRocket","description":"Building on the PiP API to open up a wider range of interface possibilities.","url":"https://blog.logrocket.com/using-chrome-document-picture-in-picture-api-react/","image":"/images/articles/document-pip-react.png"},
+    {"title":"How Waku compares to Next.js","source":"LogRocket","description":"A lightweight React framework built on Server Components, measured against the incumbent.","url":"https://blog.logrocket.com/waku-vs-next-js/","image":"/images/articles/waku-vs-next.png"},
+    {"title":"Vector search with OpenAI, Next.js and Supabase","source":"LogRocket","description":"Search that understands meaning instead of matching strings.","url":"https://blog.logrocket.com/openai-vector-search-next-js-supabase/","image":"/images/articles/vector-search.png"},
+    {"title":"Jamstack rendering patterns: the evolution","source":"Smashing Magazine","description":"Where the web is heading, and which rendering strategy answers the problem in front of you.","url":"https://www.smashingmagazine.com/2022/04/jamstack-rendering-patterns-evolution/","image":"/images/articles/jamstack-rendering.jpg"}
+  ],
+  "talks": [
+    {"title":"Open Sourcing Software at Massive Scale","category":"Upcoming","upcoming":true},
+    {"title":"AI is eating the world, grab a fork","category":"Keynote","upcoming":false},
+    {"title":"Contributing to Layer 1 Chains","category":"Web3","upcoming":false},
+    {"title":"Writing Documentations That Don't Suck!","category":"DevRel","upcoming":false},
+    {"title":"Leveraging community for product growth","category":"DevRel","upcoming":false},
+    {"title":"Advanced Rendering Patterns in the Jamstack","category":"Web","upcoming":false},
+    {"title":"Unlocking Dev Superpowers with SvelteKit","category":"Web","upcoming":false},
+    {"title":"Bridging Design and Development in Style","category":"Web","upcoming":false}
+  ],
+  "projects": [
+    {"title":"Vission","description":"Real-time analytics dashboard for the Shardeum blockchain — transactions, network health and metrics. React, TypeScript, Tailwind.","url":"http://34.55.111.27:3000/","image":"/images/projects/dataviz.png","alt":"Vission dashboard"},
+    {"title":"Network Monitor","description":"Uptime and response-time monitoring on Prometheus metrics, with a Next.js frontend and Slack incident alerts.","url":"http://34.56.12.217:3000/","image":"/images/projects/network-monitor-light.png","alt":"Network Monitor"},
+    {"title":"DX Mentorship","description":"A mentorship program for aspiring developer advocates — guidance, resources and community, now in its fourth cohort.","url":"https://www.dxmentorship.com","image":"/images/projects/mentorship.jpeg","alt":"DX Mentorship cohort call"}
+  ]
+}

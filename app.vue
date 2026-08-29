@@ -1,4 +1,5 @@
 <script setup>
+const route = useRoute();
 const scrollState = inject('scrollState');
 const lenisRef = ref(null);
 const lenisOptions = ref({
@@ -22,9 +23,9 @@ onMounted(() => {
 </script>
 <template>
   <lenis id="test" ref="lenisRef" :options="lenisOptions" @scroll="scrollEmitter">
-    <div class="glowball "></div>
+    <div v-if="route.path !== '/'" class="glowball "></div>
     <SeoKit />
-    <div class="pt-5 bg-black">
+    <div :class="route.path === '/' ? '' : 'pt-5 bg-black'">
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
